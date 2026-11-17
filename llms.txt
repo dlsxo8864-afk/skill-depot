@@ -17,6 +17,8 @@
    `~/.claude/skills/<이름>/` (Codex 는 `~/.codex/skills/<이름>/`) 에 푼다. zip 루트에 `SKILL.md` 가 있다.
    명령어(command)는 `~/.claude/commands/` 에 `.md` 파일을 둔다.
 4. 같은 이름의 폴더가 이미 있으면 지우지 말고 이름을 바꿔 남긴 뒤 설치한다.
+5. 스킬 묶음(bundle)은 공개 저장소를 통째로 담은 zip 이다. 설치 스크립트는 zip 안에서 `SKILL.md` 가 있는 폴더를
+   모두 스킬로 설치한다. 일부만 필요하면 zip 을 직접 받아 그 폴더만 `skills/` 에 넣는다.
 
 ## 지킬 것
 
@@ -69,8 +71,17 @@
 - pack:llmvid — 코드로 만드는 영상 스킬 팩 v1.3 (14종) | 구성: llmvid-blender-clay-office, llmvid-blender-cutaway-explainer, llmvid-blender-mascot-explainer, llmvid-blender-object-drama, llmvid-blender-psa-parody, llmvid-blender-stage-diorama, llmvid-blender-toon, llmvid-blender-voxel-whatif, llmvid-pixel-story, llmvid-remotion-anime, llmvid-remotion-kinetic, llmvid-remotion-paper-puppet, llmvid-remotion-pixel-rpg, llmvid-remotion-sketch
 - pack:office-story — 직장 썰 제작 3종 (씨댄스·클레이·썸네일) | 구성: seedance-office-story, clay-office-story, artifact-template-1
 
+### 모아 둔 스킬 팩
+
+수가 많아 모음마다 목록 파일을 따로 둔다. 필요한 모음의 목록을 받아 이름을 고른다.
+
+- 영상 스킬 모음 (226건) — 영상·이미지 생성 AI 없이 LLM과 코드로 영상을 만드는 스킬·도구·사례. | 목록: https://dlsxo8864-afk.github.io/skill-depot/collections/video.md
+- 인테리어·입체 목업 (150건) — 평면 목업을 360 뷰어와 워크스루로 넓히려고 조사해 추린 스킬·MCP·저장소. | 목록: https://dlsxo8864-afk.github.io/skill-depot/collections/space.md
+
 ### 원본에서 설치하는 것
 
+- dinov3 — Meta의 시각 기반 모델. 이미지에서 결·형태 특징을 뽑아 비슷한 이미지 찾기, 영역 나누기, 깊이 추정 같은 이미지 분석의 바탕으로 쓴다. | 설치: git clone https://github.com/facebookresearch/dinov3.git
+- astryx — Meta가 공개한 디자인 시스템. 컴포넌트 150여 개와 테마·CLI가 한 묶음이고, 에이전트가 같은 문서를 보고 화면을 짜도록 스킬이 들어 있다. 화면 미감을 다듬을 때 쓴다. | 설치: claude plugin marketplace add meta/astryx && claude plugin install astryx@astryx
 - humanize-korean — AI가 쓴 한글을 내용은 그대로 두고 번역투·기계적 병렬·리듬 같은 문체만 사람 글처럼 다듬는다. | 설치: git clone https://github.com/epoko77-ai/im-not-ai.git && cd im-not-ai && ./install.sh
 - remotion-skills — React 코드로 영상을 만드는 Remotion의 공식 스킬. 만들기·자막·지도·멀티미디어·렌더·스튜디오를 나눠 다룬다. | 설치: npx skills add remotion-dev/skills
 - superpowers — 기획 정리, 체계적 디버깅, 시험 주도 개발, 완료 전 검증 같은 작업 절차를 스킬로 묶은 플러그인. | 설치: claude plugin install superpowers@claude-plugins-official

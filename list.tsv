@@ -23,6 +23,8 @@ llmvid-remotion-sketch	skill	mine	zips/llmvid-remotion-sketch.zip	813f59c72ee5e0
 ai-arena	command	mine	zips/ai-arena.zip	bbd57939bb4c6e5d6b43a869d2a0e1e42e50a8dd5094b8e9f593a87d3394015e	2832	AI 격투 아레나	-	-
 continue	command	mine	zips/continue.zip	fdbbfff3c763541ef569cf684453dbab305c2af066f3662131b9107dd657fbd6	298	이어서 진행	-	-
 dev	command	mine	zips/dev.zip	35ca0911629564a6df31aab13d1b2b9a764247b00688672ab8eb64c883ad3fa8	330	자율 개발 모드	-	-
+dinov3	external	pick	-	-	0	DINOv3 (다이노3)	PyTorch를 돌릴 PC(그래픽카드 권장); 모델 가중치 — 라이선스에 동의하고 따로 받는다	git clone https://github.com/facebookresearch/dinov3.git
+astryx	external	pick	-	-	0	Astryx (메타 디자인 시스템)	React 19 이상 프로젝트(컴포넌트를 직접 쓸 때). 다른 화면에는 원칙만 CSS로 옮겨 쓴다	claude plugin marketplace add meta/astryx && claude plugin install astryx@astryx
 humanize-korean	external	external	-	-	0	휴머나이즈 KR	-	git clone https://github.com/epoko77-ai/im-not-ai.git && cd im-not-ai && ./install.sh
 remotion-skills	external	external	-	-	0	Remotion 공식 스킬 12종	-	npx skills add remotion-dev/skills
 superpowers	external	external	-	-	0	슈퍼파워	-	claude plugin install superpowers@claude-plugins-official
@@ -42,3 +44,379 @@ artifact-design	builtin	builtin	-	-	0	아티팩트 디자인	-	-
 claude-api	builtin	builtin	-	-	0	Claude API 참고	-	-
 computer-use	builtin	builtin	-	-	0	PC 조작	-	-
 workflow-authoring	builtin	builtin	-	-	0	워크플로 작성	-	-
+reel-ramen	bundle	video	zips/packs/patch-gg__pixelfx.zip	c8933c3483ac83acc9aa270d69171cc4a4d2a05c1c4dd25ad44f64d0b875a91f	1010193	릴스 예시: 코드로 그린 라면 이펙트	-	https://github.com/patch-gg/pixelfx
+reel-bridge	bundle	video	zips/packs/mromidev__claude-animated-shorts.zip	d93751bcf5ac28b93bb785df93dd9369f93b79f2706fac9c7503131276b49d27	294134	릴스 예시: 코드로 그린 현수교 붕괴	-	https://github.com/mromidev/claude-animated-shorts
+escapement	bundle	video	zips/packs/Leonxlnx__escapement.zip	81ce5aefae8799fd435f97a8da34d0627f13528b20ca86f46782fbd9ae7dcca0	422213	ESCAPEMENT (36초 시네마틱)	-	https://github.com/Leonxlnx/escapement/releases/latest
+falcon9-film	external	video	-	-	0	FALCON 9 (65초 단편)	-	https://github.com/noahsabaj/falcon9-blender/releases/latest
+archviz-poc	external	video	-	-	0	클로드 건축 시각화 POC	-	https://github.com/davidheryanto/claude-blender-archviz
+kylo-3d	external	video	-	-	0	Kylo 3D Shorts	-	https://github.com/Hitid123/kylo-3d-shorts
+toon-studio	external	video	-	-	0	Beta Version Toon Studio	-	https://github.com/ezpeezee/beta-version-toon-studio
+shortsmith	bundle	video	zips/packs/woreksami__shortsmith.zip	282b2436f0b64b989b88c6a21586496f67b22e4c40d4704301e48a6d7885c16e	83807	Shortsmith	-	https://github.com/woreksami/shortsmith
+blender-shorts-toolkit	bundle	video	zips/packs/mguzelsoy36__blender-shorts-toolkit.zip	85e8dbe2019e69b56de0217cf132401c84dd32bc82cc5831346c6dfe4607411d	45840	blender-shorts-toolkit	-	https://github.com/mguzelsoy36/blender-shorts-toolkit
+faceless-blender	external	video	-	-	0	Faceless Shorts	-	https://github.com/kinnuworks/faceless-shorts
+install-video	external	video	-	-	0	install-video	-	https://github.com/catoncat/install-video
+product-photoreal	bundle	video	zips/packs/passeth__blender-product-photoreal.zip	b231d5a9b2623c76dc88eec5a4a052679b21ae099c7d120152acc54d554c716d	40826	Blender Product Photoreal	-	https://github.com/passeth/blender-product-photoreal
+cad-renders	bundle	video	zips/packs/abchiaravalle__cad-studio-renders.zip	c3cb993e92dc99bee57a19ca687bb665a5c7842f988e3122f06d0727a21390bd	56688	cad-studio-renders	-	https://github.com/abchiaravalle/cad-studio-renders
+same-studio-shot	bundle	video	zips/packs/oh-ashen-one__claude-animated-shorts.zip	e9feda5aabdee0ca2709a59d0f9dbd659cac6b13cddd3d4e4222039c9bd7a95e	633054	same-studio-shot	-	https://github.com/oh-ashen-one/claude-animated-shorts
+molecular-anim	bundle	video	zips/packs/AmadeusBio-ai__Molecular_Animation.zip	e97c328c8b38c9a46d3de485aa04bae1898ac854dff8b3a1c2c02c7d25ee73e3	415986	Molecular Animation	-	https://github.com/AmadeusBio-ai/Molecular_Animation
+claude-animated-shorts	bundle	video	zips/packs/mromidev__claude-animated-shorts.zip	d93751bcf5ac28b93bb785df93dd9369f93b79f2706fac9c7503131276b49d27	294134	Claude Animated Shorts	-	https://github.com/mromidev/claude-animated-shorts
+claude-blender-skills	bundle	video	zips/packs/mromidev__claude-blender-skills.zip	900c71af7971b83aa73b25df84041ce6ed79a766f4168e4748560974582a281f	165111	Claude Blender Skills	-	https://github.com/mromidev/claude-blender-skills
+make-short	bundle	video	zips/packs/nocodehack__make-short.zip	02ec630211618b76e4dfd80056e03b18cf1f95f02b5a6c7f933f64ee533b3000	389536	make-short	-	https://github.com/nocodehack/make-short
+blender-shorts-agent	bundle	video	zips/packs/goinsidemachines__blender-shorts-agent.zip	a472c4e11f2a15d364463b9f5deb3e94b8a90408f752d91a35d36622249ddfbc	1016451	blender-shorts-agent	-	https://github.com/goinsidemachines/blender-shorts-agent
+blender-education	bundle	video	zips/packs/sunxiayi__make-blender-education-video-skill.zip	fe1085c1de4412919a33ce8cdaec347ecfc99db58bf7b5810b2c2c83c883bafa	46411	Make Blender Education Video	-	https://github.com/sunxiayi/make-blender-education-video-skill
+case-omi-3d	external	video	-	-	0	Ultra-Realistic 3D Environment Using Claude	-	https://github.com/mromidev/claude-blender-skills
+case-omi-film	external	video	-	-	0	3D Short Film With Claude Opus 5.5 in Blender	-	https://www.youtube.com/watch?v=BagZ55ac4xs
+case-omi-real	external	video	-	-	0	Insane Realistic Animation Using Claude in Blender	-	https://www.youtube.com/watch?v=ZN-Ugd-4HDM
+case-nocodehack	external	video	-	-	0	Make animated shorts with claude code	-	https://github.com/nocodehack/make-short
+case-hackable	external	video	-	-	0	Claude Opus 5.5 with Blender - P(Doom)	-	https://github.com/IdkwhatImD0ing/claude-music-videos
+case-inside-machines	external	video	-	-	0	Inside Machines 쇼츠	-	https://www.youtube.com/watch?v=5y8AbpL8xd8
+case-kevin	external	video	-	-	0	Make a 3D Animation With Claude and Blender	-	https://www.kevinsingh.com/p/make-a-3d-animation-with-claude-and
+awesome-3d-videos	external	video	-	-	0	Awesome Claude 3D Videos	-	https://github.com/sunsiyuan/awesome-claude-3d-videos
+awesome-opus-prompts	bundle	video	zips/packs/X-RayLuan__awesome-opus-5-5-video-prompts.zip	afa3ecefde3de761ce9a4c60adfb5f6484a0130beae6663140b8327b342cd75e	637991	Awesome Opus 5.5 Video Prompts	-	https://github.com/X-RayLuan/awesome-opus-5-5-video-prompts
+rd-bite	external	video	-	-	0	레딧: 작게 나눠 시키기	-	https://www.reddit.com/r/ClaudeAI/comments/1xmcwbt/opus_55_medium_with_blender_mcp_is_insane_with/
+rd-preview-loop	external	video	-	-	0	레딧: 작은 미리보기 반복	-	https://www.reddit.com/r/ClaudeAI/comments/1xgu73u/claude_opus_55_is_insane_in_creating_creating_3d/
+rd-photoreal	external	video	-	-	0	레딧: 사실적 렌더는 장면당 3번 실패	-	https://www.reddit.com/r/ClaudeAI/comments/1xhi21l/i_got_claude_opus_55_to_render_photoreal_blender/
+rd-tools-rules	external	video	-	-	0	레딧: 실수마다 도구와 규칙 만들기	-	https://www.reddit.com/r/ClaudeCode/comments/1wxf6t7/room_made_in_blender_with_opus_55/
+rd-existing-model	external	video	-	-	0	레딧: 기존 모델에 애니메이션만 맡기기	-	https://www.reddit.com/r/TopologyAI/comments/1wp3nt4/claude_opus_55_x_blender_animation_test/
+rd-critics	external	video	-	-	0	레딧: 회의적인 의견	-	https://www.reddit.com/r/TopologyAI/comments/1x40xfa/i_dont_think_opus_55_max_blender_mcp_is_really/
+rd-benchmark	external	video	-	-	0	레딧: 사진 재현 14개 모델 비교	-	https://www.reddit.com/r/ClaudeAI/comments/1wvqcii/claude_opus_55_placed_3rd_of_14_models_at/
+rd-limits	external	video	-	-	0	레딧: 사용량과 추론 단계	-	https://www.reddit.com/r/TopologyAI/comments/1wx8zlh/this_is_what_one_weekly_opus_55_limit_blender_mcp/
+blender-lab-mcp	external	video	-	-	0	Blender Lab 공식 MCP	-	https://www.blender.org/lab/mcp-server
+arjun-blender	bundle	video	zips/packs/arjun988__blender-skills.zip	979077165bbaae53cda13ee5a5edebee1eb32a6baae3521fcd9f230828f7fc6d	474716	Blender Skills (94종)	-	https://github.com/arjun988/blender-skills
+3dviz	bundle	video	zips/packs/viettranx__3dviz-pro-max.zip	27bcc43a45ad7b77f3c51dc6a6cdecc62edecc38fcac31e9f400221f3aca825b	1281451	3dviz-pro-max	-	https://github.com/viettranx/3dviz-pro-max
+blender-kiln	bundle	video	zips/packs/elithril__blender-kiln.zip	0b058d5ea2a2721176c7aea52c21c961d37e8355b3ce2274927c0004523763c0	1083707	blender-kiln	-	https://github.com/elithril/blender-kiln
+blenderwright	external	video	-	-	0	blenderwright	-	https://github.com/HoldMyBeer-gg/blenderwright
+frugal-mcp	external	video	-	-	0	Frugal Blender MCP	-	https://github.com/mohakmalviya/frugal-blender-mcp
+animation-direction	bundle	video	zips/packs/DisturbedMediaGroup__claude-animation-skill.zip	9a0111ac34525c564c25d760666032e669ce9773147a3cf4553d46085a65320c	71685	Animation Direction	-	https://github.com/DisturbedMediaGroup/claude-animation-skill
+motion-design-cc	bundle	video	zips/packs/LobzyJay__motion-design-with-claude-and-codex.zip	8014f9b3cfc6d624beb5a21cc0a1a9cc4a9b3008615380172ae86754cee97be7	132267	motion-design-with-claude	-	https://github.com/LobzyJay/motion-design-with-claude-and-codex
+keyframe-coach	bundle	video	zips/packs/Guilherme-M-Mateus__keyframe-coach.zip	c30a4505d68f686378a98c9052f33c81c227b74e7f13bf1f178856fbd9b514ef	24074	Keyframe Coach	-	https://github.com/Guilherme-M-Mateus/keyframe-coach
+3d-scenes	external	video	-	-	0	3D Scenes	-	https://github.com/aminellkadaoui/3d-scenes
+blender-expert	external	video	-	-	0	Blender Expert Skills	-	https://github.com/edemaistre/blender-expert-skills
+blender-kit	bundle	video	zips/packs/someamount2190__blender-kit.zip	39aea5b176dccf0e41d877223da1da40a4f77cc4d7015c28446b0db547e07dd2	302300	blender-kit	-	https://github.com/someamount2190/blender-kit
+blender-dev-tools	external	video	-	-	0	Blender Developer Tools	-	https://github.com/TMHSDigital/Blender-Developer-Tools
+blender-qc	bundle	video	zips/packs/ELTIGA__blender-qc-audit.zip	29b9be05b322bbc2b8ad6cca2d3094783a1a128dd168758d8749f1c350851097	140665	blender-qc-audit	-	https://github.com/ELTIGA/blender-qc-audit
+blender-qa	external	video	-	-	0	blender-qa	-	https://github.com/nonsenseblue/blender-qa
+claude-modeling	bundle	video	zips/packs/colinurbs__claude-modeling-skills.zip	c88f8cfb6d1e44dbeda6c52cae817c67ee3ff1217d5d24594642362e6dcbb9fc	536298	claude-modeling-skills	-	https://github.com/colinurbs/claude-modeling-skills
+blender-asset-studio	bundle	video	zips/packs/new-experement__blender-asset-studio.zip	1aba27ab21772a7f36719efc1d2a605225972bd8a6a65efbdec31fc67719180e	109123	Blender Asset Studio	-	https://github.com/new-experement/blender-asset-studio
+blender-mcp	external	video	-	-	0	BlenderMCP	-	https://github.com/ahujasid/mcp-for-blender
+el4cteo-blender	bundle	video	zips/packs/EL4CTEO__blender-skills.zip	4776e1c827a1d27e65371aacedd4d813f1c0016273f9209785d581f4503d6084	383526	Blender Agent Skills	-	https://github.com/EL4CTEO/blender-skills
+cc-blender-skill	bundle	video	zips/packs/RobLe3__cc-blender-skill.zip	44af47b302787b5d823960a0a38041b5c31defd5aa8c1f6cf45003b43c8e1940	549943	cc-blender-skill	-	https://github.com/RobLe3/cc-blender-skill
+cinematic-3d-video	bundle	video	zips/packs/cumalibilgic__cinematic-3d-video.zip	3ee96b89de5894ae7cc1e2f4a9d86c65c2bafd5d5c039a881ed00e8512076555	35239	cinematic-3d-video	-	https://github.com/cumalibilgic/cinematic-3d-video
+claude-blender	external	video	-	-	0	Claude Blender	-	https://github.com/minihellboy/claude-blender
+blendergpt	external	video	-	-	0	BlenderGPT	-	https://github.com/gd3kr/BlenderGPT
+blender-mcp-bridge	external	video	-	-	0	Blender MCP Bridge	-	https://github.com/seehiong/blender-mcp-bridge
+px-rules	external	video	-	-	0	픽셀 애니메이션 기본 규칙	-	https://tw.news.yahoo.com/claude-opus-5-5%E5%81%9A%E5%BD%B1%E7%89%87%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8-%E5%83%8F%E7%B4%A0%E9%A2%A8-004540383.html
+px-spritefusion	external	video	-	-	0	Good Pixel Art Effects with Claude	-	https://www.spritefusion.com/blog/how-to-make-good-pixel-art-effects-with-claude
+px-train-prompt	external	video	-	-	0	12초 픽셀 열차 연습 프롬프트	-	https://github.com/haiy/opus55-video-guide-zh
+px-pix-skill	bundle	video	zips/packs/luisfer-cli__pixel-art-pix-skill.zip	b1715ef96a1a86ee7b40d107e53cac080d7507ac2ee933edd7d8a2af8da54f26	16895	Pixel Art pix Skill	-	https://github.com/luisfer-cli/pixel-art-pix-skill
+px-compare	external	video	-	-	0	GPT·Claude·Gemini 픽셀 비교	-	https://github.com/adityaimamz/pixel-animation-comparison-gpt-cluade-gemini
+px-newface	external	video	-	-	0	Opus 5.5 픽셀 아트·애니메이션 해설	-	https://newfacedesign.com/blog/claude-opus-5-5-art-animation-from-code
+px-ohmyopus	external	video	-	-	0	ohmyopus 코드 영상 갤러리	-	https://ohmyopus.com/en/s/motion
+pixelfx	bundle	video	zips/packs/patch-gg__pixelfx.zip	c8933c3483ac83acc9aa270d69171cc4a4d2a05c1c4dd25ad44f64d0b875a91f	1010193	PixelFX	-	https://github.com/patch-gg/pixelfx
+pixelbolt	bundle	video	zips/packs/skulitom__Pixelbolt.zip	b5d6b8f8c32930813afe2ca1a86f59cd65248479935c531c7e251df9845edcd2	854700	Pixelbolt	-	https://github.com/skulitom/Pixelbolt
+codixel	bundle	video	zips/packs/mankidev__codixel.zip	18b1310aab0c6f2b7a9040c6375814f09170230e20bc84915d0ffdcb25b4509a	56154	Codixel	-	https://github.com/mankidev/codixel
+bb-video	bundle	video	zips/packs/BubbleBrainBB__BB-Video.zip	77148e756393db3b0775dae11f2f495068235023358b7d7b8ce88c8dcb225984	1005079	BB Video	-	https://github.com/BubbleBrainBB/BB-Video
+pixel-mv	bundle	video	zips/packs/wdu496132-rgb__pixel-mv-skill.zip	47ac1f84e29395ddb95ec5e6387c7b6c8d8488c68450b6fc9b11e25a9bc85bdc	11163	pixel-mv-skill	-	https://github.com/wdu496132-rgb/pixel-mv-skill
+pocketworld	bundle	video	zips/packs/Tu-Zhenzhao__pocketworld.zip	e02680132a8d5e9783ac22270a0abfa8ae8a1cb9e9fdea5a6c5a63a72a131803	671746	Pocketworld	-	https://github.com/Tu-Zhenzhao/pocketworld
+animated-pixel-studio	bundle	video	zips/packs/hrusyd__animated-pixel-art-studio.zip	9391e75d3480caed6988df5f8ec37aea5ef65571c88715243b96e62c483083c7	56007	Animated Pixel Art Studio	-	https://github.com/hrusyd/animated-pixel-art-studio
+starry-night	bundle	video	zips/packs/Khalidabdi1__Starry-Night.zip	48e566558d229ec6f0cce4c749ab36cbbd2dd166eee92ce4ef1685f74d8cfdb2	79133	Starry Night	-	https://github.com/Khalidabdi1/Starry-Night
+diorama-pixel	bundle	video	zips/packs/educlopez__diorama.zip	9b246ac1e9a2aede60610fee1e741cae7d628b60411e98219b6f1435e6cd17c9	429151	Diorama Pixel	-	https://github.com/educlopez/diorama
+pixelartvisuals	bundle	video	zips/packs/pdcgomes__pixelartvisuals.zip	aff6cdd3831434eb6495890027a4969e59ee79bd2a7c2f7423586c73e830210d	294329	pixelartvisuals	-	https://github.com/pdcgomes/pixelartvisuals
+pixel-pass	bundle	video	zips/packs/fangdididi__pixel-pass.zip	c89c670c208d6f71acca86114b9eeef01306d6fd9f8a47b4e7a95cb82fe29931	43523	Pixel Pass	-	https://github.com/fangdididi/pixel-pass
+sprite-animation-kit	bundle	video	zips/packs/matejbrundaek1__sprite-animation-kit.zip	54c54d04371b392bb46d4f94ae3c62471e1901b143e09ca20d9ef33be9b7aa90	104260	Sprite animation kit	-	https://github.com/matejbrundaek1/sprite-animation-kit
+spritewright	bundle	video	zips/packs/MehmetAliAtik__spritewright.zip	62aade184c8129479ddfad3ee5fbf99b54180d09b189eea515be87e247e3025c	258779	spritewright	-	https://github.com/MehmetAliAtik/spritewright
+openpixel	bundle	video	zips/packs/yaso09__openpixel.zip	3d92002ab7c00102e53e7114366ed32f0b6c0ab985119f2a6720c492b4e61a9b	86812	OpenPixel	-	https://github.com/yaso09/openpixel
+clawd-emotes	bundle	video	zips/packs/xixicc186__clawd-emotes-skill.zip	8f2a0ee8917b8d7d102d67686a5089cde6725ba27c7fc3d7943c4dcb7efcaf2a	52574	Clawd Emotes	-	https://github.com/xixicc186/clawd-emotes-skill
+claudesay	bundle	video	zips/packs/Sparrived__ClaudeSayFramework.zip	24556502759a45976c3a1360a205458bb094db786bc94343bb4b3fbf272aefb2	207968	ClaudeSay Framework	-	https://github.com/Sparrived/ClaudeSayFramework
+pixel-explainer	external	video	-	-	0	vibe 지식 대상 (픽셀판)	-	https://github.com/YT-smart/pixel-explainer-video
+pixel-knowledge	external	video	-	-	0	pixel-knowledge	-	https://github.com/Friday-s/pixel-knowledge
+vistrend-pixel	external	video	-	-	0	Pixel Video	-	https://github.com/VistrendAI/pixel-video
+pixel-brand-video	external	video	-	-	0	pixel-brand-video	-	https://github.com/thedes13/pixel-brand-video
+programmatic-video	bundle	video	zips/packs/Ol1ver0413__programmatic-video-plugin.zip	80996a36ed3d2cc0767b4474f543c65140eb4eb87b19c77abcee95ed96191593	169269	Programmatic Video	-	https://github.com/Ol1ver0413/programmatic-video-plugin
+cozy-pixel	external	video	-	-	0	Cozy Pixel Animation	-	https://github.com/hudi0705/cozy-pixel-animation
+gif-factory	bundle	video	zips/packs/WoYun520__gif-factory.zip	d4d419a74183000804570cf23e51bd23aaea77e0663a40e9b6761a9cc3a05da9	170719	GIF 공장	-	https://github.com/WoYun520/gif-factory
+aseprite-live-plugin	bundle	video	zips/packs/OpenScaleOrg__Aseprite-Plugin.zip	c0d13bb737ebd683cd6a38701099806d1ef34fcd228903eeffed4c061747ebc6	128290	Aseprite Plugin (실시간)	-	https://github.com/OpenScaleOrg/Aseprite-Plugin
+aseprite-mcp-live	external	video	-	-	0	Aseprite MCP Live	-	https://github.com/greenlogs/aseprite-mcp-live
+pixelorama-skills	bundle	video	zips/packs/seiya058904__Pixelorama-Skills.zip	0c67af1beae1492d4c9cdf2ffbd2acfd5ae40b43f76bcd31832c8bf5a04ce241	45516	Pixelorama Skills	-	https://github.com/seiya058904/Pixelorama-Skills
+pixelforge-studio	external	video	-	-	0	PixelForge Studio	-	https://github.com/himomohi/pixelforge-studio
+pixel-mcp	external	video	-	-	0	pixel-mcp	-	https://github.com/willibrandon/pixel-mcp
+pixel-art-video	bundle	video	zips/packs/frieddum__pixel-art-video.zip	003433f4c9c47b8642aaebdc3994c62d6895cad7e9ab9c0f543785e9808ad470	58986	pixel-art-video	-	https://github.com/frieddum/pixel-art-video
+pixel-studio	bundle	video	zips/packs/MuhammadaliMS__pixel-studio.zip	4e081e986a879a15b35c4bb98dd10191bf7653774e0fc47be817ec64c184f461	51214	Pixel Studio	-	https://github.com/MuhammadaliMS/pixel-studio
+pixel-anims	bundle	video	zips/packs/dris1153__pixel-anims.zip	a67ab679a1e52ec75589da84f995e271ac4639afaa786a11b5c41deef4db0891	1042818	pixel-anims	-	https://github.com/dris1153/pixel-anims
+pixel-diary	bundle	video	zips/packs/garycaogan__pixel-diary.zip	7cc6ef6d76a1bee00c0c0a6f22ce5609f17e093037ecd489d0b51097b07a8d0c	61404	pixel-diary	-	https://github.com/garycaogan/pixel-diary
+weilanx	bundle	video	zips/packs/Azure12355__weilanx-claude-videos.zip	016ab1dc7feb6c5ebae5239c0e6319c521a33ca4dce0f09fbba9f1295e3a03aa	1228660	weilanx-claude-videos	-	https://github.com/Azure12355/weilanx-claude-videos
+code-video-8bit	bundle	video	zips/packs/Changroro__code-video.zip	ed64fc11e1bdd2bc9395fe82fdfb2f11a867cbc489711da5fd615f1cbb464f49	81395	code-video (손그림+8비트)	-	https://github.com/Changroro/code-video
+aseprite-mcp	external	video	-	-	0	Aseprite MCP (diivi)	-	https://github.com/diivi/aseprite-mcp
+pixel-plugin	bundle	video	zips/packs/willibrandon__pixel-plugin.zip	dbdf289d03f7522373ed05bd838658254354fae2a4d76966cae26c8201948a3e	109374	Aseprite Pixel Art Plugin	-	https://github.com/willibrandon/pixel-plugin
+aseprite-malloy	external	video	-	-	0	Aseprite MCP (측정형)	-	https://github.com/MalloyTheDev/aseprite-mcp
+aseprite-automation	bundle	video	zips/packs/aigengame__aseprite-automation.zip	90f8ecde0291a38173306e1915e8cf5ba59b5ab608484b472f738ad02be5e1ab	913911	SPA (Aseprite Automation)	-	https://github.com/aigengame/aseprite-automation
+ai-video-marker	external	video	-	-	0	ai-video-marker	-	https://github.com/Lanqiao-Luca/ai-video-marker
+piskel	external	video	-	-	0	Piskel	-	https://github.com/piskelapp/piskel
+pc-horse	external	video	-	-	0	코드로 그린 달리는 픽셀 말	-	https://ohmyopus.com/en/c/pixel-horse
+pc-wizard	external	video	-	-	0	살아 움직이는 픽셀 마법사	-	https://ohmyopus.com/en/c/pixel-wizard
+pc-rainbow	external	video	-	-	0	우주 무지개 길 픽셀 애니메이션	-	https://ohmyopus.com/en/c/rainbow-pixel
+pc-neural	external	video	-	-	0	신경망 학습 픽셀 애니메이션	-	https://ohmyopus.com/en/c/neural-pixel
+pc-loop-scene	external	video	-	-	0	비·불·물이 움직이는 반복 픽셀 장면	-	https://x.com/RoundtableSpace/status/2110577655116366267
+pc-devbyed	external	video	-	-	0	Opus 5.5 vs GPT-6 Astra 픽셀 시험	-	https://x.com/developedbyed/status/2102522318559858721
+pc-bili	external	video	-	-	0	Opus 5.5 프롬프트로 바로 영상 만들기	-	https://www.bilibili.com/video/BV1j8aS6UEty/
+pc-ralph	external	video	-	-	0	Ralph Loop 로 클로드에게 픽셀 그리게 하기	-	https://www.youtube.com/watch?v=AQaLqo9ntnc
+pc-idle	external	video	-	-	0	클로드 코드로 2D 대기 애니메이션	-	https://www.youtube.com/watch?v=iV6AQUG_rrc
+pc-myclawd	external	video	-	-	0	MyClawd 픽셀 애니메이션 세트	-	https://github.com/CodeChrisB/MyClawd
+remotion	external	video	-	-	0	Remotion	-	https://github.com/remotion-dev/remotion
+v-remotion-skills	external	video	-	-	0	Remotion 공식 스킬	-	https://github.com/remotion-dev/skills
+hyperframes	bundle	video	zips/packs/heygen-com__hyperframes.zip	b4349a754d92832242f2b3e0fa5a56d5df1517d5a7c2740d188402a312138887	770543	HyperFrames	-	https://github.com/heygen-com/hyperframes
+motion-canvas	external	video	-	-	0	Motion Canvas	-	https://github.com/motion-canvas/motion-canvas
+revideo	external	video	-	-	0	Revideo	-	https://github.com/midrender/revideo
+html-video	external	video	-	-	0	html-video	-	https://github.com/nexu-io/html-video
+editly	external	video	-	-	0	editly	-	https://github.com/mifi/editly
+lemo-opuscar	bundle	video	zips/packs/lemomo-ai__lemo-opuscar.zip	084a454493b56ef5f10fd1dcfc052e5ab7ce2ebc499731c71180415398c0b905	1174173	Lemo-Opuscar	-	https://github.com/lemomo-ai/lemo-opuscar
+animate	bundle	video	zips/packs/cth9191__animate.zip	fab15c7e3b93271f20b929a2ba0effae688761fe250d14f9f9c91ee03619cb4c	289636	Animate	-	https://github.com/cth9191/animate
+explainroo	external	video	-	-	0	explainroo	-	https://github.com/vincentsch/explainroo
+motion-skills	external	video	-	-	0	iart Motion Skills	-	https://github.com/iart-ai/motion-skills
+motion-graphics-skills	bundle	video	zips/packs/charlie947__motion-graphics-skills.zip	39e749e1d181238a5b072e3a5484d10290a9c5717f8541950ee19a4fcde5c8aa	60151	Motion Graphics Skill Pack	-	https://github.com/charlie947/motion-graphics-skills
+claude-motion-design	bundle	video	zips/packs/howseen-ai__claude-motion-design.zip	50460761e8f6c767eaddd5d5fda83a923de26c8199cfcf880cb2292eca36a089	57171	claude-motion-design	-	https://github.com/howseen-ai/claude-motion-design
+code-video-showcase	bundle	video	zips/packs/Moessif__code-video-showcase.zip	099c8ca0852a8e1560397b94a66737a34ec25aa79d661e7cf8eeed070b3d1936	154302	code-video-showcase	-	https://github.com/Moessif/code-video-showcase
+every-frame-is-code	bundle	video	zips/packs/kiselas__every-frame-is-code.zip	b23cf38ad2a8f477c33293819c9343d62be0ee32ef9946c6868b90f11048d29f	224112	motion-kit (Every frame is code)	-	https://github.com/kiselas/every-frame-is-code
+motionmaxxing	external	video	-	-	0	motionmaxxing	-	https://github.com/Tejashmakwana/motionmaxxing
+xilo-opus-video	external	video	-	-	0	xilo-opus-video	-	https://github.com/Kianzzz/xilo-opus-video
+kalem	external	video	-	-	0	Kalem	-	https://github.com/leodavincs/kalem
+onetake	external	video	-	-	0	onetake	-	https://github.com/feitangyuan/onetake
+anything2explainer	external	video	-	-	0	anything2explainer	-	https://github.com/Vincentwei1021/anything2explainer
+llm-video-maker	external	video	-	-	0	LLM Video Maker	-	https://github.com/GoldLegendW80/llm-video-maker
+hyperframes-motion-reel	bundle	video	zips/packs/Sunwood-ai-labs__hyperframes-motion-reel-skill.zip	0e301ef1bb33e34a3a284536afcfc7323fa146874de6db11cea905c94a39b6cb	38943	HyperFrames Motion Reel	-	https://github.com/Sunwood-ai-labs/hyperframes-motion-reel-skill
+video-spec-builder	bundle	video	zips/packs/feicaiclub__video-spec-builder.zip	387d005fb95a5aef4b0b2493ee06eb1512c056231f72bdecfb88508d560dc6d0	193524	video-spec-builder	-	https://github.com/feicaiclub/video-spec-builder
+live-panel	bundle	video	zips/packs/ythx-101__live-panel-skill.zip	8d816fae7afe8466a07ef215309c3f77db75937db23205cdafb9cc26cf17c940	201422	live-panel	-	https://github.com/ythx-101/live-panel-skill
+blockreel	bundle	video	zips/packs/ViniciusNoetzold__mine-blockreel-skill.zip	fa7474c98c4db8c26c29ed4666482a6866bd524fc76f13f95509606f4eaf6cac	338179	BlockReel	-	https://github.com/ViniciusNoetzold/mine-blockreel-skill-
+prismarine-viewer	external	video	-	-	0	prismarine-viewer	-	https://github.com/PrismarineJS/prismarine-viewer
+mineflayer	external	video	-	-	0	Mineflayer	-	https://github.com/PrismarineJS/mineflayer
+minecraft-mcp	external	video	-	-	0	Minecraft MCP Server	-	https://github.com/yuniko-software/minecraft-mcp-server
+mindcraft	external	video	-	-	0	mindcraft	-	https://github.com/mindcraft-bots/mindcraft
+minecraft-agentic	external	video	-	-	0	Minecraft Agentic Builder	-	https://github.com/NoblerWorks-HQ/minecraft-agentic
+minecraft-builder-mcp	external	video	-	-	0	Minecraft Builder MCP	-	https://github.com/joshdevous/minecraft-builder-claude-mcp-server
+replaymod	external	video	-	-	0	ReplayMod	-	https://github.com/ReplayMod/ReplayMod
+chunky	external	video	-	-	0	Chunky	-	https://github.com/chunky-dev/chunky
+mcprep	external	video	-	-	0	MCprep	-	https://github.com/Moo-Ack-Productions/MCprep
+skinview3d	external	video	-	-	0	skinview3d	-	https://github.com/bs-community/skinview3d
+deepslate	external	video	-	-	0	deepslate	-	https://github.com/misode/deepslate
+claude-animation-base	bundle	video	zips/packs/JohnHeibel__ClaudeAnimationBase.zip	b5c4ecd9d7e6daca4143bf55f4aff47e4dee4c31a212ca46e2170f63aca57fba	58190	Claude Animation Base	-	https://github.com/JohnHeibel/ClaudeAnimationBase
+pdoom-video	external	video	-	-	0	PDoomVideo	-	https://github.com/JohnHeibel/PDoomVideo
+paint-mv-skills	external	video	-	-	0	paint-mv-skills	-	https://github.com/lintsinghua/paint-mv-skills
+whiteboard-video	bundle	video	zips/packs/Matteoikarieth96__whiteboard-video-skill.zip	c003f4d6b477a71e4567ef02d234e219b6a9dc474d6fd8af63a8b0165bd4a77c	49091	whiteboard-video	-	https://github.com/Matteoikarieth96/whiteboard-video-skill
+doudou-whiteboard	external	video	-	-	0	Remotion 화이트보드 엔진	-	https://github.com/undsky/doudou-remotion-whiteboard-skill
+paper-reel	bundle	video	zips/packs/haiderfarooq3__paper-reel.zip	8db8bc38a193fecc6ece76e4e0fb55f5deb7bebbc204e0f62eb2478a28da6af7	89554	paper-reel	-	https://github.com/haiderfarooq3/paper-reel
+papercut-explainer	bundle	video	zips/packs/0xS4N4TG__papercut-explainer.zip	fac39923f177fe0023d68b3fb436f66622f1b35f733f90a0ab44800d0109f0f8	433850	papercut-explainer	-	https://github.com/0xS4N4TG/papercut-explainer
+vox-editorial	external	video	-	-	0	vox-editorial	-	https://github.com/jaredcassoutt/vox-editorial
+claude-animation-skills	external	video	-	-	0	Claude animation skills	-	https://github.com/artemnovitckii/claude-animation-skills
+stick-figure-shorts	external	video	-	-	0	stick-figure-shorts	-	https://github.com/deenukhan/stick-figure-shorts
+manim-ce	external	video	-	-	0	Manim Community	-	https://github.com/ManimCommunity/manim
+manim-3b1b	external	video	-	-	0	Manim (3b1b 원판)	-	https://github.com/3b1b/manim
+manim-skill	bundle	video	zips/packs/Yusuke710__manim-skill.zip	e059c8e0669267fbed2b53389e250843c87c1d30b36f2de26562cd1492d9a405	32998	Manim Skill	-	https://github.com/Yusuke710/manim-skill
+3brown1blue	bundle	video	zips/packs/AmitSubhash__3brown1blue.zip	ed78f68920a9a789e10aaf7b4ef6b6ffdcd8f2d9c1c0253dbb7670276ccb445e	436472	3brown1blue	-	https://github.com/AmitSubhash/3brown1blue
+vumichien-manim	bundle	video	zips/packs/vumichien__manim-skill.zip	b3cd09b681a380ee31239a7193619578f9fa622ac981f2a791b2b098949f10db	271115	manim-skill (4역할)	-	https://github.com/vumichien/manim-skill
+math-to-manim	external	video	-	-	0	Math-To-Manim	-	https://github.com/HarleyCoops/Math-To-Manim
+paper2video	external	video	-	-	0	paper2video	-	https://github.com/SunandBean/paper2video
+remotion-template-tiktok	external	video	-	-	0	Remotion TikTok 자막 템플릿	-	https://github.com/remotion-dev/template-tiktok
+kinetic-editorial	external	video	-	-	0	kinetic-editorial-reel	-	https://github.com/ouerf-man/kinetic-editorial-skill
+remotion-shorts-skill	bundle	video	zips/packs/social-media-skills__remotion-shorts-skill.zip	b2391da5d6a764f9b0b5f3a3fe9392d7e32e0c60b8058074bb3bac8660912001	64058	Remotion Shorts Skill	-	https://github.com/social-media-skills/remotion-shorts-skill
+video-overlays	external	video	-	-	0	video-overlays	-	https://github.com/ONIKOSIOLA/claude-skill-video-overlays
+claude-shorts	external	video	-	-	0	claude-shorts	-	https://github.com/AgriciDaniel/claude-shorts
+p5js	external	video	-	-	0	p5.js	-	https://github.com/processing/p5.js
+threejs	external	video	-	-	0	three.js	-	https://github.com/mrdoob/three.js
+threejs-skills	bundle	video	zips/packs/CloudAI-X__threejs-skills.zip	7951259846980bc614aef5ae114f56489b17b0e1f952af69f78aa8b8dadf4336	106864	Three.js Skills	-	https://github.com/CloudAI-X/threejs-skills
+webgl-animation-skills	bundle	video	zips/packs/iart-ai__webgl-animation-skills.zip	84ff79b3e334d4bf2fe6577fabc4696cae0a97fd3350285e18902667d996db18	49775	WebGL Animation Skills	-	https://github.com/iart-ai/webgl-animation-skills
+map-animation-skills	bundle	video	zips/packs/iart-ai__map-animation-skills.zip	d9e1d3c399a2463879971cc621d69e8d797edd82caa80b60443d90c1983d4cef	27369	Map Animation Skills	-	https://github.com/iart-ai/map-animation-skills
+ccapture	external	video	-	-	0	CCapture	-	https://github.com/spite/ccapture.js
+timecut	external	video	-	-	0	timecut	-	https://github.com/tungs/timecut
+pixijs	external	video	-	-	0	PixiJS	-	https://github.com/pixijs/pixijs
+gsap	external	video	-	-	0	GSAP	-	https://github.com/greensock/GSAP
+theatrejs	external	video	-	-	0	Theatre.js	-	https://github.com/theatre-js/theatre
+claudedesignskills	external	video	-	-	0	Claude Design Skillstack	-	https://github.com/freshtechbro/claudedesignskills
+text-to-lottie	bundle	video	zips/packs/diffusionstudio__lottie.zip	8a1c192e5367c62c8cc7fe3b3c96627350c0f2e5b12f597fcd6c3574961764d0	126825	Text-to-Lottie	-	https://github.com/diffusionstudio/lottie
+lottie-web	external	video	-	-	0	lottie-web	-	https://github.com/airbnb/lottie-web
+pixel2motion	external	video	-	-	0	Pixel2Motion	-	https://github.com/nolangz/pixel2motion
+rive	external	video	-	-	0	Rive 웹 런타임	-	https://github.com/rive-app/rive-wasm
+mografy	external	video	-	-	0	Mografy	-	https://github.com/zz41354899/mografy
+excalidraw-animate	external	video	-	-	0	Excalidraw Animate	-	https://github.com/dai-shi/excalidraw-animate
+roughjs	external	video	-	-	0	Rough.js	-	https://github.com/rough-stuff/rough
+cav	external	video	-	-	0	cav (Cavalry)	-	https://github.com/rock3r/cav
+slidev	external	video	-	-	0	Slidev	-	https://github.com/slidevjs/slidev
+marp	external	video	-	-	0	Marp	-	https://github.com/marp-team/marp
+revealjs	external	video	-	-	0	reveal.js	-	https://github.com/hakimel/reveal.js
+manim-slides	external	video	-	-	0	Manim Slides	-	https://github.com/jeertmans/manim-slides
+vhs	external	video	-	-	0	VHS	-	https://github.com/charmbracelet/vhs
+asciinema	external	video	-	-	0	asciinema	-	https://github.com/asciinema/asciinema
+terminalizer	external	video	-	-	0	Terminalizer	-	https://github.com/faressoft/terminalizer
+asciify	external	video	-	-	0	asciify	-	https://github.com/amrevr/asciify
+record-skill	external	video	-	-	0	record	-	https://github.com/TGPSKI/record
+awesome-video	external	video	-	-	0	Awesome Claude Video Skills	-	https://github.com/zhuyansen/awesome-claude-video-skills
+anthropics-skills	bundle	video	zips/packs/anthropics__skills.zip	151ea25c82692ff736b4edfc14fba5e1e14c0682d13424fda2dbe23db8324c59	35790	Anthropic 공식 스킬	-	https://github.com/anthropics/skills
+composio-awesome	external	video	-	-	0	ComposioHQ Awesome Claude Skills	-	https://github.com/ComposioHQ/awesome-claude-skills
+travisvn-awesome	external	video	-	-	0	awesome-claude-skills (travisvn)	-	https://github.com/travisvn/awesome-claude-skills
+awesome-claude-code	external	video	-	-	0	awesome-claude-code	-	https://github.com/hesreallyhim/awesome-claude-code
+claude-code-templates	external	video	-	-	0	Claude Code Templates	-	https://github.com/davila7/claude-code-templates
+ecc	external	video	-	-	0	ECC (everything-claude-code)	-	https://github.com/affaan-m/ECC
+digitalsamba-toolkit	external	video	-	-	0	claude-code-video-toolkit	-	https://github.com/digitalsamba/claude-code-video-toolkit
+wilwaldon-toolkit	external	video	-	-	0	Claude Code Video Toolkit (목록)	-	https://github.com/wilwaldon/Claude-Code-Video-Toolkit
+andy-video-skill	external	video	-	-	0	Andy-Video-Skill	-	https://github.com/AIPMAndy/Andy-Video-Skill
+film-cli	external	video	-	-	0	code-video (film CLI)	-	https://github.com/dxawdc/code-video
+case-chase	external	video	-	-	0	Claude Now Does Video (FOR FREE)	-	https://www.youtube.com/watch?v=rscb1DgJtNg
+case-claude-pop	external	video	-	-	0	Claude Pop - I'm Upping My P(Doom)	-	https://github.com/JohnHeibel/PDoomVideo
+case-pouya	external	video	-	-	0	Claude Code + Remotion = FREE Motion Graphics	-	https://www.youtube.com/watch?v=kXmY6yQa5q4
+case-andy	external	video	-	-	0	Professional Motion Graphics With Claude Code + Remotion	-	https://www.youtube.com/watch?v=xAUifztpib8
+case-eric	external	video	-	-	0	Claude Code Just Automated My Video Production	-	https://www.youtube.com/watch?v=uK-SNyzmFGI
+case-emergent	external	video	-	-	0	How to Play Minecraft with AI (mindcraft)	-	https://github.com/mindcraft-bots/mindcraft
+case-manim-gen	external	video	-	-	0	Build an AI Math Animation Generator	-	https://github.com/rohitg00/manim-video-generator
+case-paper-reel	external	video	-	-	0	Nobody drew this reel	-	https://www.youtube.com/watch?v=HXAgpEai8pA
+case-history-film	external	video	-	-	0	코드로만 렌더한 3분 AI 역사 영화	-	https://digg.com/ai/w8kapzh5
+case-createwith	external	video	-	-	0	브랜드 영상 600편 제작	-	https://createwith.com/blog/how-we-made-600-branded-videos-with-ai
+case-faceless	external	video	-	-	0	클로드 코드 얼굴 없는 쇼츠 공장	-	https://github.com/hassancs91/claude-faceless-shorts-creator
+sp-anthropics-skills-webapp-testing	external	space	-	-	0	anthropics/skills — webapp-testing	-	https://github.com/anthropics/skills/tree/main/skills/webapp-testing
+sp-projects-blender-org-lab-blender-mcp	external	space	-	-	0	Blender Lab MCP Server (공식, 소스 projects.blender.org/lab/blender_mcp)	-	https://projects.blender.org/lab/blender_mcp
+sp-cloudai-x-threejs-skills	external	space	-	-	0	CloudAI-X/threejs-skills	-	https://github.com/CloudAI-X/threejs-skills
+sp-el4cteo-blender-skills	external	space	-	-	0	EL4CTEO/blender-skills	-	https://github.com/EL4CTEO/blender-skills
+sp-holdmybeer-gg-blenderwright	external	space	-	-	0	HoldMyBeer-gg/blenderwright	-	https://github.com/HoldMyBeer-gg/blenderwright
+sp-microsoft-playwright-mcp	external	space	-	-	0	microsoft/playwright-mcp	-	https://github.com/microsoft/playwright-mcp
+sp-arjun988-blender-skills	external	space	-	-	0	arjun988/blender-skills	-	https://github.com/arjun988/blender-skills
+sp-chromedevtools-chrome-devtools-mcp	external	space	-	-	0	ChromeDevTools/chrome-devtools-mcp	-	https://github.com/ChromeDevTools/chrome-devtools-mcp
+sp-dmitriygolub-threejs-devtools-mcp	external	space	-	-	0	DmitriyGolub/threejs-devtools-mcp	-	https://github.com/DmitriyGolub/threejs-devtools-mcp
+sp-grimashevich-sweethome3d-mcp-server	external	space	-	-	0	grimashevich/sweethome3d-mcp-server	-	https://github.com/grimashevich/sweethome3d-mcp-server
+sp-majidmanzarpour-threejs-game-skills	external	space	-	-	0	majidmanzarpour/threejs-game-skills	-	https://github.com/majidmanzarpour/threejs-game-skills
+sp-moh4696-open-3d-skills	external	space	-	-	0	Moh4696/open-3d-skills	-	https://github.com/Moh4696/open-3d-skills
+sp-nirholas-blender-mcp	external	space	-	-	0	nirholas/blender-mcp (headless)	-	https://github.com/nirholas/blender-mcp
+sp-pjt222-agent-almanac	external	space	-	-	0	pjt222/agent-almanac (create-3d-scene·script-blender-automation 스킬)	-	https://github.com/pjt222/agent-almanac
+sp-r3f-docs-pmnd-rs-llms-txt	external	space	-	-	0	pmndrs 문서 MCP + R3F llms.txt	-	https://r3f.docs.pmnd.rs/llms.txt
+sp-roble3-cc-blender-skill	external	space	-	-	0	RobLe3/cc-blender-skill	-	https://github.com/RobLe3/cc-blender-skill
+sp-scottstts-threejs-awesome-graphics-agent-skills	external	space	-	-	0	scottstts/Threejs-Awesome-Graphics-Agent-Skills	-	https://github.com/scottstts/Threejs-Awesome-Graphics-Agent-Skills
+sp-shi3z-sparkjs-skill	external	space	-	-	0	shi3z/sparkjs-skill	-	https://github.com/shi3z/sparkjs-skill
+sp-impertio-studio-three-js-claude-skill-package	external	space	-	-	0	Three.js Claude Skill Package (Impertio-Studio)	-	https://github.com/Impertio-Studio/Three.js-Claude-Skill-Package
+sp-tmhsdigital-blender-developer-tools	external	space	-	-	0	TMHSDigital/Blender-Developer-Tools	-	https://github.com/TMHSDigital/Blender-Developer-Tools
+sp-upstash-context7	external	space	-	-	0	upstash/context7	-	https://github.com/upstash/context7
+sp-worldlabsai-skills	external	space	-	-	0	worldlabsai/skills (worldlabs·atlas-blender 스킬)	-	https://github.com/worldlabsai/skills
+sp-achimala-dream-loop	external	space	-	-	0	achimala/dream-loop	-	https://github.com/achimala/dream-loop
+sp-anthropics-skills	external	space	-	-	0	anthropics/skills	-	https://github.com/anthropics/skills
+sp-doc-babylonjs-com-toolsandresources-mcpservers	external	space	-	-	0	Babylon.js 공식 MCP 서버(@babylonjs/mcp-servers) + llms.txt	-	https://doc.babylonjs.com/toolsAndResources/mcpServers
+sp-cesartevisual-threejs-skills	external	space	-	-	0	cesartevisual/threejs-skills	-	https://github.com/cesartevisual/threejs-skills
+sp-cl0nazepamm-3dsmax-mcp	external	space	-	-	0	cl0nazepamm/3dsmax-mcp	-	https://github.com/cl0nazepamm/3dsmax-mcp
+sp-cloudai-x-world-labs-skills	external	space	-	-	0	CloudAI-X/world-labs-skills	-	https://github.com/CloudAI-X/world-labs-skills
+sp-coding-solo-godot-mcp	external	space	-	-	0	Coding-Solo/godot-mcp	-	https://github.com/Coding-Solo/godot-mcp
+sp-comfy-org-comfy-mcp	external	space	-	-	0	Comfy-Org/comfy-mcp	-	https://github.com/Comfy-Org/comfy-mcp
+sp-dcc-mcp-dcc-asset-gltf-sample-assets	external	space	-	-	0	dcc-mcp/dcc-asset-gltf-sample-assets	-	https://github.com/dcc-mcp/dcc-asset-gltf-sample-assets
+sp-dcc-mcp-dcc-asset-polyhaven	external	space	-	-	0	dcc-mcp/dcc-asset-polyhaven	-	https://github.com/dcc-mcp/dcc-asset-polyhaven
+sp-dcc-mcp-dcc-mcp-core	external	space	-	-	0	dcc-mcp/dcc-mcp-core	-	https://github.com/dcc-mcp/dcc-mcp-core
+sp-dcc-mcp-dcc-mcp-sketchup	external	space	-	-	0	dcc-mcp/dcc-mcp-sketchup	-	https://github.com/dcc-mcp/dcc-mcp-sketchup
+sp-fangdididi-texture-set-intake	external	space	-	-	0	fangdididi/texture-set-intake	-	https://github.com/fangdididi/texture-set-intake
+sp-fkrn75-gaussian-splat-to-mesh	external	space	-	-	0	fkrn75/gaussian-splat-to-mesh	-	https://github.com/fkrn75/gaussian-splat-to-mesh
+sp-flopperam-unreal-engine-mcp	external	space	-	-	0	flopperam/unreal-engine-mcp	-	https://github.com/flopperam/unreal-engine-mcp
+sp-freshtechbro-claudedesignskills	external	space	-	-	0	freshtechbro/claudedesignskills	-	https://github.com/freshtechbro/claudedesignskills
+sp-gokayfem-gaussian-splat-to-blender-nodes	external	space	-	-	0	gaussian-splat-to-blender-nodes (에이전트 스킬)	-	https://github.com/gokayfem/gaussian-splat-to-blender-nodes
+sp-gokayfem-shader-skills	external	space	-	-	0	gokayfem/shader-skills	-	https://github.com/gokayfem/shader-skills
+sp-hueflowstudio-hueflow-sketchup-mcp	external	space	-	-	0	hueflowstudio/hueflow-sketchup-mcp	-	https://github.com/hueflowstudio/hueflow-sketchup-mcp
+sp-instruktlabs-kiln	external	space	-	-	0	instruktlabs/kiln	-	https://github.com/instruktlabs/kiln
+sp-keeno-corp-paprika3d	external	space	-	-	0	Keeno-Corp/paprika3d	-	https://github.com/Keeno-Corp/paprika3d
+sp-jeremylongshore-tons-of-skills-marketplace-klingai-c	external	space	-	-	0	klingai-camera-control 스킬 (jeremylongshore/tons-of-skills-marketplace)	-	https://github.com/jeremylongshore/tons-of-skills-marketplace/tree/main/plugins/saas-packs/klingai-pack/skills/klingai-camera-control
+sp-laaielichter-threesmith	external	space	-	-	0	laaielichter/Threesmith	-	https://github.com/laaielichter/Threesmith
+sp-laowang-wy-adai-sketchup-skill-mcp	external	space	-	-	0	laowang-wy/adai-sketchup-skill-mcp	-	https://github.com/laowang-wy/adai-sketchup-skill-mcp
+sp-lhlgithub-threejs-architecture-effects	external	space	-	-	0	lhlGitHub/threejs-architecture-effects	-	https://github.com/lhlGitHub/threejs-architecture-effects
+sp-lichtpfad-gaussian-splat-skill	external	space	-	-	0	lichtpfad/gaussian-splat-skill	-	https://github.com/lichtpfad/gaussian-splat-skill
+sp-lusilong-blender-mcp-plus	external	space	-	-	0	lusilong/blender-mcp-plus	-	https://github.com/lusilong/blender-mcp-plus
+sp-lxie-leo-meshify	external	space	-	-	0	lxie-leo/meshify	-	https://github.com/lxie-leo/meshify
+sp-max-786-claude-3d-harness	external	space	-	-	0	MAX-786/claude-3d-harness	-	https://github.com/MAX-786/claude-3d-harness
+sp-meshy-dev-meshy-3d-agent	external	space	-	-	0	meshy-dev/meshy-3d-agent	-	https://github.com/meshy-dev/meshy-3d-agent
+sp-mhyrr-sketchup-mcp	external	space	-	-	0	mhyrr/sketchup-mcp	-	https://github.com/mhyrr/sketchup-mcp
+sp-mintdotgg-mint-threejs-skills	external	space	-	-	0	mintdotgg/mint-threejs-skills	-	https://github.com/mintdotgg/mint-threejs-skills
+sp-mlolson-blender-orchestrator	external	space	-	-	0	mlolson/blender-orchestrator	-	https://github.com/mlolson/blender-orchestrator
+sp-paulodinis-floorplan-to-3d-house	external	space	-	-	0	paulodinis/floorplan-to-3d-house	-	https://github.com/paulodinis/floorplan-to-3d-house
+sp-samg-coder-threebrowserstudio	external	space	-	-	0	SamG-Coder/ThreeBrowserStudio	-	https://github.com/SamG-Coder/ThreeBrowserStudio
+sp-samuelasherrivello-ai-skills-blender	external	space	-	-	0	SamuelAsherRivello/ai-skills-blender	-	https://github.com/SamuelAsherRivello/ai-skills-blender
+sp-scenario-labs-skills	external	space	-	-	0	scenario-labs/skills	-	https://github.com/scenario-labs/skills
+sp-shattenjagger-sketchup-mcp-bridge	external	space	-	-	0	Shattenjagger/sketchup-mcp-bridge	-	https://github.com/Shattenjagger/sketchup-mcp-bridge
+sp-spaitial-ai-spaitial-ai-plugin	external	space	-	-	0	spaitial-ai/spaitial-ai-plugin	-	https://github.com/spaitial-ai/spaitial-ai-plugin
+sp-starryark-ref2scene	external	space	-	-	0	starryark/ref2scene	-	https://github.com/starryark/ref2scene
+sp-tallslab-threeforge	external	space	-	-	0	tallslab/threeforge	-	https://github.com/tallslab/threeforge
+sp-api-sketchup-com-mcp-v1-sketchup-mcp	external	space	-	-	0	Trimble SketchUp 공식 커넥터(원격 MCP)	-	https://api.sketchup.com/mcp/v1/sketchup/mcp
+sp-iart-ai-webgl-animation-skills	external	space	-	-	0	webgl-animation-skills (iart-ai)	-	https://github.com/iart-ai/webgl-animation-skills
+sp-dgreenheck-webgpu-claude-skill	external	space	-	-	0	webgpu-claude-skill	-	https://github.com/dgreenheck/webgpu-claude-skill
+sp-zinin-sketchup-mcp2	external	space	-	-	0	zinin/sketchup-mcp2	-	https://github.com/zinin/sketchup-mcp2
+sp-binomialllc-basis-universal	external	space	-	-	0	Basis Universal v2.5 (BinomialLLC/basis_universal)	-	https://github.com/BinomialLLC/basis_universal
+sp-blender-blender	external	space	-	-	0	Blender 본체(GitHub 미러)	-	https://github.com/blender/blender
+sp-colour-science-colour	external	space	-	-	0	colour-science/colour	-	https://github.com/colour-science/colour
+sp-depthanything-depth-anything-v2	external	space	-	-	0	Depth Anything V2	-	https://github.com/DepthAnything/Depth-Anything-V2
+sp-dingkeyan93-dists	external	space	-	-	0	DISTS (dingkeyan93/DISTS)	-	https://github.com/dingkeyan93/DISTS
+sp-exiftool-exiftool	external	space	-	-	0	exiftool/exiftool	-	https://github.com/exiftool/exiftool
+sp-cvg-geocalib	external	space	-	-	0	GeoCalib (cvg/GeoCalib)	-	https://github.com/cvg/GeoCalib
+sp-gfxdisp-colorvideovdp	external	space	-	-	0	gfxdisp/ColorVideoVDP	-	https://github.com/gfxdisp/ColorVideoVDP
+sp-khronosgroup-ktx-software	external	space	-	-	0	KTX-Software (toktx / ktx create)	-	https://github.com/KhronosGroup/KTX-Software
+sp-cvg-lightglue	external	space	-	-	0	LightGlue (cvg/LightGlue)	-	https://github.com/cvg/LightGlue
+sp-lovell-sharp	external	space	-	-	0	lovell/sharp (libvips 기반 타일 생성)	-	https://github.com/lovell/sharp
+sp-richzhang-perceptualsimilarity	external	space	-	-	0	LPIPS (richzhang/PerceptualSimilarity)	-	https://github.com/richzhang/PerceptualSimilarity
+sp-prs-eth-marigold	external	space	-	-	0	Marigold v1.1 (prs-eth/Marigold) — Depth·Normals·IID Appearance·IID Lighting	-	https://github.com/prs-eth/Marigold
+sp-zeux-meshoptimizer	external	space	-	-	0	meshoptimizer (gltfpack)	-	https://github.com/zeux/meshoptimizer
+sp-microsoft-moge	external	space	-	-	0	microsoft/MoGe	-	https://github.com/microsoft/MoGe
+sp-mrnerf-lichtfeld-studio	external	space	-	-	0	MrNeRF/LichtFeld-Studio	-	https://github.com/MrNeRF/LichtFeld-Studio
+sp-nerfstudio-project-gsplat	external	space	-	-	0	nerfstudio-project/gsplat	-	https://github.com/nerfstudio-project/gsplat
+sp-opencv-opencv	external	space	-	-	0	OpenCV (SIFT·USAC_MAGSAC·warpPerspective)	-	https://github.com/opencv/opencv
+sp-photosynthesis-team-piq	external	space	-	-	0	photosynthesis-team/piq	-	https://github.com/photosynthesis-team/piq
+sp-playcanvas-splat-transform	external	space	-	-	0	playcanvas/splat-transform	-	https://github.com/playcanvas/splat-transform
+sp-playcanvas-supersplat	external	space	-	-	0	playcanvas/supersplat (SuperSplat 편집기)	-	https://github.com/playcanvas/supersplat
+sp-facebookresearch-sam3	external	space	-	-	0	SAM 3 / SAM 3.1 (facebookresearch/sam3)	-	https://github.com/facebookresearch/sam3
+sp-scikit-image-scikit-image	external	space	-	-	0	scikit-image	-	https://github.com/scikit-image/scikit-image
+sp-sunset1995-py360convert	external	space	-	-	0	sunset1995/py360convert / ProGamerGov/pytorch360convert (+ComfyUI_pytorch360convert)	-	https://github.com/sunset1995/py360convert
+sp-yunfanye-openhouse-3d	external	space	-	-	0	yunfanye/openhouse-3d	-	https://github.com/yunfanye/openhouse-3d
+sp-academysoftwarefoundation-openexr	external	space	-	-	0	AcademySoftwareFoundation/openexr	-	https://github.com/AcademySoftwareFoundation/openexr
+sp-adobe-trustmark	external	space	-	-	0	adobe/trustmark	-	https://github.com/adobe/trustmark
+sp-shiaoming-aliked	external	space	-	-	0	ALIKED	-	https://github.com/Shiaoming/ALIKED
+sp-aomediacodec-libavif	external	space	-	-	0	AOMediaCodec/libavif	-	https://github.com/AOMediaCodec/libavif
+sp-arthurbrussee-brush	external	space	-	-	0	ArthurBrussee/brush	-	https://github.com/ArthurBrussee/brush
+sp-blenderkit-blendkit	external	space	-	-	0	BlenderKit/Blendkit (구 BlenderKit)	-	https://github.com/BlenderKit/Blendkit
+sp-cesiumgs-webglreport	external	space	-	-	0	CesiumGS/webglreport	-	https://github.com/CesiumGS/webglreport
+sp-contentauth-c2pa-rs	external	space	-	-	0	contentauth/c2pa-rs	-	https://github.com/contentauth/c2pa-rs
+sp-cvlab-epfl-disk	external	space	-	-	0	DISK	-	https://github.com/cvlab-epfl/disk
+sp-dlr-rm-blenderproc	external	space	-	-	0	DLR-RM/BlenderProc	-	https://github.com/DLR-RM/BlenderProc
+sp-facebookresearch-vggt	external	space	-	-	0	facebookresearch/vggt	-	https://github.com/facebookresearch/vggt
+sp-fuenwang-equirec2perspec	external	space	-	-	0	fuenwang/Equirec2Perspec	-	https://github.com/fuenwang/Equirec2Perspec
+sp-guofei9987-blind-watermark	external	space	-	-	0	guofei9987/blind_watermark	-	https://github.com/guofei9987/blind_watermark
+sp-artokun-comfyui-mcp	external	space	-	-	0	artokun/comfyui-mcp	-	https://github.com/artokun/comfyui-mcp
+sp-judyzz-threejs-parallax-skill	external	space	-	-	0	JudyZZ/threejs-parallax-skill	-	https://github.com/JudyZZ/threejs-parallax-skill
+sp-h-canopy-2d-to-3d-web	external	space	-	-	0	H-Canopy/2d-to-3d-web	-	https://github.com/H-Canopy/2d-to-3d-web
+sp-kpal81xd-spatial-artifacts	external	space	-	-	0	kpal81xd/spatial-artifacts	-	https://github.com/kpal81xd/spatial-artifacts
+sp-roeea2-scrolling-web-site-with-vidtsx	external	space	-	-	0	roeea2/scrolling-web-site-with-vidtsx (Claude Code 스킬)	-	https://github.com/roeea2/scrolling-web-site-with-vidtsx
+sp-annotorious-annotorious	external	space	-	-	0	Annotorious v3	-	https://github.com/annotorious/annotorious
+sp-huggingface-co-onnx-community-depth-anything-v2-smal	external	space	-	-	0	Depth Anything V2 (DepthAnything/Depth-Anything-V2) + onnx-community/depth-anything-v2-small	-	https://huggingface.co/onnx-community/depth-anything-v2-small
+sp-strawdynamics-drift	external	space	-	-	0	Drift (strawdynamics/drift)	-	https://github.com/strawdynamics/drift
+sp-facebookresearch-sam2	external	space	-	-	0	facebookresearch/sam2	-	https://github.com/facebookresearch/sam2
+sp-image-js-fast-png	external	space	-	-	0	image-js/fast-png	-	https://github.com/image-js/fast-png
+sp-sneas-img-comparison-slider	external	space	-	-	0	img-comparison-slider	-	https://github.com/sneas/img-comparison-slider
+sp-libvips-libvips	external	space	-	-	0	libvips/libvips	-	https://github.com/libvips/libvips
+sp-openseadragon-openseadragon	external	space	-	-	0	OpenSeadragon	-	https://github.com/openseadragon/openseadragon
+sp-mrdoob-three-js	external	space	-	-	0	three.js r187	-	https://github.com/mrdoob/three.js
+sp-annotorious-annotorious-annotorious-openseadragon	external	space	-	-	0	@annotorious/openseadragon	-	https://github.com/annotorious/annotorious/tree/main/packages/annotorious-openseadragon
+sp-bytedance-seed-depth-anything-3	external	space	-	-	0	ByteDance-Seed/Depth-Anything-3	-	https://github.com/ByteDance-Seed/Depth-Anything-3
+sp-brokensource-depthflow	external	space	-	-	0	DepthFlow (BrokenSource/DepthFlow)	-	https://github.com/BrokenSource/DepthFlow
+sp-google-model-viewer	external	space	-	-	0	google/model-viewer	-	https://github.com/google/model-viewer
+sp-ahujasid-mcp-for-blender	external	space	-	-	0	ahujasid/mcp-for-blender(옛 blender-mcp)	-	https://github.com/ahujasid/mcp-for-blender
+sp-oisinryan-unreal-360-render-skill	external	space	-	-	0	oisinryan/unreal-360-render-skill	-	https://github.com/oisinryan/unreal-360-render-skill
+sp-sunset1995-horizonnet	external	space	-	-	0	HorizonNet (sunset1995/HorizonNet)	-	https://github.com/sunset1995/HorizonNet
+sp-mpetroff-pannellum	external	space	-	-	0	Pannellum	-	https://github.com/mpetroff/pannellum
+sp-mistic100-photo-sphere-viewer	external	space	-	-	0	Photo Sphere Viewer	-	https://github.com/mistic100/Photo-Sphere-Viewer
+sp-img2threejs-plugin-interior	external	space	-	-	0	img2threejs/plugin-interior (img2 Interior)	-	https://github.com/img2threejs/plugin-interior
+sp-playcanvas-skills	external	space	-	-	0	playcanvas/skills v0.6.2	-	https://github.com/playcanvas/skills
+sp-saad-git-007-claude-skills	external	space	-	-	0	saad-git-007/claude-skills → web3d-realism-performance	-	https://github.com/saad-git-007/claude-skills
+sp-viettranx-3dviz-pro-max	external	space	-	-	0	viettranx/3dviz-pro-max	-	https://github.com/viettranx/3dviz-pro-max
+sp-gamedev-skills-awesome-gamedev-agent-skills	external	space	-	-	0	gamedev-skills/awesome-gamedev-agent-skills	-	https://github.com/gamedev-skills/awesome-gamedev-agent-skills
+sp-playcanvas-editor-mcp-server	external	space	-	-	0	playcanvas/editor-mcp-server	-	https://github.com/playcanvas/editor-mcp-server
+sp-yomotsu-camera-controls	external	space	-	-	0	camera-controls	-	https://github.com/yomotsu/camera-controls
+sp-donmccurdy-gltf-transform	external	space	-	-	0	glTF-Transform	-	https://github.com/donmccurdy/glTF-Transform
+sp-khronosgroup-gltf-blender-io	external	space	-	-	0	KhronosGroup/glTF-Blender-IO	-	https://github.com/KhronosGroup/glTF-Blender-IO
+sp-sparkjsdev-spark	external	space	-	-	0	sparkjsdev/spark (Spark 2.x)	-	https://github.com/sparkjsdev/spark
+sp-gkjohnson-three-gpu-pathtracer	external	space	-	-	0	three-gpu-pathtracer	-	https://github.com/gkjohnson/three-gpu-pathtracer
+sp-gkjohnson-three-mesh-bvh	external	space	-	-	0	three-mesh-bvh	-	https://github.com/gkjohnson/three-mesh-bvh
+sp-babylonjs-babylon-js	external	space	-	-	0	BabylonJS/Babylon.js	-	https://github.com/BabylonJS/Babylon.js
+sp-pmndrs-drei	external	space	-	-	0	drei	-	https://github.com/pmndrs/drei
+sp-google-draco	external	space	-	-	0	google/draco	-	https://github.com/google/draco
+sp-chir24-unreal-mcp	external	space	-	-	0	ChiR24/Unreal_mcp	-	https://github.com/ChiR24/Unreal_mcp
+sp-coplaydev-unity-mcp	external	space	-	-	0	CoplayDev/unity-mcp	-	https://github.com/CoplayDev/unity-mcp
+sp-danielcanton-webxr-dev-skill	external	space	-	-	0	danielcanton/webxr-dev-skill	-	https://github.com/danielcanton/webxr-dev-skill
+sp-epicgames-unreal-engine-skills-for-claude-code-plugi	external	space	-	-	0	EpicGames/unreal-engine-skills-for-claude-code-plugin + Unreal MCP(에디터 내장)	-	https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin
+sp-ivanmurzak-unity-mcp	external	space	-	-	0	IvanMurzak/Unity-MCP	-	https://github.com/IvanMurzak/Unity-MCP
+sp-tumourlove-monolith	external	space	-	-	0	tumourlove/monolith	-	https://github.com/tumourlove/monolith
+sp-unity-technologies-unity-agent-plugin	external	space	-	-	0	Unity-Technologies/unity-agent-plugin (Unity 공식)	-	https://github.com/Unity-Technologies/unity-agent-plugin

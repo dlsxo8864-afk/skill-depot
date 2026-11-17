@@ -72,10 +72,20 @@ fetch() {
   }
 }
 
+# 있던 폴더를 옆의 백업 폴더로 옮긴다(지우지 않는다)
+move_aside() {
+  local target="$1" backup_root="$2" stamp="$3"
+  [ -e "$target" ] || return 0
+  mkdir -p "$backup_root" || return 1
+  mv "$target" "$backup_root/$(basename "$target")-$stamp" || return 1
+  say "  있던 폴더는 남겨 둠: $backup_root/$(basename "$target")-$stamp"
+}
+
 kind_name() {
   case "$1" in
     skill) printf '스킬' ;;
     command) printf '명령어' ;;
+    bundle) printf '스킬 묶음' ;;
     external) printf '원본 설치' ;;
     builtin) printf '앱 기본' ;;
     *) printf '%s' "$1" ;;
@@ -192,16 +202,43 @@ LIST
       warn "$want: zip 안에 SKILL.md 가 없습니다. 설치하지 않습니다."
       return 1
     fi
-    local target="$skills_dir/$want"
     mkdir -p "$skills_dir" || return 1
-    if [ -e "$target" ]; then
-      local bak="${skills_dir}-backup/$want-$stamp"
-      mkdir -p "${skills_dir}-backup" || return 1
-      mv "$target" "$bak" || return 1
-      say "  있던 폴더는 남겨 둠: $bak"
+    move_aside "$skills_dir/$want" "${skills_dir}-backup" "$stamp" || return 1
+    mv "$ext" "$skills_dir/$want" || return 1
+    say "설치됨: $skills_dir/$want"
+  elif [ "$kind" = "bundle" ]; then
+    # 받은 묶음 안에서 SKILL.md 가 있는 폴더를 모두 스킬로 설치한다(얕은 폴더부터)
+    mkdir -p "$skills_dir" || return 1
+    local found one dir skill_name seen="|" count=0
+    found=$(find "$ext" -type f -name SKILL.md -not -path "*/node_modules/*" | awk '{ print length($0) "\t" $0 }' | sort -n | cut -f2-)
+    if [ -z "$found" ]; then
+      mkdir -p "${skills_dir}-packs" || return 1
+      move_aside "${skills_dir}-packs/$want" "${skills_dir}-backup" "$stamp" || return 1
+      mv "$ext" "${skills_dir}-packs/$want" || return 1
+      say "받음: ${skills_dir}-packs/$want"
+      say "  스킬 형식(SKILL.md)이 아닙니다. 안의 README 를 읽고 따르세요."
+    else
+      while IFS= read -r one; do
+        [ -z "$one" ] && continue
+        dir=$(dirname "$one")
+        skill_name=$(basename "$dir")
+        [ "$dir" = "$ext" ] && skill_name="$want"
+        case "$seen" in
+          *"|$skill_name|"*)
+            say "  이름이 겹쳐 건너뜀: $skill_name (${dir#"$ext"/})"
+            continue
+            ;;
+        esac
+        seen="$seen$skill_name|"
+        move_aside "$skills_dir/$skill_name" "${skills_dir}-backup" "$stamp" || return 1
+        cp -R "$dir" "$skills_dir/$skill_name" || return 1
+        say "설치됨: $skills_dir/$skill_name"
+        count=$((count + 1))
+      done <<FOUND
+$found
+FOUND
+      say "  묶음 $want 에서 스킬 ${count}개를 설치했습니다."
     fi
-    mv "$ext" "$target" || return 1
-    say "설치됨: $target"
   else
     mkdir -p "$commands_dir" || return 1
     local f base to

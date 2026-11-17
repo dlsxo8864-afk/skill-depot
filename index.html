@@ -34,6 +34,7 @@
   }
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -189,6 +190,26 @@ details.files li span { color: var(--ink2); flex: none; }
 .md th { background: var(--soft); font-weight: 600; }
 .md blockquote { margin: 8px 0; padding: 2px 14px; border-left: 3px solid var(--line); color: var(--ink2); }
 
+/* 모음 고르기 */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 26px 0 0; }
+.chips button { border: 1px solid var(--line); background: var(--shelf); border-radius: 5px; padding: 7px 13px; font-size: 15px; white-space: nowrap; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--shelf); border-color: var(--ink); font-weight: 600; }
+.chips button .n { font-weight: 400; opacity: .65; margin-left: 5px; font-size: 13px; }
+.chips + .basis { margin: 12px 0 0; max-width: 60em; }
+.chips ~ .controls { padding: 14px 0 18px; }
+#cats { border: 1px solid var(--line); border-radius: 5px; background: var(--shelf); padding: 7px 10px; font: inherit; font-size: 15px; color: inherit; max-width: 100%; }
+.points { margin: 0 0 14px; padding: 0; list-style: none; font-size: 14px; max-width: 46em; }
+.points li { padding-left: 4.6em; text-indent: -4.6em; margin: 3px 0; }
+.points li b { display: inline-block; width: 4.6em; text-indent: 0; font-weight: 500; color: var(--ink2); }
+.how { margin: 0 0 14px; padding: 10px 14px; background: var(--soft); border-radius: 5px; font-size: 14px; max-width: 46em; }
+.how strong { font-weight: 600; }
+
+/* 긴 라이선스 문구·주소가 칸을 밀어내지 않게 */
+.row-head > * { min-width: 0; }
+.use.none b { flex: 1 1 auto; overflow-wrap: anywhere; }
+.what .title, .what .sum, .desc, .desc-src, .how, .points li, .facts dd, .links a, .cmd-note, .when span { overflow-wrap: anywhere; }
+.facts { grid-template-columns: max-content minmax(0, 1fr); }
+
 .empty { padding: 34px 18px; color: var(--ink2); }
 .foot { padding: 0 0 48px; font-size: 13px; color: var(--ink2); }
 .foot a { color: inherit; }
@@ -231,15 +252,16 @@ details.files li span { color: var(--ink2); flex: none; }
 </section>
 
 <main class="wrap">
+  <div class="chips" id="groups" role="group" aria-label="모음"></div>
+  <p class="basis" id="basis"></p>
   <div class="controls">
-    <div class="seg" id="groups" role="group" aria-label="분류"></div>
+    <select id="cats" aria-label="분류" hidden></select>
     <div class="seg" id="sorts" role="group" aria-label="순서">
       <button type="button" data-sort="usage">많이 쓴 순</button>
       <button type="button" data-sort="recent">최근 배운 순</button>
     </div>
     <label class="search"><input id="q" type="search" placeholder="이름이나 설명으로 찾기" aria-label="스킬 찾기"></label>
   </div>
-  <p class="basis" id="basis"></p>
   <div class="packs" id="packs"></div>
   <ul class="list" id="list"></ul>
 </main>
@@ -256,13 +278,9 @@ details.files li span { color: var(--ink2); flex: none; }
     ? EMBEDDED.replace(/\/$/, "")
     : location.href.replace(/[#?].*$/, "").replace(/index\.html$/, "").replace(/\/$/, "");
 
-  const GROUPS = [
-    { id: "mine", label: "내 스킬" },
-    { id: "external", label: "외부 스킬" },
-    { id: "builtin", label: "앱 기본" },
-    { id: "all", label: "전체" },
-  ];
-  const KIND_TAG = { command: "명령어", external: "원본에서 설치", builtin: "앱에 들어 있음" };
+  let GROUPS = [];        // catalog.collections 에서 채운다
+  let colById = {};
+  const KIND_TAG = { command: "명령어", bundle: "스킬 묶음 zip", external: "원본에서 받기", builtin: "앱에 들어 있음" };
   const AGENT_NAME = { claude: "Claude Code", codex: "Codex" };
 
   const store = {
@@ -270,7 +288,7 @@ details.files li span { color: var(--ink2); flex: none; }
     set(k, v) { try { localStorage.setItem("depot." + k, v); } catch (e) { /* 저장 못 해도 그대로 동작 */ } },
   };
   const state = {
-    group: "mine", sort: "usage", q: "", open: null,
+    group: "mine", category: "", sort: "usage", q: "", open: null,
     os: store.get("os", /Win/i.test(navigator.platform || navigator.userAgent) ? "win" : "sh"),
     agent: store.get("agent", "claude"),
   };
@@ -411,30 +429,55 @@ details.files li span { color: var(--ink2); flex: none; }
     const p = it.preview || {};
     const poster = p.type === "video" ? p.poster : (p.type === "image" ? p.src : null);
     if (poster) return el("img", { class: big ? null : "thumb", src: poster, alt: "", loading: "lazy" });
+    if (it.kind === "bundle") return el("span", { class: "paper" }, [el("b", { text: "zip" }), size(it.zip.bytes)]);
     if (it.zip) return el("span", { class: "paper" }, [el("b", { text: String(it.file_count) }), "파일"]);
-    return el("span", { class: "paper out", text: it.group === "builtin" ? "기본" : "외부" });
+    return el("span", { class: "paper out", text: it.group === "builtin" ? "기본" : (it.imported ? "링크" : "외부") });
   }
 
   function visible() {
     const q = state.q.trim().toLowerCase();
     let items = cat.items.filter((it) => state.group === "all" || it.group === state.group);
-    if (q) items = items.filter((it) => [it.name, it.title, it.summary, it.description].join(" ").toLowerCase().includes(q));
+    if (state.category) items = items.filter((it) => it.category === state.category);
+    if (q) items = items.filter((it) => [it.name, it.title, it.summary, it.description, it.license, (it.source || {}).label].join(" ").toLowerCase().includes(q));
+    // 모아 둔 목록은 모은 순서(분류 순)를 그대로 둔다
+    if (isImported(state.group)) return items;
     const recent = (it) => it.added || "";
-    items = items.slice().sort((a, b) => state.sort === "usage"
-      ? (b.usage.calls - a.usage.calls) || recent(b).localeCompare(recent(a)) || a.name.localeCompare(b.name)
-      : recent(b).localeCompare(recent(a)) || (b.usage.calls - a.usage.calls) || a.name.localeCompare(b.name));
-    return items;
+    return items.slice().sort((a, b) => state.sort === "usage"
+      ? (b.usage.calls - a.usage.calls) || recent(b).localeCompare(recent(a)) || (a._i - b._i)
+      : recent(b).localeCompare(recent(a)) || (b.usage.calls - a.usage.calls) || (a._i - b._i));
   }
+
+  const isImported = (group) => !!(colById[group] && colById[group].imported);
 
   function renderControls() {
     const g = $("groups");
-    g.replaceChildren(...GROUPS.map((x) => {
-      const n = x.id === "all" ? cat.items.length : cat.items.filter((it) => it.group === x.id).length;
-      return el("button", {
-        type: "button", "aria-pressed": String(state.group === x.id),
-        onclick: () => { state.group = x.id; state.open = null; render(); },
-      }, [x.label, el("span", { class: "n", text: String(n) })]);
-    }));
+    g.replaceChildren(...GROUPS.map((x) => el("button", {
+      type: "button", "aria-pressed": String(state.group === x.id),
+      onclick: () => { state.group = x.id; state.category = ""; state.open = null; render(); },
+    }, [x.label, el("span", { class: "n", text: String(x.count) })])));
+
+    // 모음 설명
+    const col = colById[state.group];
+    const w = cat.usage_window;
+    let text = col ? col.desc : "받을 수 있는 것과 목록만 있는 것을 모두 보여 줍니다.";
+    if (col && col.imported) {
+      text += ` ${col.source || ""}${col.collected ? ", " + col.collected + " 수집" : ""}. 라이선스는 쓰기 전에 원문을 다시 확인하세요.`;
+    } else if (w && w.from) {
+      text += ` 사용 횟수는 ${w.from}부터 ${w.to}까지의 대화 기록에서 셌습니다(Claude는 스킬을 부른 횟수, Codex는 스킬 문서를 연 대화 수).`;
+    }
+    $("basis").textContent = text;
+
+    // 분류 고르기(분류가 있는 모음에서만)
+    const sel = $("cats");
+    const cats = col && col.categories ? col.categories : [];
+    sel.hidden = cats.length === 0;
+    sel.replaceChildren(
+      el("option", { value: "", text: `모든 분류 (${col ? col.count : 0})` }),
+      ...cats.map((c) => el("option", { value: c.id, text: `${c.label} (${c.count})` })),
+    );
+    sel.value = state.category;
+
+    $("sorts").hidden = isImported(state.group);
     for (const b of $("sorts").children) b.setAttribute("aria-pressed", String(b.dataset.sort === state.sort));
   }
 
@@ -473,22 +516,40 @@ details.files li span { color: var(--ink2); flex: none; }
     list.replaceChildren(...items.map(rowFor));
   }
 
+  function catLabel(it) {
+    const col = colById[it.group];
+    const c = col && it.category ? (col.categories || []).find((x) => x.id === it.category) : null;
+    return c ? c.label : "";
+  }
+
   function rowFor(it) {
     const open = state.open === it.name;
     const tags = [];
-    if (KIND_TAG[it.kind]) tags.push(el("span", { class: "tag", text: KIND_TAG[it.kind] }));
+    if (KIND_TAG[it.kind] && !(it.imported && it.kind === "external")) tags.push(el("span", { class: "tag", text: KIND_TAG[it.kind] }));
+    if (it.type_label) tags.push(el("span", { class: "tag", text: it.type_label }));
+    if (it.badge) tags.push(el("span", { class: "tag", text: it.badge }));
     if (it.needs && it.needs.length) tags.push(el("span", { class: "tag need", text: "따로 필요한 것 있음" }));
     const u = it.usage;
-    const use = u.calls > 0
-      ? el("div", { class: "use" }, [
-          el("span", { class: "bar" }, el("i", { style: `width:${Math.max(4, Math.sqrt(u.calls / maxCalls) * 100).toFixed(1)}%` })),
-          el("b", { text: u.calls + "회" }),
-        ])
-      : el("div", { class: "use none" }, el("b", { text: "사용 기록 없음" }));
-    const when = el("div", { class: "when" }, [
-      it.added ? el("span", { text: "배운 날 " + day(it.added) }) : null,
-      u.last ? el("span", { text: "최근 사용 " + day(u.last) }) : null,
-    ]);
+    let use, when;
+    if (it.imported) {
+      use = el("div", { class: "use none" }, el("b", { text: it.license || "라이선스 미확인" }));
+      when = el("div", { class: "when" }, [
+        it.stars ? el("span", { text: "별 " + Number(it.stars).toLocaleString("ko-KR") }) : null,
+        it.commercial ? el("span", { text: "상업 이용 " + it.commercial }) : null,
+        catLabel(it) && (state.group === "all" || !state.category) ? el("span", { text: catLabel(it) }) : null,
+      ]);
+    } else {
+      use = u.calls > 0
+        ? el("div", { class: "use" }, [
+            el("span", { class: "bar" }, el("i", { style: `width:${Math.max(4, Math.sqrt(u.calls / maxCalls) * 100).toFixed(1)}%` })),
+            el("b", { text: u.calls + "회" }),
+          ])
+        : el("div", { class: "use none" }, el("b", { text: "사용 기록 없음" }));
+      when = el("div", { class: "when" }, [
+        it.added ? el("span", { text: "배운 날 " + day(it.added) }) : null,
+        u.last ? el("span", { text: "최근 사용 " + day(u.last) }) : null,
+      ]);
+    }
     const head = el("button", {
       class: "row-head", type: "button", "aria-expanded": String(open), "aria-controls": "panel-" + it.name,
       onclick: () => { state.open = open ? null : it.name; history.replaceState(null, "", open ? location.pathname + location.search : "#" + it.name); renderList(); },
@@ -520,26 +581,54 @@ details.files li span { color: var(--ink2); flex: none; }
     })));
   }
 
+  function linkList(it) {
+    const out = [];
+    const seen = new Set();
+    const add = (label, url) => {
+      if (!url || seen.has(url)) return;
+      seen.add(url);
+      out.push(el("a", { href: url, target: "_blank", rel: "noopener", text: label }));
+    };
+    if (it.source) add("원본: " + it.source.label, it.source.url);
+    for (const l of it.links || []) add(l.label, l.url);
+    return out;
+  }
+  function bundleNote(it) {
+    const names = it.skills_in_zip || [];
+    if (!names.length) return "스킬 형식(SKILL.md)이 아닌 묶음입니다. skills-packs 폴더에 풀어 두니, 안의 README를 따르세요.";
+    const shown = names.slice(0, 6).join(", ") + (names.length > 6 ? ` 외 ${names.length - 6}개` : "");
+    return `zip 안에서 SKILL.md가 있는 폴더 ${names.length}개를 모두 스킬로 설치합니다: ${shown}. 같은 이름의 폴더가 있으면 남겨 두고 설치합니다.`;
+  }
+
   function getBlock(it) {
     const box = el("div", { class: "get" });
     const draw = () => {
       const kids = [el("h3", { text: "받기" })];
       if (it.zip) {
         const cmdOnly = it.kind === "command";
+        const bundle = it.kind === "bundle";
         const agent = cmdOnly ? "claude" : state.agent;
-        kids.push(cmdBlock("CLI에 시킬 말", () => sayFor(it.name, cmdOnly ? "명령어" : "스킬")));
+        kids.push(cmdBlock("CLI에 시킬 말", () => sayFor(it.name, cmdOnly ? "명령어" : (bundle ? "스킬 묶음" : "스킬"))));
         kids.push(cmdBlock("직접 설치", () => installCmd(it.name, agent, state.os), [
           segFor("os", [["win", "Windows"], ["sh", "macOS·Linux"]], draw),
           cmdOnly ? null : segFor("agent", [["claude", "Claude Code"], ["codex", "Codex"]], draw),
-        ], cmdOnly ? "명령어는 Claude Code의 commands 폴더에 놓입니다." : "같은 이름의 폴더가 있으면 이름을 바꿔 남겨 두고 설치합니다."));
+        ], cmdOnly ? "명령어는 Claude Code의 commands 폴더에 놓입니다."
+          : bundle ? bundleNote(it)
+          : "같은 이름의 폴더가 있으면 이름을 바꿔 남겨 두고 설치합니다."));
         kids.push(el("p", { class: "links" }, [
           el("a", { href: it.zip.path, download: "", text: `zip 받기 (${size(it.zip.bytes)})` }),
-          el("a", { href: it.raw_base + it.entry, target: "_blank", rel: "noopener", text: it.entry + " 원문" }),
+          it.entry ? el("a", { href: it.raw_base + it.entry, target: "_blank", rel: "noopener", text: it.entry + " 원문" }) : null,
+          ...linkList(it),
         ]));
       } else if (it.kind === "external") {
-        kids.push(cmdBlock("원본에서 설치하는 명령", () => (it.install || []).join("\n"), null,
-          "이 창고에는 파일이 없습니다. 원본 저장소에서 받습니다."));
-        if (it.source) kids.push(el("p", { class: "links" }, el("a", { href: it.source.url, target: "_blank", rel: "noopener", text: "원본: " + it.source.label })));
+        if (it.install && it.install.length) {
+          kids.push(cmdBlock("원본에서 설치하는 명령", () => it.install.join("\n"), null,
+            "이 창고에는 파일이 없습니다. 원본 저장소에서 받습니다."));
+        } else {
+          kids.push(el("p", { class: "cmd-note", text: "이 창고에는 파일이 없습니다. 아래 원본에서 받습니다." }));
+        }
+        const links = linkList(it);
+        if (links.length) kids.push(el("p", { class: "links" }, links));
       } else {
         kids.push(el("p", { class: "cmd-note", text: "Claude 앱에 들어 있어 받을 필요가 없습니다." }));
       }
@@ -558,11 +647,29 @@ details.files li span { color: var(--ink2); flex: none; }
     const facts = el("dl", { class: "facts" });
     const fact = (k, v) => { if (v) facts.append(el("dt", { text: k }), el("dd", { text: v })); };
     fact("지금 쓰는 곳", (it.agents || []).map((a) => AGENT_NAME[a] || a).join(", "));
-    fact("배운 날", it.added ? day(it.added) + (it.updated && it.updated !== it.added ? `, 마지막으로 고친 날 ${day(it.updated)}` : "") : "");
-    fact("사용", u.calls > 0 ? `${u.calls}회, 최근 ${day(u.last)}` : "대화 기록에 없음");
-    if (it.zip) fact("크기", `파일 ${it.file_count}개, ${size(it.bytes)}`);
-    fact("버전", it.version);
-    fact("참고", it.note);
+    if (it.imported) {
+      fact("분류", catLabel(it));
+      fact("종류", it.type_label);
+      fact("라이선스", it.license || "미확인");
+      fact("상업 이용", it.commercial);
+      fact("만드는 길", (it.routes || []).filter(Boolean).join(", "));
+      fact("AI 사용", it.made_with);
+      fact("필요한 것", it.requires);
+      fact("반응", it.reach);
+      fact("확인한 내용", it.checked);
+      fact("주의", it.caution);
+      fact("모은 날", it.added ? day(it.added) : "");
+    } else {
+      fact("배운 날", it.added ? day(it.added) + (it.updated && it.updated !== it.added ? `, 마지막으로 고친 날 ${day(it.updated)}` : "") : "");
+      fact("사용", u.calls > 0 ? `${u.calls}회, 최근 ${day(u.last)}` : "대화 기록에 없음");
+      if (it.zip) fact("크기", `파일 ${it.file_count}개, ${size(it.bytes)}`);
+      fact("버전", it.version);
+      fact("참고", it.note);
+    }
+    const points = [
+      ...(it.good || []).map((t) => el("li", null, [el("b", { text: "좋은 점" }), t])),
+      ...(it.limits || []).map((t) => el("li", null, [el("b", { text: "한계" }), t])),
+    ];
 
     // 스킬에 적힌 설명이 영어뿐이면 한글 요약을 먼저 보이고 원문은 작게 둔다
     const original = it.description || "";
@@ -570,7 +677,9 @@ details.files li span { color: var(--ink2); flex: none; }
     const info = el("div", { class: "info" }, [
       (korean ? original : it.summary) !== it.summary || it.zip ? el("p", { class: "desc", text: korean ? original : it.summary }) : null,
       !korean && original && original !== it.summary ? el("p", { class: "desc-src", text: "스킬에 적힌 설명: " + original }) : null,
+      points.length ? el("ul", { class: "points" }, points) : null,
       facts,
+      it.how ? el("p", { class: "how" }, [el("strong", { text: "쓰는 법 " }), it.how]) : null,
       it.needs && it.needs.length ? el("div", { class: "needs" }, [
         el("strong", { text: "이 창고가 주지 못하는 것 — 새 PC에서는 따로 갖춰야 합니다" }),
         el("ul", null, it.needs.map((n) => el("li", { text: n }))),
@@ -627,6 +736,7 @@ details.files li span { color: var(--ink2); flex: none; }
     const it = byName[name];
     if (!it) return;
     if (state.group !== "all" && it.group !== state.group) state.group = it.group;
+    state.category = "";
     state.q = ""; $("q").value = "";
     state.open = name;
     history.replaceState(null, "", "#" + name);
@@ -647,6 +757,7 @@ details.files li span { color: var(--ink2); flex: none; }
     if (b) { state.sort = b.dataset.sort; render(); }
   });
   $("q").addEventListener("input", (e) => { state.q = e.target.value; state.open = null; renderPacks(); renderList(); });
+  $("cats").addEventListener("change", (e) => { state.category = e.target.value; state.open = null; renderList(); });
 
   fetch("catalog.json", { cache: "no-cache" }).then((r) => {
     if (!r.ok) throw new Error(r.status);
@@ -655,10 +766,12 @@ details.files li span { color: var(--ink2); flex: none; }
     cat = data;
     byName = Object.fromEntries(cat.items.map((it) => [it.name, it]));
     maxCalls = Math.max(1, ...cat.items.map((it) => it.usage.calls));
-    const w = cat.usage_window;
-    $("basis").textContent = w && w.from
-      ? `사용 횟수는 ${w.from}부터 ${w.to}까지의 대화 기록에서 셌습니다. Claude는 스킬을 부른 횟수, Codex는 스킬 문서를 연 대화 수입니다.`
-      : "";
+    cat.items.forEach((it, i) => { it._i = i; });
+    const cols = (cat.collections || []).filter((c) => c.count > 0);
+    colById = Object.fromEntries(cols.map((c) => [c.id, c]));
+    GROUPS = cols.map((c) => ({ id: c.id, label: c.title, count: c.count }))
+      .concat([{ id: "all", label: "전체", count: cat.items.length }]);
+    if (!colById[state.group]) state.group = GROUPS[0].id;
     const built = (cat.site.built_at || "").slice(0, 10);
     $("foot").replaceChildren(
       `${cat.site.title} v${cat.site.version}, ${built} 갱신. CLI가 읽는 안내는 `,

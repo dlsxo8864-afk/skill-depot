@@ -55,8 +55,17 @@ function Get-Rows([string]$Name) {
     return , $rows
 }
 
+# 있던 폴더를 옆의 백업 폴더로 옮긴다(지우지 않는다)
+function Move-Aside([string]$Target, [string]$BackupRoot, [string]$Stamp) {
+    if (-not (Test-Path -LiteralPath $Target)) { return }
+    if (-not (Test-Path -LiteralPath $BackupRoot)) { New-Item -ItemType Directory -Path $BackupRoot -Force | Out-Null }
+    $bak = Join-Path $BackupRoot ((Split-Path -Leaf $Target) + "-" + $Stamp)
+    Move-Item -LiteralPath $Target -Destination $bak
+    Say "  있던 폴더는 남겨 둠: $bak"
+}
+
 function Show-List($Rows) {
-    $kindName = @{ skill = "스킬"; command = "명령어"; external = "원본 설치"; builtin = "앱 기본" }
+    $kindName = @{ skill = "스킬"; command = "명령어"; bundle = "스킬 묶음"; external = "원본 설치"; builtin = "앱 기본" }
     Say "받을 수 있는 것과 목록만 있는 것"
     foreach ($r in $Rows) {
         $kind = $kindName[$r[1]]
@@ -158,15 +167,45 @@ function Install-One([string]$Name, $Rows) {
             }
             $target = Join-Path $skillsDir $Name
             if (-not (Test-Path -LiteralPath $skillsDir)) { New-Item -ItemType Directory -Path $skillsDir -Force | Out-Null }
-            if (Test-Path -LiteralPath $target) {
-                $bakRoot = $skillsDir.TrimEnd("\", "/") + "-backup"
-                if (-not (Test-Path -LiteralPath $bakRoot)) { New-Item -ItemType Directory -Path $bakRoot -Force | Out-Null }
-                $bak = Join-Path $bakRoot ($Name + "-" + $stamp)
-                Move-Item -LiteralPath $target -Destination $bak
-                Say "  있던 폴더는 남겨 둠: $bak"
-            }
+            Move-Aside $target ($skillsDir.TrimEnd("\", "/") + "-backup") $stamp
             Copy-Item -LiteralPath $ext -Destination $target -Recurse -Force
             Say "설치됨: $target"
+        }
+        elseif ($kind -eq "bundle") {
+            # 받은 묶음 안에서 SKILL.md 가 있는 폴더를 모두 스킬로 설치한다(얕은 폴더부터)
+            if (-not (Test-Path -LiteralPath $skillsDir)) { New-Item -ItemType Directory -Path $skillsDir -Force | Out-Null }
+            $bakRoot = $skillsDir.TrimEnd("\", "/") + "-backup"
+            $extFull = (Get-Item -LiteralPath $ext).FullName.TrimEnd("\")
+            $found = @(Get-ChildItem -LiteralPath $ext -Recurse -File -Filter "SKILL.md" |
+                Where-Object { $_.FullName -notmatch "\\node_modules\\" } |
+                Sort-Object { $_.FullName.Length })
+            if ($found.Count -eq 0) {
+                $packRoot = $skillsDir.TrimEnd("\", "/") + "-packs"
+                if (-not (Test-Path -LiteralPath $packRoot)) { New-Item -ItemType Directory -Path $packRoot -Force | Out-Null }
+                $target = Join-Path $packRoot $Name
+                Move-Aside $target $bakRoot $stamp
+                Copy-Item -LiteralPath $ext -Destination $target -Recurse -Force
+                Say "받음: $target"
+                Say "  스킬 형식(SKILL.md)이 아닙니다. 안의 README 를 읽고 따르세요."
+            }
+            else {
+                $done = @{}
+                foreach ($f in $found) {
+                    $dir = $f.Directory.FullName.TrimEnd("\")
+                    $skillName = Split-Path -Leaf $dir
+                    if ($dir -eq $extFull) { $skillName = $Name }
+                    if ($done.ContainsKey($skillName)) {
+                        Say "  이름이 겹쳐 건너뜀: $skillName ($($dir.Substring($extFull.Length).TrimStart('\')))"
+                        continue
+                    }
+                    $done[$skillName] = $true
+                    $target = Join-Path $skillsDir $skillName
+                    Move-Aside $target $bakRoot $stamp
+                    Copy-Item -LiteralPath $dir -Destination $target -Recurse -Force
+                    Say "설치됨: $target"
+                }
+                Say ("  묶음 " + $Name + " 에서 스킬 " + $done.Count + "개를 설치했습니다.")
+            }
         }
         else {
             if (-not (Test-Path -LiteralPath $commandsDir)) { New-Item -ItemType Directory -Path $commandsDir -Force | Out-Null }
