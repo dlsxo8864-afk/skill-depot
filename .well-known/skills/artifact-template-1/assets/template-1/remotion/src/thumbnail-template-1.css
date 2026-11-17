@@ -1,0 +1,108 @@
+.t1-container {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: "Template1Black", sans-serif;
+  font-weight: 400;
+}
+.t1-background {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1920px;
+  object-fit: cover;
+}
+.t1-bottom-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.13) 0%,
+    rgba(0, 0, 0, 0) 51%,
+    rgba(4, 6, 10, 0.8) 69%,
+    rgba(7, 9, 14, 0.98) 88%,
+    #07090E 100%
+  );
+}
+.t1-masthead {
+  position: absolute;
+  left: 92px;
+  top: 116px;
+  color: #F5F6F8;
+  font-family: "Template1Masthead", sans-serif;
+  font-weight: 900;
+  font-size: 73px;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -2.5px;
+  word-spacing: -3px;
+  scale: 1 1.02;
+  transform-origin: top left;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+.t1-badge {
+  position: absolute;
+  left: 705px;
+  top: 114px;
+  width: 174px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: linear-gradient(155deg, #F32637 0%, #DA061D 60%, #AE0013 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 17px;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  font-style: italic;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+.t1-headline {
+  position: absolute;
+  left: 48px;
+  width: 984px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  word-spacing: -14px;
+  -webkit-text-stroke: 1px #000000;
+  paint-order: stroke fill;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.8), 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+.t1-headline-1 {
+  top: 1318px;
+  color: #FFD245;
+}
+.t1-headline-2 {
+  top: 1517px;
+  color: #FAFAFA;
+}
+.t1-footer {
+  position: absolute;
+  top: 1825px;
+  left: 48px;
+  width: 984px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: #F5F6F8;
+  font-family: "Template1Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  translate: 0 -50%;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+.t1-footer-rule {
+  width: 86px;
+  height: 2px;
+  background: rgba(245, 246, 248, 0.82);
+}

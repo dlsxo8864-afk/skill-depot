@@ -1,0 +1,19 @@
+{
+  "episode": "EP2",
+  "line1": "번따 거절했는데",
+  "line2": "우리 회사 직원?!",
+  "backgroundSrc": "images/template1/ep2-background.png",
+  "line1FontSize": 155,
+  "line2FontSize": 180,
+  "line1ScaleX": 0.89,
+  "line1ScaleY": 1.08,
+  "line2ScaleX": 0.775,
+  "line2ScaleY": 1.17,
+  "headlineFont": "aggro",
+  "backgroundVisible": true,
+  "gradientVisible": true,
+  "mastheadText": "회사에선 말 못 한 썰",
+  "footerText": "사연 재구성",
+  "line1Top": 1318,
+  "line2Top": 1517
+}

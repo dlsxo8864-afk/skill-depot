@@ -1,0 +1,86 @@
+{
+  "fps": 24,
+  "width": 1080,
+  "height": 1920,
+  "notice": {
+    "badge": "생활 안내 제12호",
+    "title": "점심 메뉴 정하는 법",
+    "closing": "오늘도 든든한\\N점심 되시기 바랍니다.",
+    "closing_start": 13.9
+  },
+  "cast": {
+    "me": { "skin": "#e8bf9a", "hair": "#1c1a19", "top": "#e9c84a", "bottom": "#3a3f4a", "shoes": "#e9e9e9", "outfit": "knit", "eyes": true },
+    "minsu": { "skin": "#e2b48c", "hair": "#2a2019", "top": "#4f86c6", "bottom": "#2b2f3a", "shoes": "#f0f0f0", "outfit": "hoodie", "eyes": true },
+    "lead": { "skin": "#e2b48c", "hair": "#141414", "top": "#27406b", "bottom": "#1c2434", "shoes": "#111111", "outfit": "uniform", "eyes": true }
+  },
+  "shots": [
+    {
+      "id": "hook", "start": 0.0, "end": 3.0, "set": "room", "time": "day", "lamps": 1.0,
+      "set_options": { "seed": 2 },
+      "camera": { "from": [0.4, -3.9, 1.55], "to": [0.2, -3.4, 1.5], "look_from": [-0.1, 2.0, 1.15], "look_to": [-0.1, 1.8, 1.2], "lens": 30 },
+      "actors": [
+        { "who": "me", "at": [-0.6, 1.75, 0], "heading": 180, "actions": [ { "do": "reach", "t0": 1.0, "t1": 2.2 } ] }
+      ],
+      "props": [
+        { "kind": "sign", "text": "오늘\n뭐 먹죠?", "at": [0.75, 1.9, 0], "heading": 0, "board": "#e9c84a", "ink": "#1a1a1a", "pop_at": 2.25 }
+      ]
+    },
+    {
+      "id": "ask", "start": 3.0, "end": 6.0, "reuse_set": "hook", "time": "day", "lamps": 1.0,
+      "camera": { "from": [0.0, -6.8, 1.7], "to": [0.0, -6.2, 1.65], "look_from": [0, 0.4, 1.3], "look_to": [0, 0.4, 1.35], "lens": 34 },
+      "actors": [
+        { "who": "minsu", "at": [-1.5, -0.6, 0], "heading": 0, "actions": [ { "do": "idle", "t0": 0.0, "t1": 0.9 }, { "do": "shrug", "t0": 1.0, "t1": 1.8 } ] },
+        { "who": "lead", "at": [1.5, -0.6, 0], "heading": 0, "actions": [ { "do": "idle", "t0": 0.0, "t1": 1.9 }, { "do": "shrug", "t0": 2.0, "t1": 2.8 } ] }
+      ],
+      "props": [
+        { "kind": "sign", "text": "아무거나요", "at": [-0.72, 1.0, 0], "heading": 0, "board": "#4f86c6", "ink": "#ffffff", "pop_at": 1.0 },
+        { "kind": "sign", "text": "아무거나~", "at": [0.72, 1.0, 0], "heading": 0, "board": "#27406b", "ink": "#ffffff", "pop_at": 2.0 }
+      ]
+    },
+    {
+      "id": "wait", "start": 6.0, "end": 9.0, "reuse_set": "hook", "time": "evening", "lamps": 0.6,
+      "camera": { "from": [1.6, -4.4, 1.5], "to": [1.2, -3.8, 1.45], "look_from": [0.2, 1.2, 1.0], "look_to": [0.2, 1.2, 1.05], "lens": 30 },
+      "actors": [
+        { "who": "me", "at": [0.6, 1.4, 0], "heading": 0, "actions": [ { "do": "sit", "t0": 0.0, "t1": 3.0 }, { "do": "nod", "t0": 1.4, "t1": 2.6 } ] }
+      ],
+      "props": [
+        { "kind": "sign", "text": "11:50", "at": [-1.15, 1.6, 0], "heading": 0, "board": "#2c2c30", "ink": "#ffffff" },
+        { "kind": "sign", "text": "12:20\n배고픔 100%", "at": [-0.6, 0.6, 0], "heading": 0, "board": "#b8442e", "ink": "#ffffff", "pop_at": 1.5 }
+      ]
+    },
+    {
+      "id": "decide", "start": 9.0, "end": 12.0, "set": "street_night", "time": "night", "lamps": 1.0,
+      "set_options": { "seed": 5, "cars": 5 },
+      "camera": { "from": [3.0, -12.5, 1.8], "to": [3.6, -11.5, 1.7], "look_from": [5.6, -6.5, 1.3], "look_to": [5.9, -6.5, 1.4], "lens": 28 },
+      "actors": [
+        { "who": "lead", "at": [2.2, -6.9, 0], "heading": 90, "actions": [ { "do": "walk", "t0": 0.1, "t1": 1.6, "to": [4.9, -6.9] }, { "do": "glow", "t0": 0.2, "t1": 1.6, "color": "#ffe27a", "strength": 22 }, { "do": "point", "t0": 1.8, "t1": 2.4 } ] },
+        { "who": "me", "at": [6.2, -6.5, 0.15], "heading": 270, "actions": [ { "do": "idle", "t0": 0.0, "t1": 2.0 }, { "do": "nod", "t0": 2.2, "t1": 2.9 } ] }
+      ],
+      "props": [
+        { "kind": "sign", "text": "그럼\n김치찌개", "at": [7.6, -6.2, 0.15], "heading": 0, "board": "#1f6b3a", "ink": "#ffffff", "pop_at": 0.3 }
+      ]
+    },
+    {
+      "id": "punch", "start": 12.0, "end": 15.0, "reuse_set": "decide", "time": "night", "lamps": 1.0,
+      "camera": { "from": [4.0, -15.5, 4.6], "to": [4.6, -14.2, 4.2], "look_from": [7.4, -7.0, 1.2], "look_to": [7.4, -7.0, 1.3], "lens": 32 },
+      "actors": [
+        { "who": "lead", "at": [5.2, -7.6, 0], "heading": 0, "actions": [ { "do": "glow", "t0": 0.0, "t1": 0.01, "color": "#ffe27a", "strength": 22 }, { "do": "idle", "t0": 0.0, "t1": 3.0 } ] },
+        { "who": "minsu", "at": [6.6, -8.0, 0.15], "heading": 0, "actions": [ { "do": "idle", "t0": 0.0, "t1": 0.2 }, { "do": "bow", "t0": 0.2, "t1": 1.0 } ] },
+        { "who": "me", "at": [7.8, -8.0, 0.15], "heading": 0, "actions": [ { "do": "idle", "t0": 0.0, "t1": 0.6 }, { "do": "bow", "t0": 0.6, "t1": 1.4 } ] }
+      ],
+      "props": [
+        { "kind": "sign", "text": "오늘의 메뉴\n김치찌개", "at": [6.6, -6.3, 0.15], "heading": 0, "board": "#1f6b3a", "ink": "#ffffff" },
+        { "kind": "sign", "text": "김치찌개", "at": [8.2, -6.3, 0.15], "heading": 0, "board": "#1f6b3a", "ink": "#ffffff", "pop_at": 0.4 },
+        { "kind": "sign", "text": "김치찌개", "at": [9.8, -6.3, 0.15], "heading": 0, "board": "#1f6b3a", "ink": "#ffffff", "pop_at": 0.8 },
+        { "kind": "sign", "text": "결정", "at": [8.9, -9.0, 0.15], "heading": 0, "board": "#c8283c", "ink": "#ffffff", "pop_at": 1.4 }
+      ]
+    }
+  ],
+  "captions": [
+    { "start": 0.3, "end": 2.8, "text": "점심 메뉴,\\N오늘도 못 정했죠?" },
+    { "start": 3.2, "end": 5.8, "text": "물어보면 다들\\N“아무거나요.”" },
+    { "start": 6.2, "end": 8.8, "text": "시계는 가고,\\N배는 고파 오고." },
+    { "start": 9.2, "end": 11.8, "text": "결국 팀장님이\\N정합니다." },
+    { "start": 12.2, "end": 13.8, "text": "오늘도\\N김치찌개입니다." }
+  ]
+}

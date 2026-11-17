@@ -1,0 +1,127 @@
+[
+  {
+    "relative": "ep1/canon/A_head.jpg",
+    "size": 142920,
+    "sha256": "634a8e0bbf9913b3965fbbfab69b43570a1c037b986317fd32c90e9019379ef6"
+  },
+  {
+    "relative": "ep1/canon/A_sheet.jpg",
+    "size": 737016,
+    "sha256": "c01ec72d716813fd2f227b09623d3ff010d534a6c0c28c77bcb945b91224d45a"
+  },
+  {
+    "relative": "ep1/canon/B_head.jpg",
+    "size": 142266,
+    "sha256": "c60119b07a1d2577b9421e96b1efc6795c66c03d73c53e4a7a0a6903ab17c1d0"
+  },
+  {
+    "relative": "ep1/canon/B_sheet.jpg",
+    "size": 730411,
+    "sha256": "3deea36053614e2426a7771d3a92ed8d10297cea073644dc7fa0c18eff761021"
+  },
+  {
+    "relative": "ep1/canon/plate_corridor.jpg",
+    "size": 1083837,
+    "sha256": "6f83008e15917299814340c55a996a96c8008e417d595b0f87115f44cfcbcf94"
+  },
+  {
+    "relative": "ep1/canon/plate_meeting.jpg",
+    "size": 1171221,
+    "sha256": "c91a6f82266b6a3f67dccb4c8aadc9289eb49665bc046e3c0a3dfc2a6fbad179"
+  },
+  {
+    "relative": "ep1/clip_prompts/C1.txt",
+    "size": 2806,
+    "sha256": "f991eb03e355968aeac57b2ad1444850b9ca4695655a897d20cef84bddc192c3"
+  },
+  {
+    "relative": "ep1/clip_prompts/C2.txt",
+    "size": 3316,
+    "sha256": "15d8790b2063b4e77fd73d494ee92211086fce73510b871f965cf26d647dadd6"
+  },
+  {
+    "relative": "ep1/clip_prompts/C3.txt",
+    "size": 3802,
+    "sha256": "cda616abd3ad9fea7bcfc1e232607b2ab92826b2512f062b0731880441c8845a"
+  },
+  {
+    "relative": "ep1/deliverable_no_answer_30s.mp4",
+    "size": 11220205,
+    "sha256": "b8b4e4fdd94d4a80dbb9f1cb76cb8b98eef0adfd3e3b64e1359e6b013d5b4d8d"
+  },
+  {
+    "relative": "ep1/PRODUCTION_REPORT.md",
+    "size": 14106,
+    "sha256": "fde538d404748c6196001987f94752f7a3c17fa8cb527193154d4b29651d4fbc"
+  },
+  {
+    "relative": "ep1/prompt_used_U_full.txt",
+    "size": 11385,
+    "sha256": "6e4c997fd9cdd50cd3a5caa8db2c1a5a166abc23fd4bfd2502294438ecf9ffe9"
+  },
+  {
+    "relative": "ep1/QC_frame_grid.jpg",
+    "size": 144013,
+    "sha256": "85e79f095800ed4ccb56a22be7633dcc7e47c975e0898c7b34791045e181f6e6"
+  },
+  {
+    "relative": "ep1/README.md",
+    "size": 2277,
+    "sha256": "edfba3dc9f462d681dc4aefa6b93fc7dec45d24466a30d5860c4911f5c3b1e2a"
+  },
+  {
+    "relative": "ep1/STORY_GUIDE.json",
+    "size": 8297,
+    "sha256": "119f3a76ff7901b70d8bf992edae79e231f4186e5276a557e21ae7a76bd462de"
+  },
+  {
+    "relative": "ep1/WORK_PROCESS.md",
+    "size": 11505,
+    "sha256": "250cb447128ad16e82f98517931d8408931c60abe23db2474f7084f70ed5f123"
+  },
+  {
+    "relative": "ep2/workflow/DELIVERY_NOTES.md",
+    "size": 2360,
+    "sha256": "9c5ed5dc6a1c1e6d6984348dcb8c835bb16cd23e8f5d05928fdc2906ad19334f"
+  },
+  {
+    "relative": "ep2/workflow/prompts/UA_elevator_0-4s.txt",
+    "size": 6139,
+    "sha256": "9e2234140a19999a55f0dffad8f6db9c0f7617d8d6461af2b585ba0069b5256f"
+  },
+  {
+    "relative": "ep2/workflow/prompts/UB_winebar_4-12s.txt",
+    "size": 8080,
+    "sha256": "2bb401599bfabcace760a6e7a4ab87f1ee6553430fa7e02c1348b4c31648f998"
+  },
+  {
+    "relative": "ep2/workflow/prompts/UC_elevator_12-20s.txt",
+    "size": 6890,
+    "sha256": "a084c0c8b3aeae9c1231d9e56936e1dbb13d9e971f3000bfbe592c3478c455ad"
+  },
+  {
+    "relative": "ep2/workflow/prompts/UD_lobby_20-30s.txt",
+    "size": 8314,
+    "sha256": "e83295eca1fe5e4009d80d527a560d9ce2dff1880fa73cbb44c3c5f76302c6f5"
+  },
+  {
+    "relative": "ep2/workflow/README.txt",
+    "size": 835,
+    "sha256": "98cd604e1fce893427a52fb448a9c92658307df21a80134d6ff2501f867a143a"
+  },
+  {
+    "relative": "ep2/workflow/SHOT_LIST.json",
+    "size": 8476,
+    "sha256": "4d46530d388c71e1bf44a710a89ef347088108e09cb62ee39898b536e95ae5ce"
+  },
+  {
+    "relative": "ep2/workflow/SKILL_korean_silent_reallife_short.md",
+    "size": 6146,
+    "sha256": "9f16ed90d9f67eb76914f456322c2bc57e49fa79d69733c8a53d81b27e3b40a0"
+  },
+  {
+    "relative": "ep2/workflow/WORK_PROCESS.md",
+    "size": 8936,
+    "sha256": "40906f97725ba5636f23654d7afb5c1644ac0fc58ab519891617c3f8c6b6b7c5"
+  }
+]

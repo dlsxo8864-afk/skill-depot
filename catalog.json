@@ -1,0 +1,2934 @@
+{
+ "site": {
+  "title": "스킬 창고",
+  "version": "1.0",
+  "built_at": "2026-11-17T22:15:20.647052+09:00",
+  "base_url": "https://dlsxo8864-afk.github.io/skill-depot"
+ },
+ "usage_window": {
+  "from": "2026-07-06",
+  "to": "2026-11-17"
+ },
+ "items": [
+  {
+   "name": "gemini-delegate",
+   "kind": "skill",
+   "group": "mine",
+   "title": "제미나이 위임",
+   "summary": "분량 큰 기초 구현과 초안 묶음을 구글 CLI에 맡기고, 검토·시험·마감은 메인 모델이 한다.",
+   "description": "Delegate substantial foundation implementation, batches of draft files, and repetitive scaffolding to the user's Google CLI bridge to reduce GPT and Claude usage, then review, test, and finish with the main LLM. Use for explicit Gemini delegation or substantial coding foundation work under this user's routing preference.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [
+    "gemini-bridge 프로그램(MCP 서버와 bridge_core.py)",
+    "Antigravity CLI(agy) 로그인"
+   ],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-02",
+   "updated": "2026-11-02",
+   "usage": {
+    "calls": 32,
+    "sessions": 32,
+    "first": "2026-10-02",
+    "last": "2026-11-17"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/gemini-delegate/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2425
+    }
+   ],
+   "file_count": 1,
+   "bytes": 2425,
+   "zip": {
+    "path": "zips/gemini-delegate.zip",
+    "bytes": 1361,
+    "sha256": "3bcf965eef7110170ef0b8a0cea6ea9ed28f89331a9f91af1928cb8eae633f14"
+   }
+  },
+  {
+   "name": "api-agents",
+   "kind": "skill",
+   "group": "mine",
+   "title": "API 병렬 워커",
+   "summary": "서로 독립된 작업 여러 개를 API 크레딧으로 도는 워커에 나눠 맡긴다. 구독 사용량을 쓰지 않는다.",
+   "description": "프로모션 API 크레딧($200, 2026-11-23 만료)으로 도는 병렬 워커(api-agents MCP·cli.py)에 작업을 나눠 맡길 때 쓴다. 트리거 — \"API 에이전트로\", \"API 워커\", \"워커로 병렬\", \"크레딧으로 돌려\", \"병렬로 맡겨\", \"주간 한도 절약\", \"api-agents\", \"/api-agents\", 크레딧 잔액·워커 진행 상황 질문.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [
+    "API 병렬 에이전트 프로그램(29번)",
+    "콘솔 API 키 — 지금 쓰는 프로모션 크레딧은 2026-11-23 만료"
+   ],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-10-22",
+   "updated": "2026-10-22",
+   "usage": {
+    "calls": 2,
+    "sessions": 2,
+    "first": "2026-10-22",
+    "last": "2026-10-22"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/api-agents/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 5156
+    }
+   ],
+   "file_count": 1,
+   "bytes": 5156,
+   "zip": {
+    "path": "zips/api-agents.zip",
+    "bytes": 2903,
+    "sha256": "04061021678232575ab06d4ad602e609bd26614ac63c28ef6223b0cb98d94a7f"
+   }
+  },
+  {
+   "name": "coupang-shorts-pipeline",
+   "kind": "skill",
+   "group": "mine",
+   "title": "쿠팡 쇼츠 프롬프트 검수",
+   "summary": "쇼츠킷 쿠팡 파트너스 탭의 단계별 프롬프트를 고치고, 대본·첫 프레임·영상 프롬프트 결과를 검수한다.",
+   "description": "쿠팡 파트너스 탭(쇼츠킷 8296, affiliate maker)의 단계별 프롬프트·스킬을 고치거나 새 쿠팡 쇼츠 실행 결과를 검수할 때, 또는 상품 쇼츠 대본·recreate brief·첫 프레임 이미지·영상 프롬프트 품질을 올릴 때 쓴다(쇼츠킷 프롬프트, 쿠팡 쇼츠, affiliate maker, recreate brief).",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [
+    "쇼츠킷 프로그램(27번) 소스"
+   ],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-09",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 2,
+    "sessions": 2,
+    "first": "2026-11-09",
+    "last": "2026-11-15"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/coupang-shorts-pipeline/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 5762
+    },
+    {
+     "path": "references/defect-checklist.md",
+     "bytes": 6083
+    },
+    {
+     "path": "references/evidence-rules.md",
+     "bytes": 6182
+    },
+    {
+     "path": "references/prompt-contracts.md",
+     "bytes": 8879
+    }
+   ],
+   "file_count": 4,
+   "bytes": 26906,
+   "zip": {
+    "path": "zips/coupang-shorts-pipeline.zip",
+    "bytes": 14654,
+    "sha256": "5f4c2a1d6a1084dcc306b710a4c511b3187c51098e2b66aa0d7fa3373930c07a"
+   }
+  },
+  {
+   "name": "naver-clip-voice-script",
+   "kind": "skill",
+   "group": "mine",
+   "title": "식당 홍보 내레이션",
+   "summary": "네이버 클립·쇼츠용 식당 홍보 내레이션을 쓰고, 한국어 AI 음성을 고르고 연기 지시를 준다.",
+   "description": "Use when writing Korean narration for short restaurant or food promo videos (네이버 클립, 쇼츠, 릴스), choosing or directing Korean AI voices (Gemini TTS, ElevenLabs), or when a Korean voiceover sounds flat, robotic or boring (무미건조, 심심함, 말투 어색, AI 티, 재미없음). Also when changing the 쇼츠킷 네이버 클립 식당홍보 tab's script or voice prompts.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-06",
+   "updated": "2026-11-09",
+   "usage": {
+    "calls": 1,
+    "sessions": 1,
+    "first": "2026-11-09",
+    "last": "2026-11-09"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/naver-clip-voice-script/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 3670
+    },
+    {
+     "path": "references/script-craft.md",
+     "bytes": 5264
+    },
+    {
+     "path": "references/sources.md",
+     "bytes": 7995
+    },
+    {
+     "path": "references/voice-direction.md",
+     "bytes": 6182
+    }
+   ],
+   "file_count": 4,
+   "bytes": 23111,
+   "zip": {
+    "path": "zips/naver-clip-voice-script.zip",
+    "bytes": 12820,
+    "sha256": "4b667bcbf6a469ffd0c4314229ca09d66d28e45bf4c9b025cb268968c3e1fb6f"
+   }
+  },
+  {
+   "name": "product-scene-video",
+   "kind": "skill",
+   "group": "mine",
+   "title": "상품 장면 영상화",
+   "summary": "쿠팡 상품 장면의 이미지 생성·영상화·장면 연결 품질을 올리고 최종 MP4를 검수한다.",
+   "description": "쿠팡 상품 장면의 이미지 생성·이미지 영상화·연결 품질을 개선하거나 8296 쇼츠킷 제작기를 수정할 때 사용한다. 제품 정체성, 모델별 입력 규격, 실제 생성 증빙과 최종 MP4 검수를 관리한다.",
+   "version": null,
+   "agents": [
+    "codex"
+   ],
+   "needs": [
+    "쇼츠킷 프로그램(27번) 소스"
+   ],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-04",
+   "updated": "2026-11-04",
+   "usage": {
+    "calls": 3,
+    "sessions": 3,
+    "first": "2026-10-16",
+    "last": "2026-11-06"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/product-scene-video/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 5456
+    }
+   ],
+   "file_count": 1,
+   "bytes": 5456,
+   "zip": {
+    "path": "zips/product-scene-video.zip",
+    "bytes": 2887,
+    "sha256": "2790816a3c82a4fda56294698fa4e6e410c2405dd4cf4cd5747c078a58e9cab2"
+   }
+  },
+  {
+   "name": "seedance-office-story",
+   "kind": "skill",
+   "group": "mine",
+   "title": "직장 썰 씨댄스 제작",
+   "summary": "직장 썰을 30초 이내 세로 영상으로 각색하고, Seedance용 장면 프롬프트·캐릭터 참조·편집 인계를 준비한다.",
+   "description": "한국 직장 썰을 30초 이내 세로 영상으로 각색하고 Seedance용 장면 프롬프트·캐릭터 참조·수동 영상 업로드 또는 모델 API·Remotion 편집 인계를 준비한다. 직장 사연 영상 제작, 기존 회차 수정, 업로드용 멘션 문구 준비에 사용한다.",
+   "version": null,
+   "agents": [
+    "codex"
+   ],
+   "needs": [
+    "Seedance 이용(수동 업로드 또는 모델 API)"
+   ],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-04",
+   "updated": "2026-11-06",
+   "usage": {
+    "calls": 6,
+    "sessions": 6,
+    "first": "2026-11-03",
+    "last": "2026-11-15"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/seedance-office-story/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 8479
+    },
+    {
+     "path": "agents/openai.yaml",
+     "bytes": 295
+    },
+    {
+     "path": "references/api-workflow.md",
+     "bytes": 3814
+    },
+    {
+     "path": "references/capabilities.json",
+     "bytes": 2880
+    },
+    {
+     "path": "references/case-studies.md",
+     "bytes": 4546
+    },
+    {
+     "path": "references/production-guide.md",
+     "bytes": 3544
+    },
+    {
+     "path": "references/provider-schema.snapshot.json",
+     "bytes": 9394
+    },
+    {
+     "path": "references/sources/ep1/PRODUCTION_REPORT.md",
+     "bytes": 14106
+    },
+    {
+     "path": "references/sources/ep1/README.md",
+     "bytes": 2277
+    },
+    {
+     "path": "references/sources/ep1/STORY_GUIDE.json",
+     "bytes": 8297
+    },
+    {
+     "path": "references/sources/ep1/WORK_PROCESS.md",
+     "bytes": 11505
+    },
+    {
+     "path": "references/sources/ep1/clip_prompts/C1.txt",
+     "bytes": 2806
+    },
+    {
+     "path": "references/sources/ep1/clip_prompts/C2.txt",
+     "bytes": 3316
+    },
+    {
+     "path": "references/sources/ep1/clip_prompts/C3.txt",
+     "bytes": 3802
+    },
+    {
+     "path": "references/sources/ep1/prompt_used_U_full.txt",
+     "bytes": 11385
+    },
+    {
+     "path": "references/sources/ep2/DELIVERY_NOTES.md",
+     "bytes": 2360
+    },
+    {
+     "path": "references/sources/ep2/README.txt",
+     "bytes": 835
+    },
+    {
+     "path": "references/sources/ep2/SHOT_LIST.json",
+     "bytes": 8476
+    },
+    {
+     "path": "references/sources/ep2/SKILL_korean_silent_reallife_short.md",
+     "bytes": 6146
+    },
+    {
+     "path": "references/sources/ep2/WORK_PROCESS.md",
+     "bytes": 8936
+    },
+    {
+     "path": "references/sources/ep2/prompts/UA_elevator_0-4s.txt",
+     "bytes": 6139
+    },
+    {
+     "path": "references/sources/ep2/prompts/UB_winebar_4-12s.txt",
+     "bytes": 8080
+    },
+    {
+     "path": "references/sources/ep2/prompts/UC_elevator_12-20s.txt",
+     "bytes": 6890
+    },
+    {
+     "path": "references/sources/ep2/prompts/UD_lobby_20-30s.txt",
+     "bytes": 8314
+    },
+    {
+     "path": "references/sources/media-evidence.json",
+     "bytes": 1846
+    },
+    {
+     "path": "references/sources/source-inventory.json",
+     "bytes": 4035
+    },
+    {
+     "path": "scripts/seedance_runner.py",
+     "bytes": 32879
+    }
+   ],
+   "file_count": 27,
+   "bytes": 185382,
+   "zip": {
+    "path": "zips/seedance-office-story.zip",
+    "bytes": 82088,
+    "sha256": "30a6d4e4743cc56488cc77350da7aaaebbd9ba544cab7ed36cd357b003fd4e6a"
+   }
+  },
+  {
+   "name": "clay-office-story",
+   "kind": "skill",
+   "group": "mine",
+   "title": "직장 썰 클레이 인형극",
+   "summary": "정해 둔 점토풍 블렌더 캐릭터로 직장 썰 장면을 만들고, 음성·모션 자막과 합성한다.",
+   "description": "직장 썰을 고정된 점토풍 블렌더 캐릭터·장면 동작으로 만들고 음성 및 기존 리모션 모션 자막과 합성한다. 퇴근각 클레이 버전, 캐릭터 시안, Seedance 대체 영상 제작과 해당 회차 수정에 사용한다.",
+   "version": null,
+   "agents": [
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-12",
+   "updated": "2026-11-12",
+   "usage": {
+    "calls": 5,
+    "sessions": 5,
+    "first": "2026-11-03",
+    "last": "2026-11-15"
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/clay-office-story/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 6280
+    },
+    {
+     "path": "assets/characters.json",
+     "bytes": 13437
+    },
+    {
+     "path": "assets/characters/catalog_F01.blend",
+     "bytes": 318679
+    },
+    {
+     "path": "assets/characters/catalog_F02.blend",
+     "bytes": 298662
+    },
+    {
+     "path": "assets/characters/catalog_F03.blend",
+     "bytes": 325140
+    },
+    {
+     "path": "assets/characters/catalog_M01.blend",
+     "bytes": 322176
+    },
+    {
+     "path": "assets/characters/catalog_M02.blend",
+     "bytes": 360930
+    },
+    {
+     "path": "assets/characters/catalog_M03.blend",
+     "bytes": 308768
+    },
+    {
+     "path": "assets/episodes.json",
+     "bytes": 7680
+    },
+    {
+     "path": "assets/remotion/package.json",
+     "bytes": 823
+    },
+    {
+     "path": "assets/remotion/public/fonts/CaptionKR-Bold.ttf",
+     "bytes": 6183932
+    },
+    {
+     "path": "assets/remotion/public/fonts/FooterKR-Regular.ttf",
+     "bytes": 6185868
+    },
+    {
+     "path": "assets/remotion/public/fonts/OFL-NotoSansKR.txt",
+     "bytes": 4388
+    },
+    {
+     "path": "assets/remotion/src/CenteredCaptions.tsx",
+     "bytes": 2340
+    },
+    {
+     "path": "assets/remotion/src/ChatInsert.tsx",
+     "bytes": 18003
+    },
+    {
+     "path": "assets/remotion/src/EP3Notifications.tsx",
+     "bytes": 4019
+    },
+    {
+     "path": "assets/remotion/src/OfficeStoryEP3.tsx",
+     "bytes": 7084
+    },
+    {
+     "path": "assets/remotion/src/index.tsx",
+     "bytes": 1733
+    },
+    {
+     "path": "assets/remotion/tsconfig.json",
+     "bytes": 368
+    },
+    {
+     "path": "references/workflow.md",
+     "bytes": 2553
+    },
+    {
+     "path": "scripts/build_clay.py",
+     "bytes": 12200
+    },
+    {
+     "path": "scripts/build_episode.py",
+     "bytes": 13627
+    },
+    {
+     "path": "scripts/clay_lib.py",
+     "bytes": 47187
+    },
+    {
+     "path": "scripts/compose_ep3.py",
+     "bytes": 1588
+    },
+    {
+     "path": "scripts/compose_episode.py",
+     "bytes": 2744
+    },
+    {
+     "path": "scripts/polish.py",
+     "bytes": 5323
+    },
+    {
+     "path": "scripts/prepare_timeline.py",
+     "bytes": 3218
+    },
+    {
+     "path": "scripts/render_frames.py",
+     "bytes": 2384
+    },
+    {
+     "path": "scripts/run_episode.ps1",
+     "bytes": 1503
+    }
+   ],
+   "file_count": 29,
+   "bytes": 14462637,
+   "zip": {
+    "path": "zips/clay-office-story.zip",
+    "bytes": 8043617,
+    "sha256": "aaf39ea622222227a91cb3444c01e11b43b67c49bd1a5bb6eac6f035d38be867"
+   }
+  },
+  {
+   "name": "artifact-template-1",
+   "kind": "skill",
+   "group": "mine",
+   "title": "직장 썰 썸네일 템플릿 1",
+   "summary": "직장 썰 썸네일을 정해진 판형으로 만든다. 사진은 글자 없이 따로 만들고, 글자와 효과는 Remotion 템플릿으로 얹는다.",
+   "description": "직장 썰 썸네일 템플릿 1. Use when the user selects this template, names 템플릿 1 or 템플릿1, or invokes $artifact-template-1. Generate photographs separately without text; compose all typography and effects with the retained Remotion template.",
+   "version": null,
+   "agents": [
+    "codex"
+   ],
+   "needs": [
+    "SB 어그로 Bold 글꼴 — 글꼴 파일 재배포가 허용되지 않아 뺐다. 샌드박스 공식 배포처에서 받아 assets/template-1/remotion/public/fonts/SBAggroB.ttf 로 넣는다"
+   ],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-04",
+   "updated": "2026-11-04",
+   "usage": {
+    "calls": 2,
+    "sessions": 2,
+    "first": "2026-11-03",
+    "last": "2026-11-06"
+   },
+   "preview": {
+    "type": "image",
+    "src": "previews/artifact-template-1.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/artifact-template-1/",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 4874
+    },
+    {
+     "path": "agents/openai.yaml",
+     "bytes": 365
+    },
+    {
+     "path": "artifact-template.json",
+     "bytes": 147
+    },
+    {
+     "path": "assets/preview.png",
+     "bytes": 2152581
+    },
+    {
+     "path": "assets/reference.png",
+     "bytes": 2152581
+    },
+    {
+     "path": "assets/template-1/WORKFLOW.md",
+     "bytes": 2901
+    },
+    {
+     "path": "assets/template-1/backgrounds/ep1-background.png",
+     "bytes": 1845325
+    },
+    {
+     "path": "assets/template-1/backgrounds/ep2-background.png",
+     "bytes": 2128440
+    },
+    {
+     "path": "assets/template-1/exports/EP1-mobile-proof.png",
+     "bytes": 179814
+    },
+    {
+     "path": "assets/template-1/exports/EP1-template-1.png",
+     "bytes": 1823461
+    },
+    {
+     "path": "assets/template-1/exports/EP1-text-overlay.png",
+     "bytes": 409597
+    },
+    {
+     "path": "assets/template-1/exports/EP2-mobile-proof.png",
+     "bytes": 216498
+    },
+    {
+     "path": "assets/template-1/exports/EP2-template-1.png",
+     "bytes": 2152581
+    },
+    {
+     "path": "assets/template-1/exports/EP2-text-overlay.png",
+     "bytes": 419770
+    },
+    {
+     "path": "assets/template-1/manifest.json",
+     "bytes": 2641
+    },
+    {
+     "path": "assets/template-1/prompts/ep1-background-prompt.txt",
+     "bytes": 2504
+    },
+    {
+     "path": "assets/template-1/prompts/ep2-background-prompt.txt",
+     "bytes": 3036
+    },
+    {
+     "path": "assets/template-1/references/ep1-female-source.png",
+     "bytes": 936933
+    },
+    {
+     "path": "assets/template-1/references/ep1-male-source.png",
+     "bytes": 1162562
+    },
+    {
+     "path": "assets/template-1/references/female-approved.png",
+     "bytes": 2282422
+    },
+    {
+     "path": "assets/template-1/references/male-character-sheet.png",
+     "bytes": 2182014
+    },
+    {
+     "path": "assets/template-1/references/style-original-ep1.png",
+     "bytes": 1697010
+    },
+    {
+     "path": "assets/template-1/references/style-original-ep2.png",
+     "bytes": 1876961
+    },
+    {
+     "path": "assets/template-1/remotion/README.md",
+     "bytes": 2901
+    },
+    {
+     "path": "assets/template-1/remotion/eslint.config.mjs",
+     "bytes": 79
+    },
+    {
+     "path": "assets/template-1/remotion/package-lock.json",
+     "bytes": 189112
+    },
+    {
+     "path": "assets/template-1/remotion/package.json",
+     "bytes": 823
+    },
+    {
+     "path": "assets/template-1/remotion/presets/EP1.json",
+     "bytes": 513
+    },
+    {
+     "path": "assets/template-1/remotion/presets/EP2.json",
+     "bytes": 524
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/BlackHanSans-Regular.ttf",
+     "bytes": 998424
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/FooterKR-Regular.ttf",
+     "bytes": 6185868
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/GmarketSansBold.otf",
+     "bytes": 889716
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/LICENSE-GmarketSans-metadata.txt",
+     "bytes": 11739
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/LICENSE-SBAggro.pdf",
+     "bytes": 115442
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/MastheadKR-Black.ttf",
+     "bytes": 6181920
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/OFL-BlackHanSans.txt",
+     "bytes": 4399
+    },
+    {
+     "path": "assets/template-1/remotion/public/fonts/OFL-NotoSansKR.txt",
+     "bytes": 4388
+    },
+    {
+     "path": "assets/template-1/remotion/public/images/template1/ep1-background.png",
+     "bytes": 1845325
+    },
+    {
+     "path": "assets/template-1/remotion/public/images/template1/ep2-background.png",
+     "bytes": 2128440
+    },
+    {
+     "path": "assets/template-1/remotion/remotion.config.ts",
+     "bytes": 371
+    },
+    {
+     "path": "assets/template-1/remotion/src/Root.tsx",
+     "bytes": 121
+    },
+    {
+     "path": "assets/template-1/remotion/src/ThumbnailTemplate1.tsx",
+     "bytes": 7582
+    },
+    {
+     "path": "assets/template-1/remotion/src/index.ts",
+     "bytes": 109
+    },
+    {
+     "path": "assets/template-1/remotion/src/thumbnail-template-1.css",
+     "bytes": 2300
+    },
+    {
+     "path": "assets/template-1/remotion/tsconfig.json",
+     "bytes": 368
+    },
+    {
+     "path": "assets/template-1/style.json",
+     "bytes": 3070
+    }
+   ],
+   "file_count": 46,
+   "bytes": 42208552,
+   "zip": {
+    "path": "zips/artifact-template-1.zip",
+    "bytes": 33700769,
+    "sha256": "9548c38321a558b7352ec4874afde9ad78d9373a27e252e75ef6253155322ee9"
+   }
+  },
+  {
+   "name": "llmvid-blender-clay-office",
+   "kind": "skill",
+   "group": "mine",
+   "title": "점토 인형 사무실 썰",
+   "summary": "대본과 음성으로, 점토풍 3D 캐릭터가 등장하는 미니어처 사무실 썰 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성으로, 점토풍 3D 캐릭터가 등장하는 미니어처 사무실 썰 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형을 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 자막과 음성을 붙인다. 직장인 썰을 아기자기한 점토 인형극 느낌으로 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-clay-office.mp4",
+    "poster": "previews/llmvid-blender-clay-office.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-clay-office/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 4534
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 18207
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/create_office.py",
+     "bytes": 30768
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 4373
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/preview_checks.py",
+     "bytes": 1195
+    },
+    {
+     "path": "example/refinements.py",
+     "bytes": 27424
+    },
+    {
+     "path": "example/render_final.py",
+     "bytes": 2776
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    }
+   ],
+   "file_count": 11,
+   "bytes": 99276,
+   "zip": {
+    "path": "zips/llmvid-blender-clay-office.zip",
+    "bytes": 37466,
+    "sha256": "937897566a9f1369693b4b3f8f0662f30a2bbce7ce550bb2e7ba2cd917ee07b2"
+   }
+  },
+  {
+   "name": "llmvid-blender-cutaway-explainer",
+   "kind": "skill",
+   "group": "mine",
+   "title": "장치 단면 설명",
+   "summary": "대본과 음성으로, 장치의 겉을 보여 준 뒤 앞판을 투명하게 만들어 속에서 일이 벌어지는 차례를 보여 주는 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성으로, 장치의 겉을 보여 준 뒤 앞판을 투명하게 만들어 속에서 일이 벌어지는 차례를 보여 주는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형으로 장치(투입구·저장통·압력계·밸브·배출구)를 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 단계 표시·자막·효과음을 붙인다. 과정을 '기계의 흐름'에 빗대어 설명하는 쇼츠에 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-cutaway-explainer.mp4",
+    "poster": "previews/llmvid-blender-cutaway-explainer.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-cutaway-explainer/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2878
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 13717
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/cards.py",
+     "bytes": 4995
+    },
+    {
+     "path": "example/create_scene.py",
+     "bytes": 17789
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 6810
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/plan.py",
+     "bytes": 4053
+    },
+    {
+     "path": "example/render.py",
+     "bytes": 1866
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    }
+   ],
+   "file_count": 11,
+   "bytes": 62107,
+   "zip": {
+    "path": "zips/llmvid-blender-cutaway-explainer.zip",
+    "bytes": 29278,
+    "sha256": "d22ceaa91e33a7a99bab762deba2c50d9dde2d609830246b1dc4936bd5506476"
+   }
+  },
+  {
+   "name": "llmvid-blender-mascot-explainer",
+   "kind": "skill",
+   "group": "mine",
+   "title": "마스코트 카드 설명",
+   "summary": "대본과 음성으로, 어두운 무대에 선 3D 마스코트가 화면 카드(단톡·시계·알림·결과)를 차례로 띄우며 설명하는 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성으로, 어두운 무대에 선 3D 마스코트가 화면 카드(단톡·시계·알림·결과)를 차례로 띄우며 설명하는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형과 코드로 그린 카드를 EEVEE로 렌더하고 ffmpeg로 제목 띠·자막·효과음을 붙인다. 정보·요령·순서를 짧게 설명하는 쇼츠에 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-mascot-explainer.mp4",
+    "poster": "previews/llmvid-blender-mascot-explainer.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-mascot-explainer/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2989
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 13717
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/cards.py",
+     "bytes": 6304
+    },
+    {
+     "path": "example/create_scene.py",
+     "bytes": 18259
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 6810
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/plan.py",
+     "bytes": 4294
+    },
+    {
+     "path": "example/render.py",
+     "bytes": 1866
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    }
+   ],
+   "file_count": 11,
+   "bytes": 64238,
+   "zip": {
+    "path": "zips/llmvid-blender-mascot-explainer.zip",
+    "bytes": 30103,
+    "sha256": "c9384c697e92da19f8aeca3e5ff0776613127a08bdc51c44a671863f0bfd65a9"
+   }
+  },
+  {
+   "name": "llmvid-blender-object-drama",
+   "kind": "skill",
+   "group": "mine",
+   "title": "물건만 나오는 실사풍 썰",
+   "summary": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 실사풍 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 실사풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 블렌더(Cycles)로 책상 장면을 코드로 조립해 렌더하고 ffmpeg로 음성·자막·효과음을 붙인다. 메신저 대화가 중심인 직장·일상 썰을 영상으로 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-object-drama.mp4",
+    "poster": "previews/llmvid-blender-object-drama.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-object-drama/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 4360
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 14639
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/build_ssul.py",
+     "bytes": 16046
+    },
+    {
+     "path": "example/dl_assets.py",
+     "bytes": 2427
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 6894
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/listobj.py",
+     "bytes": 599
+    },
+    {
+     "path": "example/plan.py",
+     "bytes": 3652
+    },
+    {
+     "path": "example/probe.py",
+     "bytes": 1637
+    },
+    {
+     "path": "example/rnd_ssul.py",
+     "bytes": 3291
+    },
+    {
+     "path": "example/screens.py",
+     "bytes": 6105
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    }
+   ],
+   "file_count": 14,
+   "bytes": 69649,
+   "zip": {
+    "path": "zips/llmvid-blender-object-drama.zip",
+    "bytes": 33903,
+    "sha256": "4d197fb7c67711a31c6734e603c58748fb2333ffecea8eedc8ea5ee600f58866"
+   }
+  },
+  {
+   "name": "llmvid-blender-psa-parody",
+   "kind": "skill",
+   "group": "mine",
+   "title": "공익 안내 방송 패러디",
+   "summary": "대본과 음성으로, 관절 인형풍 3D 인물이 나오는 '생활 안전 수칙' 공익 안내 방송 패러디 세로 쇼츠(1080×1920)를 만든다.",
+   "description": "대본과 음성으로, 관절 인형풍 3D 인물이 나오는 '생활 안전 수칙' 공익 안내 방송 패러디 세로 쇼츠(1080×1920)를 만든다. 영상·이미지 생성 AI 없이 블렌더 코드로 방·밤거리 교차로 세트와 인물·팻말을 만들어 EEVEE로 렌더하고, ffmpeg로 수칙 번호 배지·제목·녹색 상자 자막·끝맺음 문구를 얹는다. 사소한 습관이 터무니없는 결과로 번지는 생활 수칙 패러디를 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-psa-parody.mp4",
+    "poster": "previews/llmvid-blender-psa-parody.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-psa-parody/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 4901
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 28368
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/create_psa.py",
+     "bytes": 66614
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 7233
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/preview_checks.py",
+     "bytes": 2316
+    },
+    {
+     "path": "example/render_final.py",
+     "bytes": 4403
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    },
+    {
+     "path": "example/timeline.example.json",
+     "bytes": 5724
+    }
+   ],
+   "file_count": 10,
+   "bytes": 127016,
+   "zip": {
+    "path": "zips/llmvid-blender-psa-parody.zip",
+    "bytes": 47163,
+    "sha256": "bb9cb49f5e7bfc6cc1714ea52cb11c6aa290c27fa1fb81ab9eef204714cb334a"
+   }
+  },
+  {
+   "name": "llmvid-blender-stage-diorama",
+   "kind": "skill",
+   "group": "mine",
+   "title": "단계별 미니어처 세트",
+   "summary": "대본과 음성으로, 로우폴리 미니어처 세트 하나가 구간(단계)마다 한 단계씩 바뀌어 가는 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성으로, 로우폴리 미니어처 세트 하나가 구간(단계)마다 한 단계씩 바뀌어 가는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형으로 섬·나무·인형 인물·구조물을 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 단계 키워드·자막·효과음을 붙인다. '~하는 법', '~가 되기까지'처럼 단계가 뚜렷한 이야기에 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-stage-diorama.mp4",
+    "poster": "previews/llmvid-blender-stage-diorama.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-stage-diorama/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2874
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 13651
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/cards.py",
+     "bytes": 8617
+    },
+    {
+     "path": "example/create_scene.py",
+     "bytes": 21036
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 6810
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/plan.py",
+     "bytes": 5742
+    },
+    {
+     "path": "example/render.py",
+     "bytes": 1866
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    }
+   ],
+   "file_count": 11,
+   "bytes": 70595,
+   "zip": {
+    "path": "zips/llmvid-blender-stage-diorama.zip",
+    "bytes": 30681,
+    "sha256": "d390f137830352c88d65d5a69a81a3898303330b7c2c5e8260ecb15690b72746"
+   }
+  },
+  {
+   "name": "llmvid-blender-toon",
+   "kind": "skill",
+   "group": "mine",
+   "title": "물건만 나오는 카툰풍 썰",
+   "summary": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 카툰풍(단계 명암 + 잉크선) 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 카툰풍(단계 명암 + 잉크선) 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 블렌더로 책상 장면을 코드로 조립해 EEVEE + Freestyle로 렌더하고 ffmpeg로 음성·자막·효과음을 붙인다. 메신저 대화가 중심인 썰을 만화 느낌으로, 빠르게 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-toon.mp4",
+    "poster": "previews/llmvid-blender-toon.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-toon/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 4368
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 15943
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/build_ssul.py",
+     "bytes": 16046
+    },
+    {
+     "path": "example/dl_assets.py",
+     "bytes": 2427
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 6894
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/listobj.py",
+     "bytes": 599
+    },
+    {
+     "path": "example/make_toon.py",
+     "bytes": 4064
+    },
+    {
+     "path": "example/plan.py",
+     "bytes": 3652
+    },
+    {
+     "path": "example/probe.py",
+     "bytes": 1637
+    },
+    {
+     "path": "example/rnd_ssul.py",
+     "bytes": 3291
+    },
+    {
+     "path": "example/screens.py",
+     "bytes": 6105
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    }
+   ],
+   "file_count": 15,
+   "bytes": 75025,
+   "zip": {
+    "path": "zips/llmvid-blender-toon.zip",
+    "bytes": 36189,
+    "sha256": "8c524dd9ee33663608d215c7237563dad7d67bb3bea62a5f61a68f4d764a41ef"
+   }
+  },
+  {
+   "name": "llmvid-blender-voxel-whatif",
+   "kind": "skill",
+   "group": "mine",
+   "title": "복셀 '만약에' 쇼츠",
+   "summary": "대본과 음성으로, 블록(복셀) 인물과 픽셀 질감 세트가 나오는 '만약 ~라면' 세로 쇼츠(1080×1920)를 만든다.",
+   "description": "대본과 음성으로, 블록(복셀) 인물과 픽셀 질감 세트가 나오는 '만약 ~라면' 세로 쇼츠(1080×1920)를 만든다. 영상·이미지 생성 AI 없이 블렌더 코드로 공원·방·경기장 세트와 인물·군중을 만들어 EEVEE로 렌더하고, ffmpeg로 제목 카드와 자막을 얹는다. 장소가 여러 번 바뀌고 군중 장면이 나오는 상상 시나리오형 내레이션 쇼츠를 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-blender-voxel-whatif.mp4",
+    "poster": "previews/llmvid-blender-voxel-whatif.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-blender-voxel-whatif/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 4427
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 25916
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/create_voxel.py",
+     "bytes": 65637
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 5719
+    },
+    {
+     "path": "example/fontfind.py",
+     "bytes": 3124
+    },
+    {
+     "path": "example/preview_checks.py",
+     "bytes": 2316
+    },
+    {
+     "path": "example/render_final.py",
+     "bytes": 4403
+    },
+    {
+     "path": "example/sheet.py",
+     "bytes": 1258
+    },
+    {
+     "path": "example/timeline.example.json",
+     "bytes": 4620
+    }
+   ],
+   "file_count": 10,
+   "bytes": 120495,
+   "zip": {
+    "path": "zips/llmvid-blender-voxel-whatif.zip",
+    "bytes": 44386,
+    "sha256": "e36625f812c976a8339424bce4c9468fcb7fc97d6d307c0d6a2d4c887e4fe35a"
+   }
+  },
+  {
+   "name": "llmvid-pixel-story",
+   "kind": "skill",
+   "group": "mine",
+   "title": "픽셀 애니 썰",
+   "summary": "대본과 음성(선택)을 받아 영상·이미지 생성 AI 없이 파이썬 코드만으로 세로형(1080x1920) 픽셀 애니메이션 영상을 만든다.",
+   "description": "대본과 음성(선택)을 받아 영상·이미지 생성 AI 없이 파이썬 코드만으로 세로형(1080x1920) 픽셀 애니메이션 영상을 만든다. 사용자가 \"픽셀 애니로 영상 만들어 줘\", \"도트 스타일 썰 영상\", \"pixel-story 스킬로\" 같이 말하거나, 짧은 이야기·대화형 대본을 레트로 게임풍 영상으로 바꾸려 할 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-pixel-story.mp4",
+    "poster": "previews/llmvid-pixel-story.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-pixel-story/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 1193
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 8410
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/film.py",
+     "bytes": 16627
+    },
+    {
+     "path": "example/finish.py",
+     "bytes": 2526
+    },
+    {
+     "path": "example/fonts/Galmuri11-Bold.ttf",
+     "bytes": 2613660
+    },
+    {
+     "path": "example/fonts/Galmuri11.ttf",
+     "bytes": 5376428
+    },
+    {
+     "path": "example/fonts/OFL-Galmuri.txt",
+     "bytes": 4425
+    },
+    {
+     "path": "example/pixelvid.py",
+     "bytes": 62736
+    },
+    {
+     "path": "example/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "references/upstream/LICENSE",
+     "bytes": 1084
+    },
+    {
+     "path": "references/upstream/api.md",
+     "bytes": 8247
+    },
+    {
+     "path": "references/upstream/craft.md",
+     "bytes": 7768
+    },
+    {
+     "path": "references/upstream/story.md",
+     "bytes": 12554
+    }
+   ],
+   "file_count": 14,
+   "bytes": 8121275,
+   "zip": {
+    "path": "zips/llmvid-pixel-story.zip",
+    "bytes": 1259800,
+    "sha256": "7633f4dfb427d9617a3e5f49a53c73bb74882e45a082857555bf79522a0d5ff6"
+   }
+  },
+  {
+   "name": "llmvid-remotion-anime",
+   "kind": "skill",
+   "group": "mine",
+   "title": "애니풍 메신저 썰",
+   "summary": "대본과 음성(없어도 됨)으로 15~30초 안팎의 애니풍 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 애니풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG·CSS 로 인물·사무실·단톡 화면·자막을 직접 그린다. 회사·메신저 썰처럼 채팅 화면이 중심인 대본을 코드로 영상화할 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-remotion-anime.mp4",
+    "poster": "previews/llmvid-remotion-anime.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-remotion-anime/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2611
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 16622
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/package.json",
+     "bytes": 871
+    },
+    {
+     "path": "example/public/fonts/BlackHanSans-Regular.ttf",
+     "bytes": 998424
+    },
+    {
+     "path": "example/public/fonts/OFL-BlackHanSans.txt",
+     "bytes": 4399
+    },
+    {
+     "path": "example/remotion.config.ts",
+     "bytes": 371
+    },
+    {
+     "path": "example/src/Anime.tsx",
+     "bytes": 24263
+    },
+    {
+     "path": "example/src/Root.tsx",
+     "bytes": 389
+    },
+    {
+     "path": "example/src/fonts.ts",
+     "bytes": 1991
+    },
+    {
+     "path": "example/src/index.ts",
+     "bytes": 105
+    },
+    {
+     "path": "example/src/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/src/script.ts",
+     "bytes": 2468
+    },
+    {
+     "path": "example/tsconfig.json",
+     "bytes": 399
+    }
+   ],
+   "file_count": 14,
+   "bytes": 1058530,
+   "zip": {
+    "path": "zips/llmvid-remotion-anime.zip",
+    "bytes": 339108,
+    "sha256": "4343028ad961c17f73ea3fdeb247dbc287a503f9805fe2bbfb6933bd2ad5cdf7"
+   }
+  },
+  {
+   "name": "llmvid-remotion-kinetic",
+   "kind": "skill",
+   "group": "mine",
+   "title": "키네틱 타이포",
+   "summary": "대본과 음성(없어도 됨)으로 15~30초 안팎의 키네틱 타이포 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 키네틱 타이포 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드로 말 덩어리마다 큰 글자가 튀어나오게 한다. 그림 없이 글자와 색만으로 썰·훅 영상을 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-remotion-kinetic.mp4",
+    "poster": "previews/llmvid-remotion-kinetic.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-remotion-kinetic/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2613
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 14726
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/package.json",
+     "bytes": 904
+    },
+    {
+     "path": "example/public/fonts/BlackHanSans-Regular.ttf",
+     "bytes": 998424
+    },
+    {
+     "path": "example/public/fonts/OFL-BlackHanSans.txt",
+     "bytes": 4399
+    },
+    {
+     "path": "example/remotion.config.ts",
+     "bytes": 371
+    },
+    {
+     "path": "example/src/Kinetic.tsx",
+     "bytes": 4789
+    },
+    {
+     "path": "example/src/Root.tsx",
+     "bytes": 397
+    },
+    {
+     "path": "example/src/fonts.ts",
+     "bytes": 1991
+    },
+    {
+     "path": "example/src/index.ts",
+     "bytes": 105
+    },
+    {
+     "path": "example/src/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/src/script.ts",
+     "bytes": 2468
+    },
+    {
+     "path": "example/tsconfig.json",
+     "bytes": 399
+    }
+   ],
+   "file_count": 14,
+   "bytes": 1037203,
+   "zip": {
+    "path": "zips/llmvid-remotion-kinetic.zip",
+    "bytes": 332490,
+    "sha256": "97e7874846de84c47dc4e3ee2ec76c64a9918eeda21497dbb731334c75f82e05"
+   }
+  },
+  {
+   "name": "llmvid-remotion-paper-puppet",
+   "kind": "skill",
+   "group": "mine",
+   "title": "관절 종이 인형극",
+   "summary": "대본과 음성(없어도 됨)으로 15~30초 안팎의 관절 종이인형풍 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 관절 종이인형풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG로 오려 붙인 종이 질감과 관절 인형 동작을 직접 그린다. 사무실 썰이나 독특한 종이 인형극 느낌의 대본을 코드로 영상화할 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-remotion-paper-puppet.mp4",
+    "poster": "previews/llmvid-remotion-paper-puppet.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-remotion-paper-puppet/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2799
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 17432
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/package.json",
+     "bytes": 722
+    },
+    {
+     "path": "example/public/README.txt",
+     "bytes": 565
+    },
+    {
+     "path": "example/remotion.config.ts",
+     "bytes": 371
+    },
+    {
+     "path": "example/src/PaperAssets.tsx",
+     "bytes": 11346
+    },
+    {
+     "path": "example/src/PaperScene.tsx",
+     "bytes": 10464
+    },
+    {
+     "path": "example/src/Root.tsx",
+     "bytes": 1047
+    },
+    {
+     "path": "example/src/StoryData.ts",
+     "bytes": 1037
+    },
+    {
+     "path": "example/src/StoryFilm.tsx",
+     "bytes": 790
+    },
+    {
+     "path": "example/src/common.tsx",
+     "bytes": 1726
+    },
+    {
+     "path": "example/src/fonts.ts",
+     "bytes": 1456
+    },
+    {
+     "path": "example/src/index.ts",
+     "bytes": 109
+    },
+    {
+     "path": "example/src/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/src/script.ts",
+     "bytes": 2468
+    },
+    {
+     "path": "example/tsconfig.json",
+     "bytes": 399
+    }
+   ],
+   "file_count": 17,
+   "bytes": 58348,
+   "zip": {
+    "path": "zips/llmvid-remotion-paper-puppet.zip",
+    "bytes": 28256,
+    "sha256": "2a0294e25202cbc3bc462165189704729f65f6692a26b420463ea014843a8fc5"
+   }
+  },
+  {
+   "name": "llmvid-remotion-pixel-rpg",
+   "kind": "skill",
+   "group": "mine",
+   "title": "픽셀 RPG풍",
+   "summary": "대본과 음성(없어도 됨)으로 15~30초 안팎의 픽셀 RPG풍 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 픽셀 RPG풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG로 도트 게임 화면 같은 사무실과 인물 동작을 직접 그린다. 사무실 썰이나 레트로 게임 분위기의 대본을 코드로 영상화할 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-remotion-pixel-rpg.mp4",
+    "poster": "previews/llmvid-remotion-pixel-rpg.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-remotion-pixel-rpg/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2787
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 17071
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/package.json",
+     "bytes": 719
+    },
+    {
+     "path": "example/public/README.txt",
+     "bytes": 565
+    },
+    {
+     "path": "example/remotion.config.ts",
+     "bytes": 371
+    },
+    {
+     "path": "example/src/PixelAssets.tsx",
+     "bytes": 10929
+    },
+    {
+     "path": "example/src/PixelScene.tsx",
+     "bytes": 9242
+    },
+    {
+     "path": "example/src/Root.tsx",
+     "bytes": 1047
+    },
+    {
+     "path": "example/src/StoryData.ts",
+     "bytes": 1037
+    },
+    {
+     "path": "example/src/StoryFilm.tsx",
+     "bytes": 790
+    },
+    {
+     "path": "example/src/common.tsx",
+     "bytes": 1726
+    },
+    {
+     "path": "example/src/fonts.ts",
+     "bytes": 1456
+    },
+    {
+     "path": "example/src/index.ts",
+     "bytes": 109
+    },
+    {
+     "path": "example/src/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/src/script.ts",
+     "bytes": 2468
+    },
+    {
+     "path": "example/tsconfig.json",
+     "bytes": 399
+    }
+   ],
+   "file_count": 17,
+   "bytes": 56333,
+   "zip": {
+    "path": "zips/llmvid-remotion-pixel-rpg.zip",
+    "bytes": 27452,
+    "sha256": "9e7c0a268601726a6a4928c266be146854f8c6cba95d27eb22788bd9180dccf5"
+   }
+  },
+  {
+   "name": "llmvid-remotion-sketch",
+   "kind": "skill",
+   "group": "mine",
+   "title": "손그림 느낌",
+   "summary": "대본과 음성(없어도 됨)으로 15~30초 안팎의 손그림 느낌 세로 영상(1080×1920)을 만든다.",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 손그림 느낌 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드로 그린 애니풍 장면에 선 떨림과 종이결 필터를 입힌다. 그림일기·낙서 분위기의 썰 영상을 코드로 만들 때 쓴다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-11-15",
+   "updated": "2026-11-15",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "video",
+    "src": "previews/llmvid-remotion-sketch.mp4",
+    "poster": "previews/llmvid-remotion-sketch.jpg"
+   },
+   "entry": "SKILL.md",
+   "raw_base": ".well-known/skills/llmvid-remotion-sketch/",
+   "files": [
+    {
+     "path": "LICENSES.md",
+     "bytes": 2612
+    },
+    {
+     "path": "SKILL.md",
+     "bytes": 17766
+    },
+    {
+     "path": "example/SCRIPT.md",
+     "bytes": 3075
+    },
+    {
+     "path": "example/package.json",
+     "bytes": 893
+    },
+    {
+     "path": "example/public/fonts/BlackHanSans-Regular.ttf",
+     "bytes": 998424
+    },
+    {
+     "path": "example/public/fonts/OFL-BlackHanSans.txt",
+     "bytes": 4399
+    },
+    {
+     "path": "example/remotion.config.ts",
+     "bytes": 371
+    },
+    {
+     "path": "example/src/Anime.tsx",
+     "bytes": 24263
+    },
+    {
+     "path": "example/src/Root.tsx",
+     "bytes": 483
+    },
+    {
+     "path": "example/src/Sketch.tsx",
+     "bytes": 1503
+    },
+    {
+     "path": "example/src/fonts.ts",
+     "bytes": 1991
+    },
+    {
+     "path": "example/src/index.ts",
+     "bytes": 105
+    },
+    {
+     "path": "example/src/script.json",
+     "bytes": 2542
+    },
+    {
+     "path": "example/src/script.ts",
+     "bytes": 2468
+    },
+    {
+     "path": "example/tsconfig.json",
+     "bytes": 399
+    }
+   ],
+   "file_count": 15,
+   "bytes": 1061294,
+   "zip": {
+    "path": "zips/llmvid-remotion-sketch.zip",
+    "bytes": 340540,
+    "sha256": "813f59c72ee5e06e738781b78b1317ab4396982b960f18bd5d4830dbe50f2244"
+   }
+  },
+  {
+   "name": "ai-arena",
+   "kind": "command",
+   "group": "mine",
+   "title": "AI 격투 아레나",
+   "summary": "제미나이·클로드·GPT가 싸우며 스스로 배우는 틱제 격투 RPG를 만들고 확장하는 명령어.",
+   "description": "AI Fight Arena — 겟앰프드식 틱제 격투 RPG를 만들고 확장한다 (제미나이·클로드·GPT가 싸우며 자기학습)",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-09-07",
+   "updated": "2026-09-07",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "ai-arena.md",
+   "raw_base": "extras/ai-arena/",
+   "files": [
+    {
+     "path": "ai-arena.md",
+     "bytes": 4566
+    }
+   ],
+   "file_count": 1,
+   "bytes": 4566,
+   "zip": {
+    "path": "zips/ai-arena.zip",
+    "bytes": 2832,
+    "sha256": "bbd57939bb4c6e5d6b43a869d2a0e1e42e50a8dd5094b8e9f593a87d3394015e"
+   }
+  },
+  {
+   "name": "continue",
+   "kind": "command",
+   "group": "mine",
+   "title": "이어서 진행",
+   "summary": "git 상태와 최근 변경을 보고, 멈춘 곳부터 끝까지 이어서 진행하는 명령어.",
+   "description": "이전 작업 이어서 진행:",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-03-26",
+   "updated": "2026-03-26",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "continue.md",
+   "raw_base": "extras/continue/",
+   "files": [
+    {
+     "path": "continue.md",
+     "bytes": 200
+    }
+   ],
+   "file_count": 1,
+   "bytes": 200,
+   "zip": {
+    "path": "zips/continue.zip",
+    "bytes": 298,
+    "sha256": "fdbbfff3c763541ef569cf684453dbab305c2af066f3662131b9107dd657fbd6"
+   }
+  },
+  {
+   "name": "dev",
+   "kind": "command",
+   "group": "mine",
+   "title": "자율 개발 모드",
+   "summary": "확인 없이 끝까지 진행하고, 오류는 3회까지 스스로 고친 뒤 결과만 알리는 명령어.",
+   "description": "자율 개발 모드. 아래 규칙 적용:",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": "2026-03-26",
+   "updated": "2026-03-26",
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "doc"
+   },
+   "entry": "dev.md",
+   "raw_base": "extras/dev/",
+   "files": [
+    {
+     "path": "dev.md",
+     "bytes": 252
+    }
+   ],
+   "file_count": 1,
+   "bytes": 252,
+   "zip": {
+    "path": "zips/dev.zip",
+    "bytes": 330,
+    "sha256": "35ca0911629564a6df31aab13d1b2b9a764247b00688672ab8eb64c883ad3fa8"
+   }
+  },
+  {
+   "name": "humanize-korean",
+   "kind": "external",
+   "group": "external",
+   "title": "휴머나이즈 KR",
+   "summary": "AI가 쓴 한글을 내용은 그대로 두고 번역투·기계적 병렬·리듬 같은 문체만 사람 글처럼 다듬는다.",
+   "description": "AI가 쓴 한글을 내용은 그대로 두고 번역투·기계적 병렬·리듬 같은 문체만 사람 글처럼 다듬는다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": "Windows에서는 설치 뒤 SKILL.md의 python3를 python으로 바꾸고, 호출마다 PYTHONIOENCODING=utf-8을 붙여야 했다.",
+   "source": {
+    "label": "epoko77-ai/im-not-ai",
+    "url": "https://github.com/epoko77-ai/im-not-ai"
+   },
+   "install": [
+    "git clone https://github.com/epoko77-ai/im-not-ai.git",
+    "cd im-not-ai",
+    "./install.sh"
+   ],
+   "added": "2026-07-28",
+   "updated": null,
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "remotion-skills",
+   "kind": "external",
+   "group": "external",
+   "title": "Remotion 공식 스킬 12종",
+   "summary": "React 코드로 영상을 만드는 Remotion의 공식 스킬. 만들기·자막·지도·멀티미디어·렌더·스튜디오를 나눠 다룬다.",
+   "description": "React 코드로 영상을 만드는 Remotion의 공식 스킬. 만들기·자막·지도·멀티미디어·렌더·스튜디오를 나눠 다룬다.",
+   "version": null,
+   "agents": [
+    "claude",
+    "codex"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "remotion-dev/skills",
+    "url": "https://github.com/remotion-dev/skills"
+   },
+   "install": [
+    "npx skills add remotion-dev/skills"
+   ],
+   "added": "2026-10-07",
+   "updated": null,
+   "usage": {
+    "calls": 9,
+    "sessions": 8,
+    "first": "2026-10-11",
+    "last": "2026-11-10"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "superpowers",
+   "kind": "external",
+   "group": "external",
+   "title": "슈퍼파워",
+   "summary": "기획 정리, 체계적 디버깅, 시험 주도 개발, 완료 전 검증 같은 작업 절차를 스킬로 묶은 플러그인.",
+   "description": "기획 정리, 체계적 디버깅, 시험 주도 개발, 완료 전 검증 같은 작업 절차를 스킬로 묶은 플러그인.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official"
+   },
+   "install": [
+    "claude plugin install superpowers@claude-plugins-official"
+   ],
+   "added": "2026-05-31",
+   "updated": null,
+   "usage": {
+    "calls": 22,
+    "sessions": 22,
+    "first": "2026-08-10",
+    "last": "2026-11-15"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "frontend-design",
+   "kind": "external",
+   "group": "external",
+   "title": "프런트엔드 디자인",
+   "summary": "새 화면을 만들 때 틀에 박힌 기본값 대신 주제에 맞는 색·글자·배치를 고르게 하는 플러그인.",
+   "description": "새 화면을 만들 때 틀에 박힌 기본값 대신 주제에 맞는 색·글자·배치를 고르게 하는 플러그인.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official"
+   },
+   "install": [
+    "claude plugin install frontend-design@claude-plugins-official"
+   ],
+   "added": "2026-09-30",
+   "updated": null,
+   "usage": {
+    "calls": 9,
+    "sessions": 9,
+    "first": "2026-10-07",
+    "last": "2026-11-17"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "understand-anything",
+   "kind": "external",
+   "group": "external",
+   "title": "코드 구조 지도",
+   "summary": "코드베이스를 지식 그래프로 분석해 구조·흐름·변경 영향을 보여 주는 플러그인.",
+   "description": "코드베이스를 지식 그래프로 분석해 구조·흐름·변경 영향을 보여 주는 플러그인.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "Lum1104/Understand-Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything"
+   },
+   "install": [
+    "claude plugin marketplace add Lum1104/Understand-Anything",
+    "claude plugin install understand-anything@understand-anything"
+   ],
+   "added": "2026-05-31",
+   "updated": null,
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "karpathy-guidelines",
+   "kind": "external",
+   "group": "external",
+   "title": "카파시 코딩 지침",
+   "summary": "코드를 쓰고 고칠 때 과한 설계, 넓은 수정, 숨은 가정 같은 흔한 실수를 줄이는 지침.",
+   "description": "코드를 쓰고 고칠 때 과한 설계, 넓은 수정, 숨은 가정 같은 흔한 실수를 줄이는 지침.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "forrestchang/andrej-karpathy-skills",
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills"
+   },
+   "install": [
+    "claude plugin marketplace add forrestchang/andrej-karpathy-skills",
+    "claude plugin install andrej-karpathy-skills@karpathy-skills"
+   ],
+   "added": "2026-05-31",
+   "updated": null,
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "watch",
+   "kind": "external",
+   "group": "external",
+   "title": "영상 보기",
+   "summary": "영상 주소나 파일을 받아 프레임과 자막을 뽑고, 영상 내용에 대한 질문에 답한다. ffmpeg와 yt-dlp가 필요하다.",
+   "description": "영상 주소나 파일을 받아 프레임과 자막을 뽑고, 영상 내용에 대한 질문에 답한다. ffmpeg와 yt-dlp가 필요하다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "bradautomates/claude-video",
+    "url": "https://github.com/bradautomates/claude-video"
+   },
+   "install": [
+    "claude plugin marketplace add bradautomates/claude-video",
+    "claude plugin install watch@claude-video"
+   ],
+   "added": "2026-05-31",
+   "updated": null,
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "telegram",
+   "kind": "external",
+   "group": "external",
+   "title": "텔레그램 채널",
+   "summary": "텔레그램 봇으로 Claude 세션과 메시지를 주고받는 플러그인. 봇 토큰은 따로 넣는다.",
+   "description": "텔레그램 봇으로 Claude 세션과 메시지를 주고받는 플러그인. 봇 토큰은 따로 넣는다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official"
+   },
+   "install": [
+    "claude plugin install telegram@claude-plugins-official"
+   ],
+   "added": "2026-04-03",
+   "updated": null,
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "runway-api",
+   "kind": "external",
+   "group": "external",
+   "title": "런웨이 API",
+   "summary": "Runway의 영상·이미지 모델과 캐릭터, 워크플로를 앱에 연결할 때 쓰는 플러그인.",
+   "description": "Runway의 영상·이미지 모델과 캐릭터, 워크플로를 앱에 연결할 때 쓰는 플러그인.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": {
+    "label": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official"
+   },
+   "install": [
+    "claude plugin install runway-api@claude-plugins-official"
+   ],
+   "added": "2026-11-04",
+   "updated": null,
+   "usage": {
+    "calls": 0,
+    "sessions": 0,
+    "first": null,
+    "last": null
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "built-in-browser",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "앱 안 브라우저",
+   "summary": "Claude 데스크탑 앱 안의 브라우저로 페이지를 열고, 읽고, 누르고, 화면을 확인한다.",
+   "description": "Claude 데스크탑 앱 안의 브라우저로 페이지를 열고, 읽고, 누르고, 화면을 확인한다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 133,
+    "sessions": 29,
+    "first": "2026-10-01",
+    "last": "2026-11-12"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "chrome-browser",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "크롬 브라우저",
+   "summary": "내 Chrome에서 로그인된 상태 그대로 웹 작업을 한다.",
+   "description": "내 Chrome에서 로그인된 상태 그대로 웹 작업을 한다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 21,
+    "sessions": 20,
+    "first": "2026-09-29",
+    "last": "2026-11-17"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "xlsx",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "엑셀",
+   "summary": "엑셀·CSV 파일을 읽고, 고치고, 새로 만든다.",
+   "description": "엑셀·CSV 파일을 읽고, 고치고, 새로 만든다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 9,
+    "sessions": 9,
+    "first": "2026-08-19",
+    "last": "2026-11-12"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "pptx",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "파워포인트",
+   "summary": "파워포인트 파일을 읽고, 고치고, 새로 만든다.",
+   "description": "파워포인트 파일을 읽고, 고치고, 새로 만든다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 11,
+    "sessions": 10,
+    "first": "2026-07-06",
+    "last": "2026-11-12"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "dataviz",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "차트 그리기",
+   "summary": "차트와 대시보드를 한 가지 색·형식 체계로, 밝은 화면과 어두운 화면 모두에서 읽히게 그린다.",
+   "description": "차트와 대시보드를 한 가지 색·형식 체계로, 밝은 화면과 어두운 화면 모두에서 읽히게 그린다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 6,
+    "sessions": 6,
+    "first": "2026-10-22",
+    "last": "2026-11-11"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "pdf",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "PDF",
+   "summary": "PDF를 읽고, 합치고, 나누고, 새로 만든다.",
+   "description": "PDF를 읽고, 합치고, 나누고, 새로 만든다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 5,
+    "sessions": 4,
+    "first": "2026-09-14",
+    "last": "2026-11-09"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "artifact-design",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "아티팩트 디자인",
+   "summary": "아티팩트 페이지를 쓰기 전에 지킬 형식과 디자인 기준.",
+   "description": "아티팩트 페이지를 쓰기 전에 지킬 형식과 디자인 기준.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 13,
+    "sessions": 13,
+    "first": "2026-07-21",
+    "last": "2026-11-16"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "claude-api",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "Claude API 참고",
+   "summary": "Claude API와 SDK의 모델·요금·매개변수·도구 사용법을 찾아본다.",
+   "description": "Claude API와 SDK의 모델·요금·매개변수·도구 사용법을 찾아본다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 8,
+    "sessions": 6,
+    "first": "2026-08-13",
+    "last": "2026-10-22"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "computer-use",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "PC 조작",
+   "summary": "PC 화면을 보고 마우스와 키보드로 데스크탑 앱을 조작한다.",
+   "description": "PC 화면을 보고 마우스와 키보드로 데스크탑 앱을 조작한다.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 5,
+    "sessions": 5,
+    "first": "2026-09-28",
+    "last": "2026-11-12"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  },
+  {
+   "name": "workflow-authoring",
+   "kind": "builtin",
+   "group": "builtin",
+   "title": "워크플로 작성",
+   "summary": "여러 에이전트를 정해진 순서로 돌리는 워크플로 스크립트를 쓰는 법.",
+   "description": "여러 에이전트를 정해진 순서로 돌리는 워크플로 스크립트를 쓰는 법.",
+   "version": null,
+   "agents": [
+    "claude"
+   ],
+   "needs": [],
+   "note": null,
+   "source": null,
+   "install": [],
+   "added": null,
+   "updated": null,
+   "usage": {
+    "calls": 24,
+    "sessions": 17,
+    "first": "2026-09-07",
+    "last": "2026-11-12"
+   },
+   "preview": {
+    "type": "none"
+   },
+   "entry": null,
+   "raw_base": null,
+   "files": [],
+   "file_count": 0,
+   "bytes": 0,
+   "zip": null
+  }
+ ],
+ "packs": [
+  {
+   "id": "llmvid",
+   "title": "코드로 만드는 영상 스킬 팩 v1.3 (14종)",
+   "items": [
+    "llmvid-blender-clay-office",
+    "llmvid-blender-cutaway-explainer",
+    "llmvid-blender-mascot-explainer",
+    "llmvid-blender-object-drama",
+    "llmvid-blender-psa-parody",
+    "llmvid-blender-stage-diorama",
+    "llmvid-blender-toon",
+    "llmvid-blender-voxel-whatif",
+    "llmvid-pixel-story",
+    "llmvid-remotion-anime",
+    "llmvid-remotion-kinetic",
+    "llmvid-remotion-paper-puppet",
+    "llmvid-remotion-pixel-rpg",
+    "llmvid-remotion-sketch"
+   ],
+   "bytes": 2616815
+  },
+  {
+   "id": "office-story",
+   "title": "직장 썰 제작 3종 (씨댄스·클레이·썸네일)",
+   "items": [
+    "seedance-office-story",
+    "clay-office-story",
+    "artifact-template-1"
+   ],
+   "bytes": 41826474
+  }
+ ]
+}

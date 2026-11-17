@@ -1,0 +1,4 @@
+interface:
+  display_name: "씨댄스 직장 썰 제작"
+  short_description: "직장 썰 각색부터 씨댄스 영상 소스와 리모션 편집 인계까지"
+  default_prompt: "$seedance-office-story로 이 사연을 30초 이내 대본과 씨댄스 장면 프롬프트로 준비해줘."

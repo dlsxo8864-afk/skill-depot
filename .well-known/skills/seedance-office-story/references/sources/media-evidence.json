@@ -1,0 +1,78 @@
+[
+  {
+    "source": "ep1-package",
+    "file": "C:\\Users\\<사용자>\\Documents\\Codex\\toegeungak-studio\\production-research\\2026-11-04\\ep1\\deliverable_no_answer_30s.mp4",
+    "sha256": "b8b4e4fdd94d4a80dbb9f1cb76cb8b98eef0adfd3e3b64e1359e6b013d5b4d8d",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "24/1",
+          "nb_frames": "721"
+        }
+      ],
+      "format": {
+        "duration": "30.041667",
+        "size": "11220205"
+      }
+    },
+    "sceneThreshold": 0.25,
+    "candidateCutTimes": [
+      3.916667,
+      5.833333,
+      8.916667,
+      12.875,
+      15.166667,
+      17.791667,
+      20.5,
+      23.291667,
+      27.666667
+    ],
+    "sceneCommandExitCode": 0,
+    "humanReviewRequired": true
+  },
+  {
+    "source": "ep2-earlier-upload",
+    "file": "C:\\Users\\<사용자>\\Downloads\\serve.mp4",
+    "sha256": "fd88f5cbdb5544d83a64b44fc61fe56ec8f06707a160716d9471bb579d13b42f",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "24/1",
+          "nb_frames": "720"
+        }
+      ],
+      "format": {
+        "duration": "30.000000",
+        "size": "15939375"
+      }
+    },
+    "sceneThreshold": 0.25,
+    "candidateCutTimes": [
+      4.0,
+      5.708333,
+      7.875,
+      9.833333,
+      12.0,
+      14.583333,
+      17.166667,
+      20.0,
+      21.75,
+      24.375,
+      26.291667
+    ],
+    "sceneCommandExitCode": 0,
+    "humanReviewRequired": true
+  }
+]

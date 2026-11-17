@@ -1,0 +1,44 @@
+gemini-delegate	skill	mine	zips/gemini-delegate.zip	3bcf965eef7110170ef0b8a0cea6ea9ed28f89331a9f91af1928cb8eae633f14	1361	제미나이 위임	gemini-bridge 프로그램(MCP 서버와 bridge_core.py); Antigravity CLI(agy) 로그인	-
+api-agents	skill	mine	zips/api-agents.zip	04061021678232575ab06d4ad602e609bd26614ac63c28ef6223b0cb98d94a7f	2903	API 병렬 워커	API 병렬 에이전트 프로그램(29번); 콘솔 API 키 — 지금 쓰는 프로모션 크레딧은 2026-11-23 만료	-
+coupang-shorts-pipeline	skill	mine	zips/coupang-shorts-pipeline.zip	5f4c2a1d6a1084dcc306b710a4c511b3187c51098e2b66aa0d7fa3373930c07a	14654	쿠팡 쇼츠 프롬프트 검수	쇼츠킷 프로그램(27번) 소스	-
+naver-clip-voice-script	skill	mine	zips/naver-clip-voice-script.zip	4b667bcbf6a469ffd0c4314229ca09d66d28e45bf4c9b025cb268968c3e1fb6f	12820	식당 홍보 내레이션	-	-
+product-scene-video	skill	mine	zips/product-scene-video.zip	2790816a3c82a4fda56294698fa4e6e410c2405dd4cf4cd5747c078a58e9cab2	2887	상품 장면 영상화	쇼츠킷 프로그램(27번) 소스	-
+seedance-office-story	skill	mine	zips/seedance-office-story.zip	30a6d4e4743cc56488cc77350da7aaaebbd9ba544cab7ed36cd357b003fd4e6a	82088	직장 썰 씨댄스 제작	Seedance 이용(수동 업로드 또는 모델 API)	-
+clay-office-story	skill	mine	zips/clay-office-story.zip	aaf39ea622222227a91cb3444c01e11b43b67c49bd1a5bb6eac6f035d38be867	8043617	직장 썰 클레이 인형극	-	-
+artifact-template-1	skill	mine	zips/artifact-template-1.zip	9548c38321a558b7352ec4874afde9ad78d9373a27e252e75ef6253155322ee9	33700769	직장 썰 썸네일 템플릿 1	SB 어그로 Bold 글꼴 — 글꼴 파일 재배포가 허용되지 않아 뺐다. 샌드박스 공식 배포처에서 받아 assets/template-1/remotion/public/fonts/SBAggroB.ttf 로 넣는다	-
+llmvid-blender-clay-office	skill	mine	zips/llmvid-blender-clay-office.zip	937897566a9f1369693b4b3f8f0662f30a2bbce7ce550bb2e7ba2cd917ee07b2	37466	점토 인형 사무실 썰	-	-
+llmvid-blender-cutaway-explainer	skill	mine	zips/llmvid-blender-cutaway-explainer.zip	d22ceaa91e33a7a99bab762deba2c50d9dde2d609830246b1dc4936bd5506476	29278	장치 단면 설명	-	-
+llmvid-blender-mascot-explainer	skill	mine	zips/llmvid-blender-mascot-explainer.zip	c9384c697e92da19f8aeca3e5ff0776613127a08bdc51c44a671863f0bfd65a9	30103	마스코트 카드 설명	-	-
+llmvid-blender-object-drama	skill	mine	zips/llmvid-blender-object-drama.zip	4d197fb7c67711a31c6734e603c58748fb2333ffecea8eedc8ea5ee600f58866	33903	물건만 나오는 실사풍 썰	-	-
+llmvid-blender-psa-parody	skill	mine	zips/llmvid-blender-psa-parody.zip	bb9cb49f5e7bfc6cc1714ea52cb11c6aa290c27fa1fb81ab9eef204714cb334a	47163	공익 안내 방송 패러디	-	-
+llmvid-blender-stage-diorama	skill	mine	zips/llmvid-blender-stage-diorama.zip	d390f137830352c88d65d5a69a81a3898303330b7c2c5e8260ecb15690b72746	30681	단계별 미니어처 세트	-	-
+llmvid-blender-toon	skill	mine	zips/llmvid-blender-toon.zip	8c524dd9ee33663608d215c7237563dad7d67bb3bea62a5f61a68f4d764a41ef	36189	물건만 나오는 카툰풍 썰	-	-
+llmvid-blender-voxel-whatif	skill	mine	zips/llmvid-blender-voxel-whatif.zip	e36625f812c976a8339424bce4c9468fcb7fc97d6d307c0d6a2d4c887e4fe35a	44386	복셀 '만약에' 쇼츠	-	-
+llmvid-pixel-story	skill	mine	zips/llmvid-pixel-story.zip	7633f4dfb427d9617a3e5f49a53c73bb74882e45a082857555bf79522a0d5ff6	1259800	픽셀 애니 썰	-	-
+llmvid-remotion-anime	skill	mine	zips/llmvid-remotion-anime.zip	4343028ad961c17f73ea3fdeb247dbc287a503f9805fe2bbfb6933bd2ad5cdf7	339108	애니풍 메신저 썰	-	-
+llmvid-remotion-kinetic	skill	mine	zips/llmvid-remotion-kinetic.zip	97e7874846de84c47dc4e3ee2ec76c64a9918eeda21497dbb731334c75f82e05	332490	키네틱 타이포	-	-
+llmvid-remotion-paper-puppet	skill	mine	zips/llmvid-remotion-paper-puppet.zip	2a0294e25202cbc3bc462165189704729f65f6692a26b420463ea014843a8fc5	28256	관절 종이 인형극	-	-
+llmvid-remotion-pixel-rpg	skill	mine	zips/llmvid-remotion-pixel-rpg.zip	9e7c0a268601726a6a4928c266be146854f8c6cba95d27eb22788bd9180dccf5	27452	픽셀 RPG풍	-	-
+llmvid-remotion-sketch	skill	mine	zips/llmvid-remotion-sketch.zip	813f59c72ee5e06e738781b78b1317ab4396982b960f18bd5d4830dbe50f2244	340540	손그림 느낌	-	-
+ai-arena	command	mine	zips/ai-arena.zip	bbd57939bb4c6e5d6b43a869d2a0e1e42e50a8dd5094b8e9f593a87d3394015e	2832	AI 격투 아레나	-	-
+continue	command	mine	zips/continue.zip	fdbbfff3c763541ef569cf684453dbab305c2af066f3662131b9107dd657fbd6	298	이어서 진행	-	-
+dev	command	mine	zips/dev.zip	35ca0911629564a6df31aab13d1b2b9a764247b00688672ab8eb64c883ad3fa8	330	자율 개발 모드	-	-
+humanize-korean	external	external	-	-	0	휴머나이즈 KR	-	git clone https://github.com/epoko77-ai/im-not-ai.git && cd im-not-ai && ./install.sh
+remotion-skills	external	external	-	-	0	Remotion 공식 스킬 12종	-	npx skills add remotion-dev/skills
+superpowers	external	external	-	-	0	슈퍼파워	-	claude plugin install superpowers@claude-plugins-official
+frontend-design	external	external	-	-	0	프런트엔드 디자인	-	claude plugin install frontend-design@claude-plugins-official
+understand-anything	external	external	-	-	0	코드 구조 지도	-	claude plugin marketplace add Lum1104/Understand-Anything && claude plugin install understand-anything@understand-anything
+karpathy-guidelines	external	external	-	-	0	카파시 코딩 지침	-	claude plugin marketplace add forrestchang/andrej-karpathy-skills && claude plugin install andrej-karpathy-skills@karpathy-skills
+watch	external	external	-	-	0	영상 보기	-	claude plugin marketplace add bradautomates/claude-video && claude plugin install watch@claude-video
+telegram	external	external	-	-	0	텔레그램 채널	-	claude plugin install telegram@claude-plugins-official
+runway-api	external	external	-	-	0	런웨이 API	-	claude plugin install runway-api@claude-plugins-official
+built-in-browser	builtin	builtin	-	-	0	앱 안 브라우저	-	-
+chrome-browser	builtin	builtin	-	-	0	크롬 브라우저	-	-
+xlsx	builtin	builtin	-	-	0	엑셀	-	-
+pptx	builtin	builtin	-	-	0	파워포인트	-	-
+dataviz	builtin	builtin	-	-	0	차트 그리기	-	-
+pdf	builtin	builtin	-	-	0	PDF	-	-
+artifact-design	builtin	builtin	-	-	0	아티팩트 디자인	-	-
+claude-api	builtin	builtin	-	-	0	Claude API 참고	-	-
+computer-use	builtin	builtin	-	-	0	PC 조작	-	-
+workflow-authoring	builtin	builtin	-	-	0	워크플로 작성	-	-

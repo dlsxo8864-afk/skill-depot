@@ -1,0 +1,89 @@
+{
+  "template": "템플릿 1",
+  "version": "1.1.0",
+  "date": "2026-11-04",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "background_generation": "built-in image_gen, new text-free photographs from raw character references",
+  "text_renderer": "Remotion 4.0.540, native React/CSS, local fonts",
+  "backgrounds": [
+    {
+      "episode": "EP1",
+      "path": "backgrounds\\ep1-background.png",
+      "size": [
+        941,
+        1672
+      ],
+      "sha256": "1cd6acb745ec05653dccd0d5a97d3390077cf810672b1698e8457d3cb0e2d992"
+    },
+    {
+      "episode": "EP2",
+      "path": "backgrounds\\ep2-background.png",
+      "size": [
+        941,
+        1672
+      ],
+      "sha256": "82003d426d0941bc3d8975c070aa77e8fa5e58ee4cc56b66a6556a861b971f1f"
+    }
+  ],
+  "exports": [
+    {
+      "path": "exports\\EP1-template-1.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "mode": "RGB",
+      "sha256": "6ee0812abfd12b9a70834929e05bfde31689a5cfa1509a718f13893ff35497dc"
+    },
+    {
+      "path": "exports\\EP1-text-overlay.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "mode": "RGBA",
+      "sha256": "7092fc5c1d85e176e9e602de691765c3632017f4f5898ff8e158682aebff7002",
+      "alpha_range": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "exports\\EP2-template-1.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "mode": "RGB",
+      "sha256": "4532ea0697cc4e0f24fa8657c159a94b202541521ce9e502ab8d8893e0f43fc8"
+    },
+    {
+      "path": "exports\\EP2-text-overlay.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "mode": "RGBA",
+      "sha256": "b39f311e8df9cc74d26c9fb9c0119d2a3790487a551a4477a75cdc223f1ea360",
+      "alpha_range": [
+        0,
+        255
+      ]
+    }
+  ],
+  "checks": {
+    "background_master_copy_hash_match": true,
+    "final_png_1080x1920": true,
+    "overlays_have_actual_transparency": true,
+    "local_fonts_and_licenses_present": true,
+    "independent_kit_npm_ci_lint_and_two_preset_renders": "passed",
+    "visual_review_full_size_and_324px": "passed",
+    "workflow": "Photo masters are preserved; later wording/EP/footer changes only update native text props and rerender.",
+    "background_sha256_unchanged_after_typography_revision": true,
+    "fonts": "SB Aggro Bold; Noto Sans KR Black masthead and Regular footer; local fonts and license files retained"
+  },
+  "revision": "Original image-generated typography matched with SB Aggro Bold, tighter word spacing, taller glyphs and soft black shadow. Background masters unchanged."
+}

@@ -1,0 +1,159 @@
+{
+ "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+ "skills": [
+  {
+   "name": "gemini-delegate",
+   "type": "skill-md",
+   "description": "Delegate substantial foundation implementation, batches of draft files, and repetitive scaffolding to the user's Google CLI bridge to reduce GPT and Claude usage, then review, test, and finish with the main LLM. Use for explicit Gemini delegation or substantial coding foundation work under this user's routing preference.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/.well-known/skills/gemini-delegate/SKILL.md",
+   "digest": "sha256:abf0fea5029384f88e3d189eb96141d280377e322c234f8ed86c046c36f85921"
+  },
+  {
+   "name": "api-agents",
+   "type": "skill-md",
+   "description": "프로모션 API 크레딧($200, 2026-11-23 만료)으로 도는 병렬 워커(api-agents MCP·cli.py)에 작업을 나눠 맡길 때 쓴다. 트리거 — \"API 에이전트로\", \"API 워커\", \"워커로 병렬\", \"크레딧으로 돌려\", \"병렬로 맡겨\", \"주간 한도 절약\", \"api-agents\", \"/api-agents\", 크레딧 잔액·워커 진행 상황 질문.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/.well-known/skills/api-agents/SKILL.md",
+   "digest": "sha256:cfe8a504e35fa1949c854a036ede4e0eae212df52f716de177f3b4850cc594ed"
+  },
+  {
+   "name": "coupang-shorts-pipeline",
+   "type": "archive",
+   "description": "쿠팡 파트너스 탭(쇼츠킷 8296, affiliate maker)의 단계별 프롬프트·스킬을 고치거나 새 쿠팡 쇼츠 실행 결과를 검수할 때, 또는 상품 쇼츠 대본·recreate brief·첫 프레임 이미지·영상 프롬프트 품질을 올릴 때 쓴다(쇼츠킷 프롬프트, 쿠팡 쇼츠, affiliate maker, recreate brief).",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/coupang-shorts-pipeline.zip",
+   "digest": "sha256:5f4c2a1d6a1084dcc306b710a4c511b3187c51098e2b66aa0d7fa3373930c07a"
+  },
+  {
+   "name": "naver-clip-voice-script",
+   "type": "archive",
+   "description": "Use when writing Korean narration for short restaurant or food promo videos (네이버 클립, 쇼츠, 릴스), choosing or directing Korean AI voices (Gemini TTS, ElevenLabs), or when a Korean voiceover sounds flat, robotic or boring (무미건조, 심심함, 말투 어색, AI 티, 재미없음). Also when changing the 쇼츠킷 네이버 클립 식당홍보 tab's script or voice prompts.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/naver-clip-voice-script.zip",
+   "digest": "sha256:4b667bcbf6a469ffd0c4314229ca09d66d28e45bf4c9b025cb268968c3e1fb6f"
+  },
+  {
+   "name": "product-scene-video",
+   "type": "skill-md",
+   "description": "쿠팡 상품 장면의 이미지 생성·이미지 영상화·연결 품질을 개선하거나 8296 쇼츠킷 제작기를 수정할 때 사용한다. 제품 정체성, 모델별 입력 규격, 실제 생성 증빙과 최종 MP4 검수를 관리한다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/.well-known/skills/product-scene-video/SKILL.md",
+   "digest": "sha256:16fe9af0570154165540145cf0594a9cfe50cb8e200a006040d3754995248892"
+  },
+  {
+   "name": "seedance-office-story",
+   "type": "archive",
+   "description": "한국 직장 썰을 30초 이내 세로 영상으로 각색하고 Seedance용 장면 프롬프트·캐릭터 참조·수동 영상 업로드 또는 모델 API·Remotion 편집 인계를 준비한다. 직장 사연 영상 제작, 기존 회차 수정, 업로드용 멘션 문구 준비에 사용한다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/seedance-office-story.zip",
+   "digest": "sha256:30a6d4e4743cc56488cc77350da7aaaebbd9ba544cab7ed36cd357b003fd4e6a"
+  },
+  {
+   "name": "clay-office-story",
+   "type": "archive",
+   "description": "직장 썰을 고정된 점토풍 블렌더 캐릭터·장면 동작으로 만들고 음성 및 기존 리모션 모션 자막과 합성한다. 퇴근각 클레이 버전, 캐릭터 시안, Seedance 대체 영상 제작과 해당 회차 수정에 사용한다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/clay-office-story.zip",
+   "digest": "sha256:aaf39ea622222227a91cb3444c01e11b43b67c49bd1a5bb6eac6f035d38be867"
+  },
+  {
+   "name": "artifact-template-1",
+   "type": "archive",
+   "description": "직장 썰 썸네일 템플릿 1. Use when the user selects this template, names 템플릿 1 or 템플릿1, or invokes $artifact-template-1. Generate photographs separately without text; compose all typography and effects with the retained Remotion template.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/artifact-template-1.zip",
+   "digest": "sha256:9548c38321a558b7352ec4874afde9ad78d9373a27e252e75ef6253155322ee9"
+  },
+  {
+   "name": "llmvid-blender-clay-office",
+   "type": "archive",
+   "description": "대본과 음성으로, 점토풍 3D 캐릭터가 등장하는 미니어처 사무실 썰 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형을 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 자막과 음성을 붙인다. 직장인 썰을 아기자기한 점토 인형극 느낌으로 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-clay-office.zip",
+   "digest": "sha256:937897566a9f1369693b4b3f8f0662f30a2bbce7ce550bb2e7ba2cd917ee07b2"
+  },
+  {
+   "name": "llmvid-blender-cutaway-explainer",
+   "type": "archive",
+   "description": "대본과 음성으로, 장치의 겉을 보여 준 뒤 앞판을 투명하게 만들어 속에서 일이 벌어지는 차례를 보여 주는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형으로 장치(투입구·저장통·압력계·밸브·배출구)를 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 단계 표시·자막·효과음을 붙인다. 과정을 '기계의 흐름'에 빗대어 설명하는 쇼츠에 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-cutaway-explainer.zip",
+   "digest": "sha256:d22ceaa91e33a7a99bab762deba2c50d9dde2d609830246b1dc4936bd5506476"
+  },
+  {
+   "name": "llmvid-blender-mascot-explainer",
+   "type": "archive",
+   "description": "대본과 음성으로, 어두운 무대에 선 3D 마스코트가 화면 카드(단톡·시계·알림·결과)를 차례로 띄우며 설명하는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형과 코드로 그린 카드를 EEVEE로 렌더하고 ffmpeg로 제목 띠·자막·효과음을 붙인다. 정보·요령·순서를 짧게 설명하는 쇼츠에 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-mascot-explainer.zip",
+   "digest": "sha256:c9384c697e92da19f8aeca3e5ff0776613127a08bdc51c44a671863f0bfd65a9"
+  },
+  {
+   "name": "llmvid-blender-object-drama",
+   "type": "archive",
+   "description": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 실사풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 블렌더(Cycles)로 책상 장면을 코드로 조립해 렌더하고 ffmpeg로 음성·자막·효과음을 붙인다. 메신저 대화가 중심인 직장·일상 썰을 영상으로 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-object-drama.zip",
+   "digest": "sha256:4d197fb7c67711a31c6734e603c58748fb2333ffecea8eedc8ea5ee600f58866"
+  },
+  {
+   "name": "llmvid-blender-psa-parody",
+   "type": "archive",
+   "description": "대본과 음성으로, 관절 인형풍 3D 인물이 나오는 '생활 안전 수칙' 공익 안내 방송 패러디 세로 쇼츠(1080×1920)를 만든다. 영상·이미지 생성 AI 없이 블렌더 코드로 방·밤거리 교차로 세트와 인물·팻말을 만들어 EEVEE로 렌더하고, ffmpeg로 수칙 번호 배지·제목·녹색 상자 자막·끝맺음 문구를 얹는다. 사소한 습관이 터무니없는 결과로 번지는 생활 수칙 패러디를 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-psa-parody.zip",
+   "digest": "sha256:bb9cb49f5e7bfc6cc1714ea52cb11c6aa290c27fa1fb81ab9eef204714cb334a"
+  },
+  {
+   "name": "llmvid-blender-stage-diorama",
+   "type": "archive",
+   "description": "대본과 음성으로, 로우폴리 미니어처 세트 하나가 구간(단계)마다 한 단계씩 바뀌어 가는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형으로 섬·나무·인형 인물·구조물을 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 단계 키워드·자막·효과음을 붙인다. '~하는 법', '~가 되기까지'처럼 단계가 뚜렷한 이야기에 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-stage-diorama.zip",
+   "digest": "sha256:d390f137830352c88d65d5a69a81a3898303330b7c2c5e8260ecb15690b72746"
+  },
+  {
+   "name": "llmvid-blender-toon",
+   "type": "archive",
+   "description": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 카툰풍(단계 명암 + 잉크선) 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 블렌더로 책상 장면을 코드로 조립해 EEVEE + Freestyle로 렌더하고 ffmpeg로 음성·자막·효과음을 붙인다. 메신저 대화가 중심인 썰을 만화 느낌으로, 빠르게 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-toon.zip",
+   "digest": "sha256:8c524dd9ee33663608d215c7237563dad7d67bb3bea62a5f61a68f4d764a41ef"
+  },
+  {
+   "name": "llmvid-blender-voxel-whatif",
+   "type": "archive",
+   "description": "대본과 음성으로, 블록(복셀) 인물과 픽셀 질감 세트가 나오는 '만약 ~라면' 세로 쇼츠(1080×1920)를 만든다. 영상·이미지 생성 AI 없이 블렌더 코드로 공원·방·경기장 세트와 인물·군중을 만들어 EEVEE로 렌더하고, ffmpeg로 제목 카드와 자막을 얹는다. 장소가 여러 번 바뀌고 군중 장면이 나오는 상상 시나리오형 내레이션 쇼츠를 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-blender-voxel-whatif.zip",
+   "digest": "sha256:e36625f812c976a8339424bce4c9468fcb7fc97d6d307c0d6a2d4c887e4fe35a"
+  },
+  {
+   "name": "llmvid-pixel-story",
+   "type": "archive",
+   "description": "대본과 음성(선택)을 받아 영상·이미지 생성 AI 없이 파이썬 코드만으로 세로형(1080x1920) 픽셀 애니메이션 영상을 만든다. 사용자가 \"픽셀 애니로 영상 만들어 줘\", \"도트 스타일 썰 영상\", \"pixel-story 스킬로\" 같이 말하거나, 짧은 이야기·대화형 대본을 레트로 게임풍 영상으로 바꾸려 할 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-pixel-story.zip",
+   "digest": "sha256:7633f4dfb427d9617a3e5f49a53c73bb74882e45a082857555bf79522a0d5ff6"
+  },
+  {
+   "name": "llmvid-remotion-anime",
+   "type": "archive",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 애니풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG·CSS 로 인물·사무실·단톡 화면·자막을 직접 그린다. 회사·메신저 썰처럼 채팅 화면이 중심인 대본을 코드로 영상화할 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-remotion-anime.zip",
+   "digest": "sha256:4343028ad961c17f73ea3fdeb247dbc287a503f9805fe2bbfb6933bd2ad5cdf7"
+  },
+  {
+   "name": "llmvid-remotion-kinetic",
+   "type": "archive",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 키네틱 타이포 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드로 말 덩어리마다 큰 글자가 튀어나오게 한다. 그림 없이 글자와 색만으로 썰·훅 영상을 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-remotion-kinetic.zip",
+   "digest": "sha256:97e7874846de84c47dc4e3ee2ec76c64a9918eeda21497dbb731334c75f82e05"
+  },
+  {
+   "name": "llmvid-remotion-paper-puppet",
+   "type": "archive",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 관절 종이인형풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG로 오려 붙인 종이 질감과 관절 인형 동작을 직접 그린다. 사무실 썰이나 독특한 종이 인형극 느낌의 대본을 코드로 영상화할 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-remotion-paper-puppet.zip",
+   "digest": "sha256:2a0294e25202cbc3bc462165189704729f65f6692a26b420463ea014843a8fc5"
+  },
+  {
+   "name": "llmvid-remotion-pixel-rpg",
+   "type": "archive",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 픽셀 RPG풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG로 도트 게임 화면 같은 사무실과 인물 동작을 직접 그린다. 사무실 썰이나 레트로 게임 분위기의 대본을 코드로 영상화할 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-remotion-pixel-rpg.zip",
+   "digest": "sha256:9e7c0a268601726a6a4928c266be146854f8c6cba95d27eb22788bd9180dccf5"
+  },
+  {
+   "name": "llmvid-remotion-sketch",
+   "type": "archive",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 손그림 느낌 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드로 그린 애니풍 장면에 선 떨림과 종이결 필터를 입힌다. 그림일기·낙서 분위기의 썰 영상을 코드로 만들 때 쓴다.",
+   "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/llmvid-remotion-sketch.zip",
+   "digest": "sha256:813f59c72ee5e06e738781b78b1317ab4396982b960f18bd5d4830dbe50f2244"
+  }
+ ]
+}

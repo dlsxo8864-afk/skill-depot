@@ -1,0 +1,7 @@
+interface:
+  display_name: "템플릿 1"
+  short_description: "글자 없는 사진과 Remotion 텍스트를 분리하는 직장 썰 썸네일"
+  icon_large: "./assets/preview.png"
+  default_prompt: "Use $artifact-template-1 to generate a text-free photo and compose editable Remotion text and effects with this template."
+policy:
+  allow_implicit_invocation: true

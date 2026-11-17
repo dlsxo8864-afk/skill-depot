@@ -1,0 +1,109 @@
+{
+  "name": "템플릿 1",
+  "version": "1.1.0",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "colors": {
+    "yellow": "#FFD245",
+    "white": "#FAFAFA",
+    "charcoal": "#07090E",
+    "badge": "#D80B20"
+  },
+  "geometry": {
+    "masthead": {
+      "x": 92,
+      "y": 116,
+      "fontSize": 73
+    },
+    "badge": {
+      "x": 705,
+      "y": 114,
+      "width": 174,
+      "height": 88
+    },
+    "headline1": {
+      "x": 48,
+      "y": 1318,
+      "width": 984
+    },
+    "headline2": {
+      "x": 48,
+      "y": 1517,
+      "width": 984
+    },
+    "footer": {
+      "centerY": 1825,
+      "fontSize": 40
+    }
+  },
+  "footer": "사연 재구성",
+  "backgroundPolicy": "Generate text-free photographs independently; retain raw originals and never re-edit a flattened thumbnail to change words.",
+  "textPolicy": "All typography, episode badges, gradients, outlines and shadows are native Remotion/CSS layers.",
+  "fonts": [
+    {
+      "family": "Template1Aggro",
+      "file": "public/fonts/SBAggroB.ttf",
+      "license": "public/fonts/LICENSE-SBAggro.pdf",
+      "source": "https://sandbox.co.kr/company-ci"
+    },
+    {
+      "family": "Template1Masthead",
+      "file": "public/fonts/MastheadKR-Black.ttf",
+      "license": "public/fonts/OFL-NotoSansKR.txt"
+    },
+    {
+      "family": "Template1Regular",
+      "file": "public/fonts/FooterKR-Regular.ttf",
+      "license": "public/fonts/OFL-NotoSansKR.txt"
+    }
+  ],
+  "typography": {
+    "headlineFont": "aggro",
+    "wordSpacing": -14,
+    "letterSpacing": -2,
+    "effect": "thin black stroke and soft black drop shadow; no gray or brown extrusions",
+    "presets": {
+      "EP1": {
+        "episode": "EP1",
+        "line1": "해고한 직원한테",
+        "line2": "고백받음",
+        "backgroundSrc": "images/template1/ep1-background.png",
+        "line1FontSize": 155,
+        "line2FontSize": 260,
+        "line1ScaleX": 0.89,
+        "line1ScaleY": 1.08,
+        "line2ScaleX": 0.95,
+        "line2ScaleY": 1.18,
+        "headlineFont": "aggro",
+        "backgroundVisible": true,
+        "gradientVisible": true,
+        "mastheadText": "회사에선 말 못 한 썰",
+        "footerText": "사연 재구성",
+        "line1Top": 1218,
+        "line2Top": 1425
+      },
+      "EP2": {
+        "episode": "EP2",
+        "line1": "번따 거절했는데",
+        "line2": "우리 회사 직원?!",
+        "backgroundSrc": "images/template1/ep2-background.png",
+        "line1FontSize": 155,
+        "line2FontSize": 180,
+        "line1ScaleX": 0.89,
+        "line1ScaleY": 1.08,
+        "line2ScaleX": 0.775,
+        "line2ScaleY": 1.17,
+        "headlineFont": "aggro",
+        "backgroundVisible": true,
+        "gradientVisible": true,
+        "mastheadText": "회사에선 말 못 한 썰",
+        "footerText": "사연 재구성",
+        "line1Top": 1318,
+        "line2Top": 1517
+      }
+    }
+  },
+  "visualReference": "references/style-original-ep2.png"
+}

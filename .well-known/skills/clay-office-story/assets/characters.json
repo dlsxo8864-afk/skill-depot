@@ -1,0 +1,681 @@
+{
+  "meta": {
+    "project": "퇴근각 Clay Renewal",
+    "version": "1.0.0",
+    "blender_version": "5.2",
+    "fps": 24,
+    "proportions": "adult_miniature_clay"
+  },
+  "characters": {
+    "F01": {
+      "id": "F01",
+      "name": "Minji",
+      "gender": "female",
+      "description": "Dark bob, teal blouse, neat dark slacks. Attentive, expressive junior-mid office worker.",
+      "proportions": {
+        "total_height": 1.4779500000000003,
+        "head_scale": [
+          0.245,
+          0.218,
+          0.257
+        ],
+        "shoulder_width": 0.36,
+        "torso_length": 0.34,
+        "leg_length": 0.54,
+        "eye_spacing": 0.145,
+        "eye_radius": 0.032,
+        "eye_height_ratio": 0.52,
+        "shoe_length": 0.19,
+        "shoe_width": 0.085,
+        "shoe_height": 0.045
+      },
+      "hair": {
+        "style": "bob",
+        "color": [
+          0.045,
+          0.045,
+          0.052,
+          1.0
+        ],
+        "roughness": 0.68,
+        "specular": 0.18
+      },
+      "skin": {
+        "color": [
+          0.89,
+          0.73,
+          0.65,
+          1.0
+        ],
+        "blush_color": [
+          0.88,
+          0.6,
+          0.56,
+          1
+        ],
+        "roughness": 0.6,
+        "specular": 0.22
+      },
+      "outfit": {
+        "type": "blouse_slacks",
+        "top_color": [
+          0.07,
+          0.4,
+          0.42,
+          1.0
+        ],
+        "collar_color": [
+          0.95,
+          0.95,
+          0.92,
+          1.0
+        ],
+        "bottom_color": [
+          0.12,
+          0.14,
+          0.18,
+          1.0
+        ],
+        "shoe_color": [
+          0.08,
+          0.08,
+          0.09,
+          1.0
+        ]
+      },
+      "accessories": []
+    },
+    "F02": {
+      "id": "F02",
+      "name": "Sujin",
+      "gender": "female",
+      "description": "Auburn ponytail, lilac cardigan, cream inner top, beige slacks. Warm and candid coworker.",
+      "proportions": {
+        "total_height": 1.4779500000000003,
+        "head_scale": [
+          0.245,
+          0.218,
+          0.257
+        ],
+        "shoulder_width": 0.36,
+        "torso_length": 0.34,
+        "leg_length": 0.54,
+        "eye_spacing": 0.145,
+        "eye_radius": 0.032,
+        "eye_height_ratio": 0.53,
+        "shoe_length": 0.195,
+        "shoe_width": 0.085,
+        "shoe_height": 0.045
+      },
+      "hair": {
+        "style": "ponytail",
+        "color": [
+          0.38,
+          0.16,
+          0.08,
+          1.0
+        ],
+        "tie_color": [
+          0.22,
+          0.22,
+          0.25,
+          1.0
+        ],
+        "roughness": 0.64,
+        "specular": 0.2
+      },
+      "skin": {
+        "color": [
+          0.9,
+          0.74,
+          0.66,
+          1.0
+        ],
+        "blush_color": [
+          0.88,
+          0.6,
+          0.56,
+          1
+        ],
+        "roughness": 0.6,
+        "specular": 0.22
+      },
+      "outfit": {
+        "type": "cardigan_pants",
+        "top_color": [
+          0.62,
+          0.54,
+          0.72,
+          1.0
+        ],
+        "inner_color": [
+          0.93,
+          0.91,
+          0.86,
+          1.0
+        ],
+        "bottom_color": [
+          0.8,
+          0.75,
+          0.67,
+          1.0
+        ],
+        "shoe_color": [
+          0.32,
+          0.2,
+          0.14,
+          1.0
+        ]
+      },
+      "accessories": []
+    },
+    "F03": {
+      "id": "F03",
+      "name": "Jiyeon",
+      "gender": "female",
+      "description": "Dark short wavy hair, cream jacket, dark inner top, tailored trousers, round glasses. Composed, analytical senior.",
+      "proportions": {
+        "total_height": 1.4779500000000003,
+        "head_scale": [
+          0.245,
+          0.218,
+          0.257
+        ],
+        "shoulder_width": 0.36,
+        "torso_length": 0.34,
+        "leg_length": 0.54,
+        "eye_spacing": 0.145,
+        "eye_radius": 0.032,
+        "eye_height_ratio": 0.51,
+        "shoe_length": 0.19,
+        "shoe_width": 0.085,
+        "shoe_height": 0.045
+      },
+      "hair": {
+        "style": "short_wavy",
+        "color": [
+          0.05,
+          0.05,
+          0.06,
+          1.0
+        ],
+        "roughness": 0.66,
+        "specular": 0.18
+      },
+      "skin": {
+        "color": [
+          0.88,
+          0.72,
+          0.63,
+          1.0
+        ],
+        "blush_color": [
+          0.88,
+          0.6,
+          0.56,
+          1
+        ],
+        "roughness": 0.6,
+        "specular": 0.22
+      },
+      "outfit": {
+        "type": "jacket_slacks",
+        "top_color": [
+          0.9,
+          0.87,
+          0.8,
+          1.0
+        ],
+        "inner_color": [
+          0.16,
+          0.18,
+          0.24,
+          1.0
+        ],
+        "bottom_color": [
+          0.14,
+          0.15,
+          0.19,
+          1.0
+        ],
+        "shoe_color": [
+          0.1,
+          0.1,
+          0.12,
+          1.0
+        ]
+      },
+      "accessories": [
+        {
+          "type": "glasses",
+          "frame_shape": "round",
+          "frame_color": [
+            0.12,
+            0.12,
+            0.14,
+            1.0
+          ],
+          "rim_thickness": 0.005,
+          "radius": 0.032
+        }
+      ]
+    },
+    "M01": {
+      "id": "M01",
+      "name": "Dohyun",
+      "gender": "male",
+      "description": "Neat side-part dark hair, crisp navy dress shirt, charcoal slacks. Structured, calm office worker.",
+      "proportions": {
+        "total_height": 1.5835000000000001,
+        "head_scale": [
+          0.25,
+          0.225,
+          0.27
+        ],
+        "shoulder_width": 0.4,
+        "torso_length": 0.37,
+        "leg_length": 0.59,
+        "eye_spacing": 0.15,
+        "eye_radius": 0.03,
+        "eye_height_ratio": 0.52,
+        "shoe_length": 0.22,
+        "shoe_width": 0.095,
+        "shoe_height": 0.048
+      },
+      "hair": {
+        "style": "side_part",
+        "color": [
+          0.04,
+          0.04,
+          0.05,
+          1.0
+        ],
+        "roughness": 0.65,
+        "specular": 0.18
+      },
+      "skin": {
+        "color": [
+          0.87,
+          0.72,
+          0.63,
+          1.0
+        ],
+        "blush_color": [
+          0.88,
+          0.6,
+          0.56,
+          1
+        ],
+        "roughness": 0.62,
+        "specular": 0.2
+      },
+      "outfit": {
+        "type": "shirt_slacks",
+        "top_color": [
+          0.07,
+          0.14,
+          0.3,
+          1.0
+        ],
+        "collar_color": [
+          0.08,
+          0.16,
+          0.34,
+          1.0
+        ],
+        "bottom_color": [
+          0.24,
+          0.25,
+          0.28,
+          1.0
+        ],
+        "shoe_color": [
+          0.07,
+          0.07,
+          0.08,
+          1.0
+        ]
+      },
+      "accessories": []
+    },
+    "M02": {
+      "id": "M02",
+      "name": "Taewoo",
+      "gender": "male",
+      "description": "Curly warm-brown hair, mustard knit sweater, khaki chinos. Friendly, slightly informal persona.",
+      "proportions": {
+        "total_height": 1.5835000000000001,
+        "head_scale": [
+          0.25,
+          0.225,
+          0.27
+        ],
+        "shoulder_width": 0.4,
+        "torso_length": 0.37,
+        "leg_length": 0.59,
+        "eye_spacing": 0.15,
+        "eye_radius": 0.03,
+        "eye_height_ratio": 0.51,
+        "shoe_length": 0.215,
+        "shoe_width": 0.095,
+        "shoe_height": 0.048
+      },
+      "hair": {
+        "style": "curly",
+        "color": [
+          0.26,
+          0.15,
+          0.08,
+          1.0
+        ],
+        "roughness": 0.7,
+        "specular": 0.16
+      },
+      "skin": {
+        "color": [
+          0.89,
+          0.73,
+          0.64,
+          1.0
+        ],
+        "blush_color": [
+          0.88,
+          0.6,
+          0.56,
+          1
+        ],
+        "roughness": 0.62,
+        "specular": 0.2
+      },
+      "outfit": {
+        "type": "sweater_chinos",
+        "top_color": [
+          0.72,
+          0.5,
+          0.12,
+          1.0
+        ],
+        "inner_color": [
+          0.92,
+          0.92,
+          0.9,
+          1.0
+        ],
+        "bottom_color": [
+          0.36,
+          0.32,
+          0.26,
+          1.0
+        ],
+        "shoe_color": [
+          0.18,
+          0.13,
+          0.09,
+          1.0
+        ]
+      },
+      "accessories": []
+    },
+    "M03": {
+      "id": "M03",
+      "name": "Sanghun",
+      "gender": "male",
+      "description": "Swept silver hair, sage green jacket, dark inner knit, rectangular glasses. Veteran manager.",
+      "proportions": {
+        "total_height": 1.5845,
+        "head_scale": [
+          0.25,
+          0.225,
+          0.27
+        ],
+        "shoulder_width": 0.4,
+        "torso_length": 0.37,
+        "leg_length": 0.59,
+        "eye_spacing": 0.15,
+        "eye_radius": 0.03,
+        "eye_height_ratio": 0.51,
+        "shoe_length": 0.225,
+        "shoe_width": 0.098,
+        "shoe_height": 0.05
+      },
+      "hair": {
+        "style": "swept_silver",
+        "color": [
+          0.68,
+          0.7,
+          0.72,
+          1.0
+        ],
+        "roughness": 0.64,
+        "specular": 0.2
+      },
+      "skin": {
+        "color": [
+          0.86,
+          0.71,
+          0.62,
+          1.0
+        ],
+        "blush_color": [
+          0.88,
+          0.6,
+          0.56,
+          1
+        ],
+        "roughness": 0.64,
+        "specular": 0.18
+      },
+      "outfit": {
+        "type": "jacket_slacks",
+        "top_color": [
+          0.36,
+          0.45,
+          0.37,
+          1.0
+        ],
+        "inner_color": [
+          0.14,
+          0.14,
+          0.15,
+          1.0
+        ],
+        "bottom_color": [
+          0.18,
+          0.19,
+          0.22,
+          1.0
+        ],
+        "shoe_color": [
+          0.07,
+          0.07,
+          0.08,
+          1.0
+        ]
+      },
+      "accessories": [
+        {
+          "type": "glasses",
+          "frame_shape": "rectangular",
+          "frame_color": [
+            0.38,
+            0.32,
+            0.22,
+            1.0
+          ],
+          "rim_thickness": 0.005,
+          "radius": 0.034
+        }
+      ]
+    }
+  },
+  "expressions": {
+    "neutral": {
+      "head_tilt": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eye_lid_scale": 1.0,
+      "glance": [
+        0.0,
+        0.0
+      ],
+      "brow_l": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "brow_r": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mouth_shape": "rest",
+      "mouth_scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "awkward": {
+      "head_tilt": [
+        0.04,
+        0.06,
+        -0.05
+      ],
+      "eye_lid_scale": 0.94,
+      "glance": [
+        0.38,
+        0.08
+      ],
+      "brow_l": [
+        0.015,
+        0.0,
+        0.12
+      ],
+      "brow_r": [
+        -0.008,
+        0.0,
+        -0.08
+      ],
+      "mouth_shape": "tight_smile",
+      "mouth_scale": [
+        0.88,
+        0.85,
+        0.75
+      ]
+    },
+    "puzzled": {
+      "head_tilt": [
+        -0.03,
+        -0.08,
+        0.08
+      ],
+      "eye_lid_scale": 1.06,
+      "glance": [
+        -0.18,
+        0.22
+      ],
+      "brow_l": [
+        0.025,
+        0.0,
+        0.24
+      ],
+      "brow_r": [
+        -0.018,
+        0.0,
+        -0.16
+      ],
+      "mouth_shape": "small_o",
+      "mouth_scale": [
+        0.75,
+        0.8,
+        1.15
+      ]
+    },
+    "annoyed": {
+      "head_tilt": [
+        -0.05,
+        0.02,
+        0.02
+      ],
+      "eye_lid_scale": 0.72,
+      "glance": [
+        0.0,
+        0.02
+      ],
+      "brow_l": [
+        -0.022,
+        0.0,
+        -0.22
+      ],
+      "brow_r": [
+        0.022,
+        0.0,
+        0.22
+      ],
+      "mouth_shape": "flat_firm",
+      "mouth_scale": [
+        1.08,
+        0.7,
+        0.7
+      ]
+    },
+    "ashamed": {
+      "head_tilt": [
+        0.18,
+        0.04,
+        -0.06
+      ],
+      "eye_lid_scale": 0.62,
+      "glance": [
+        0.0,
+        -0.36
+      ],
+      "brow_l": [
+        0.028,
+        0.0,
+        0.18
+      ],
+      "brow_r": [
+        -0.028,
+        0.0,
+        -0.18
+      ],
+      "mouth_shape": "down_curve",
+      "mouth_scale": [
+        0.82,
+        0.8,
+        0.85
+      ]
+    },
+    "happy": {
+      "head_tilt": [
+        -0.02,
+        0.0,
+        0.0
+      ],
+      "eye_lid_scale": 0.95,
+      "glance": [
+        0.0,
+        0.04
+      ],
+      "brow_l": [
+        0.012,
+        0.0,
+        0.06
+      ],
+      "brow_r": [
+        -0.012,
+        0.0,
+        -0.06
+      ],
+      "mouth_shape": "warm_smile",
+      "mouth_scale": [
+        1.14,
+        1.0,
+        1.05
+      ]
+    }
+  }
+}

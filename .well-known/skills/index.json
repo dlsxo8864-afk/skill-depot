@@ -1,0 +1,433 @@
+{
+ "skills": [
+  {
+   "name": "gemini-delegate",
+   "description": "Delegate substantial foundation implementation, batches of draft files, and repetitive scaffolding to the user's Google CLI bridge to reduce GPT and Claude usage, then review, test, and finish with the main LLM. Use for explicit Gemini delegation or substantial coding foundation work under this user's routing preference.",
+   "files": [
+    "SKILL.md"
+   ]
+  },
+  {
+   "name": "api-agents",
+   "description": "프로모션 API 크레딧($200, 2026-11-23 만료)으로 도는 병렬 워커(api-agents MCP·cli.py)에 작업을 나눠 맡길 때 쓴다. 트리거 — \"API 에이전트로\", \"API 워커\", \"워커로 병렬\", \"크레딧으로 돌려\", \"병렬로 맡겨\", \"주간 한도 절약\", \"api-agents\", \"/api-agents\", 크레딧 잔액·워커 진행 상황 질문.",
+   "files": [
+    "SKILL.md"
+   ]
+  },
+  {
+   "name": "coupang-shorts-pipeline",
+   "description": "쿠팡 파트너스 탭(쇼츠킷 8296, affiliate maker)의 단계별 프롬프트·스킬을 고치거나 새 쿠팡 쇼츠 실행 결과를 검수할 때, 또는 상품 쇼츠 대본·recreate brief·첫 프레임 이미지·영상 프롬프트 품질을 올릴 때 쓴다(쇼츠킷 프롬프트, 쿠팡 쇼츠, affiliate maker, recreate brief).",
+   "files": [
+    "SKILL.md",
+    "references/defect-checklist.md",
+    "references/evidence-rules.md",
+    "references/prompt-contracts.md"
+   ]
+  },
+  {
+   "name": "naver-clip-voice-script",
+   "description": "Use when writing Korean narration for short restaurant or food promo videos (네이버 클립, 쇼츠, 릴스), choosing or directing Korean AI voices (Gemini TTS, ElevenLabs), or when a Korean voiceover sounds flat, robotic or boring (무미건조, 심심함, 말투 어색, AI 티, 재미없음). Also when changing the 쇼츠킷 네이버 클립 식당홍보 tab's script or voice prompts.",
+   "files": [
+    "SKILL.md",
+    "references/script-craft.md",
+    "references/sources.md",
+    "references/voice-direction.md"
+   ]
+  },
+  {
+   "name": "product-scene-video",
+   "description": "쿠팡 상품 장면의 이미지 생성·이미지 영상화·연결 품질을 개선하거나 8296 쇼츠킷 제작기를 수정할 때 사용한다. 제품 정체성, 모델별 입력 규격, 실제 생성 증빙과 최종 MP4 검수를 관리한다.",
+   "files": [
+    "SKILL.md"
+   ]
+  },
+  {
+   "name": "seedance-office-story",
+   "description": "한국 직장 썰을 30초 이내 세로 영상으로 각색하고 Seedance용 장면 프롬프트·캐릭터 참조·수동 영상 업로드 또는 모델 API·Remotion 편집 인계를 준비한다. 직장 사연 영상 제작, 기존 회차 수정, 업로드용 멘션 문구 준비에 사용한다.",
+   "files": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "references/api-workflow.md",
+    "references/capabilities.json",
+    "references/case-studies.md",
+    "references/production-guide.md",
+    "references/provider-schema.snapshot.json",
+    "references/sources/ep1/PRODUCTION_REPORT.md",
+    "references/sources/ep1/README.md",
+    "references/sources/ep1/STORY_GUIDE.json",
+    "references/sources/ep1/WORK_PROCESS.md",
+    "references/sources/ep1/clip_prompts/C1.txt",
+    "references/sources/ep1/clip_prompts/C2.txt",
+    "references/sources/ep1/clip_prompts/C3.txt",
+    "references/sources/ep1/prompt_used_U_full.txt",
+    "references/sources/ep2/DELIVERY_NOTES.md",
+    "references/sources/ep2/README.txt",
+    "references/sources/ep2/SHOT_LIST.json",
+    "references/sources/ep2/SKILL_korean_silent_reallife_short.md",
+    "references/sources/ep2/WORK_PROCESS.md",
+    "references/sources/ep2/prompts/UA_elevator_0-4s.txt",
+    "references/sources/ep2/prompts/UB_winebar_4-12s.txt",
+    "references/sources/ep2/prompts/UC_elevator_12-20s.txt",
+    "references/sources/ep2/prompts/UD_lobby_20-30s.txt",
+    "references/sources/media-evidence.json",
+    "references/sources/source-inventory.json",
+    "scripts/seedance_runner.py"
+   ]
+  },
+  {
+   "name": "clay-office-story",
+   "description": "직장 썰을 고정된 점토풍 블렌더 캐릭터·장면 동작으로 만들고 음성 및 기존 리모션 모션 자막과 합성한다. 퇴근각 클레이 버전, 캐릭터 시안, Seedance 대체 영상 제작과 해당 회차 수정에 사용한다.",
+   "files": [
+    "SKILL.md",
+    "assets/characters.json",
+    "assets/characters/catalog_F01.blend",
+    "assets/characters/catalog_F02.blend",
+    "assets/characters/catalog_F03.blend",
+    "assets/characters/catalog_M01.blend",
+    "assets/characters/catalog_M02.blend",
+    "assets/characters/catalog_M03.blend",
+    "assets/episodes.json",
+    "assets/remotion/package.json",
+    "assets/remotion/public/fonts/CaptionKR-Bold.ttf",
+    "assets/remotion/public/fonts/FooterKR-Regular.ttf",
+    "assets/remotion/public/fonts/OFL-NotoSansKR.txt",
+    "assets/remotion/src/CenteredCaptions.tsx",
+    "assets/remotion/src/ChatInsert.tsx",
+    "assets/remotion/src/EP3Notifications.tsx",
+    "assets/remotion/src/OfficeStoryEP3.tsx",
+    "assets/remotion/src/index.tsx",
+    "assets/remotion/tsconfig.json",
+    "references/workflow.md",
+    "scripts/build_clay.py",
+    "scripts/build_episode.py",
+    "scripts/clay_lib.py",
+    "scripts/compose_ep3.py",
+    "scripts/compose_episode.py",
+    "scripts/polish.py",
+    "scripts/prepare_timeline.py",
+    "scripts/render_frames.py",
+    "scripts/run_episode.ps1"
+   ]
+  },
+  {
+   "name": "artifact-template-1",
+   "description": "직장 썰 썸네일 템플릿 1. Use when the user selects this template, names 템플릿 1 or 템플릿1, or invokes $artifact-template-1. Generate photographs separately without text; compose all typography and effects with the retained Remotion template.",
+   "files": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "artifact-template.json",
+    "assets/preview.png",
+    "assets/reference.png",
+    "assets/template-1/WORKFLOW.md",
+    "assets/template-1/backgrounds/ep1-background.png",
+    "assets/template-1/backgrounds/ep2-background.png",
+    "assets/template-1/exports/EP1-mobile-proof.png",
+    "assets/template-1/exports/EP1-template-1.png",
+    "assets/template-1/exports/EP1-text-overlay.png",
+    "assets/template-1/exports/EP2-mobile-proof.png",
+    "assets/template-1/exports/EP2-template-1.png",
+    "assets/template-1/exports/EP2-text-overlay.png",
+    "assets/template-1/manifest.json",
+    "assets/template-1/prompts/ep1-background-prompt.txt",
+    "assets/template-1/prompts/ep2-background-prompt.txt",
+    "assets/template-1/references/ep1-female-source.png",
+    "assets/template-1/references/ep1-male-source.png",
+    "assets/template-1/references/female-approved.png",
+    "assets/template-1/references/male-character-sheet.png",
+    "assets/template-1/references/style-original-ep1.png",
+    "assets/template-1/references/style-original-ep2.png",
+    "assets/template-1/remotion/README.md",
+    "assets/template-1/remotion/eslint.config.mjs",
+    "assets/template-1/remotion/package-lock.json",
+    "assets/template-1/remotion/package.json",
+    "assets/template-1/remotion/presets/EP1.json",
+    "assets/template-1/remotion/presets/EP2.json",
+    "assets/template-1/remotion/public/fonts/BlackHanSans-Regular.ttf",
+    "assets/template-1/remotion/public/fonts/FooterKR-Regular.ttf",
+    "assets/template-1/remotion/public/fonts/GmarketSansBold.otf",
+    "assets/template-1/remotion/public/fonts/LICENSE-GmarketSans-metadata.txt",
+    "assets/template-1/remotion/public/fonts/LICENSE-SBAggro.pdf",
+    "assets/template-1/remotion/public/fonts/MastheadKR-Black.ttf",
+    "assets/template-1/remotion/public/fonts/OFL-BlackHanSans.txt",
+    "assets/template-1/remotion/public/fonts/OFL-NotoSansKR.txt",
+    "assets/template-1/remotion/public/images/template1/ep1-background.png",
+    "assets/template-1/remotion/public/images/template1/ep2-background.png",
+    "assets/template-1/remotion/remotion.config.ts",
+    "assets/template-1/remotion/src/Root.tsx",
+    "assets/template-1/remotion/src/ThumbnailTemplate1.tsx",
+    "assets/template-1/remotion/src/index.ts",
+    "assets/template-1/remotion/src/thumbnail-template-1.css",
+    "assets/template-1/remotion/tsconfig.json",
+    "assets/template-1/style.json"
+   ]
+  },
+  {
+   "name": "llmvid-blender-clay-office",
+   "description": "대본과 음성으로, 점토풍 3D 캐릭터가 등장하는 미니어처 사무실 썰 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형을 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 자막과 음성을 붙인다. 직장인 썰을 아기자기한 점토 인형극 느낌으로 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/create_office.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/preview_checks.py",
+    "example/refinements.py",
+    "example/render_final.py",
+    "example/script.json",
+    "example/sheet.py"
+   ]
+  },
+  {
+   "name": "llmvid-blender-cutaway-explainer",
+   "description": "대본과 음성으로, 장치의 겉을 보여 준 뒤 앞판을 투명하게 만들어 속에서 일이 벌어지는 차례를 보여 주는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형으로 장치(투입구·저장통·압력계·밸브·배출구)를 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 단계 표시·자막·효과음을 붙인다. 과정을 '기계의 흐름'에 빗대어 설명하는 쇼츠에 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/cards.py",
+    "example/create_scene.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/plan.py",
+    "example/render.py",
+    "example/script.json",
+    "example/sheet.py"
+   ]
+  },
+  {
+   "name": "llmvid-blender-mascot-explainer",
+   "description": "대본과 음성으로, 어두운 무대에 선 3D 마스코트가 화면 카드(단톡·시계·알림·결과)를 차례로 띄우며 설명하는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형과 코드로 그린 카드를 EEVEE로 렌더하고 ffmpeg로 제목 띠·자막·효과음을 붙인다. 정보·요령·순서를 짧게 설명하는 쇼츠에 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/cards.py",
+    "example/create_scene.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/plan.py",
+    "example/render.py",
+    "example/script.json",
+    "example/sheet.py"
+   ]
+  },
+  {
+   "name": "llmvid-blender-object-drama",
+   "description": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 실사풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 블렌더(Cycles)로 책상 장면을 코드로 조립해 렌더하고 ffmpeg로 음성·자막·효과음을 붙인다. 메신저 대화가 중심인 직장·일상 썰을 영상으로 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/build_ssul.py",
+    "example/dl_assets.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/listobj.py",
+    "example/plan.py",
+    "example/probe.py",
+    "example/rnd_ssul.py",
+    "example/screens.py",
+    "example/script.json",
+    "example/sheet.py"
+   ]
+  },
+  {
+   "name": "llmvid-blender-psa-parody",
+   "description": "대본과 음성으로, 관절 인형풍 3D 인물이 나오는 '생활 안전 수칙' 공익 안내 방송 패러디 세로 쇼츠(1080×1920)를 만든다. 영상·이미지 생성 AI 없이 블렌더 코드로 방·밤거리 교차로 세트와 인물·팻말을 만들어 EEVEE로 렌더하고, ffmpeg로 수칙 번호 배지·제목·녹색 상자 자막·끝맺음 문구를 얹는다. 사소한 습관이 터무니없는 결과로 번지는 생활 수칙 패러디를 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/create_psa.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/preview_checks.py",
+    "example/render_final.py",
+    "example/sheet.py",
+    "example/timeline.example.json"
+   ]
+  },
+  {
+   "name": "llmvid-blender-stage-diorama",
+   "description": "대본과 음성으로, 로우폴리 미니어처 세트 하나가 구간(단계)마다 한 단계씩 바뀌어 가는 세로 영상(1080×1920)을 만든다. 영상·이미지 생성 AI 없이 블렌더 기본 도형으로 섬·나무·인형 인물·구조물을 코드로 조립해 EEVEE로 렌더하고 ffmpeg로 단계 키워드·자막·효과음을 붙인다. '~하는 법', '~가 되기까지'처럼 단계가 뚜렷한 이야기에 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/cards.py",
+    "example/create_scene.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/plan.py",
+    "example/render.py",
+    "example/script.json",
+    "example/sheet.py"
+   ]
+  },
+  {
+   "name": "llmvid-blender-toon",
+   "description": "대본과 음성으로, 사람 없이 휴대폰 화면·서류·도장 같은 물건만 나오는 카툰풍(단계 명암 + 잉크선) 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 블렌더로 책상 장면을 코드로 조립해 EEVEE + Freestyle로 렌더하고 ffmpeg로 음성·자막·효과음을 붙인다. 메신저 대화가 중심인 썰을 만화 느낌으로, 빠르게 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/build_ssul.py",
+    "example/dl_assets.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/listobj.py",
+    "example/make_toon.py",
+    "example/plan.py",
+    "example/probe.py",
+    "example/rnd_ssul.py",
+    "example/screens.py",
+    "example/script.json",
+    "example/sheet.py"
+   ]
+  },
+  {
+   "name": "llmvid-blender-voxel-whatif",
+   "description": "대본과 음성으로, 블록(복셀) 인물과 픽셀 질감 세트가 나오는 '만약 ~라면' 세로 쇼츠(1080×1920)를 만든다. 영상·이미지 생성 AI 없이 블렌더 코드로 공원·방·경기장 세트와 인물·군중을 만들어 EEVEE로 렌더하고, ffmpeg로 제목 카드와 자막을 얹는다. 장소가 여러 번 바뀌고 군중 장면이 나오는 상상 시나리오형 내레이션 쇼츠를 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/create_voxel.py",
+    "example/finish.py",
+    "example/fontfind.py",
+    "example/preview_checks.py",
+    "example/render_final.py",
+    "example/sheet.py",
+    "example/timeline.example.json"
+   ]
+  },
+  {
+   "name": "llmvid-pixel-story",
+   "description": "대본과 음성(선택)을 받아 영상·이미지 생성 AI 없이 파이썬 코드만으로 세로형(1080x1920) 픽셀 애니메이션 영상을 만든다. 사용자가 \"픽셀 애니로 영상 만들어 줘\", \"도트 스타일 썰 영상\", \"pixel-story 스킬로\" 같이 말하거나, 짧은 이야기·대화형 대본을 레트로 게임풍 영상으로 바꾸려 할 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/film.py",
+    "example/finish.py",
+    "example/fonts/Galmuri11-Bold.ttf",
+    "example/fonts/Galmuri11.ttf",
+    "example/fonts/OFL-Galmuri.txt",
+    "example/pixelvid.py",
+    "example/script.json",
+    "references/upstream/LICENSE",
+    "references/upstream/api.md",
+    "references/upstream/craft.md",
+    "references/upstream/story.md"
+   ]
+  },
+  {
+   "name": "llmvid-remotion-anime",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 애니풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG·CSS 로 인물·사무실·단톡 화면·자막을 직접 그린다. 회사·메신저 썰처럼 채팅 화면이 중심인 대본을 코드로 영상화할 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/package.json",
+    "example/public/fonts/BlackHanSans-Regular.ttf",
+    "example/public/fonts/OFL-BlackHanSans.txt",
+    "example/remotion.config.ts",
+    "example/src/Anime.tsx",
+    "example/src/Root.tsx",
+    "example/src/fonts.ts",
+    "example/src/index.ts",
+    "example/src/script.json",
+    "example/src/script.ts",
+    "example/tsconfig.json"
+   ]
+  },
+  {
+   "name": "llmvid-remotion-kinetic",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 키네틱 타이포 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드로 말 덩어리마다 큰 글자가 튀어나오게 한다. 그림 없이 글자와 색만으로 썰·훅 영상을 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/package.json",
+    "example/public/fonts/BlackHanSans-Regular.ttf",
+    "example/public/fonts/OFL-BlackHanSans.txt",
+    "example/remotion.config.ts",
+    "example/src/Kinetic.tsx",
+    "example/src/Root.tsx",
+    "example/src/fonts.ts",
+    "example/src/index.ts",
+    "example/src/script.json",
+    "example/src/script.ts",
+    "example/tsconfig.json"
+   ]
+  },
+  {
+   "name": "llmvid-remotion-paper-puppet",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 관절 종이인형풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG로 오려 붙인 종이 질감과 관절 인형 동작을 직접 그린다. 사무실 썰이나 독특한 종이 인형극 느낌의 대본을 코드로 영상화할 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/package.json",
+    "example/public/README.txt",
+    "example/remotion.config.ts",
+    "example/src/PaperAssets.tsx",
+    "example/src/PaperScene.tsx",
+    "example/src/Root.tsx",
+    "example/src/StoryData.ts",
+    "example/src/StoryFilm.tsx",
+    "example/src/common.tsx",
+    "example/src/fonts.ts",
+    "example/src/index.ts",
+    "example/src/script.json",
+    "example/src/script.ts",
+    "example/tsconfig.json"
+   ]
+  },
+  {
+   "name": "llmvid-remotion-pixel-rpg",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 픽셀 RPG풍 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드의 SVG로 도트 게임 화면 같은 사무실과 인물 동작을 직접 그린다. 사무실 썰이나 레트로 게임 분위기의 대본을 코드로 영상화할 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/package.json",
+    "example/public/README.txt",
+    "example/remotion.config.ts",
+    "example/src/PixelAssets.tsx",
+    "example/src/PixelScene.tsx",
+    "example/src/Root.tsx",
+    "example/src/StoryData.ts",
+    "example/src/StoryFilm.tsx",
+    "example/src/common.tsx",
+    "example/src/fonts.ts",
+    "example/src/index.ts",
+    "example/src/script.json",
+    "example/src/script.ts",
+    "example/tsconfig.json"
+   ]
+  },
+  {
+   "name": "llmvid-remotion-sketch",
+   "description": "대본과 음성(없어도 됨)으로 15~30초 안팎의 손그림 느낌 세로 영상(1080×1920)을 만든다. 영상 생성 AI 없이 Remotion(React) 코드로 그린 애니풍 장면에 선 떨림과 종이결 필터를 입힌다. 그림일기·낙서 분위기의 썰 영상을 코드로 만들 때 쓴다.",
+   "files": [
+    "SKILL.md",
+    "LICENSES.md",
+    "example/SCRIPT.md",
+    "example/package.json",
+    "example/public/fonts/BlackHanSans-Regular.ttf",
+    "example/public/fonts/OFL-BlackHanSans.txt",
+    "example/remotion.config.ts",
+    "example/src/Anime.tsx",
+    "example/src/Root.tsx",
+    "example/src/Sketch.tsx",
+    "example/src/fonts.ts",
+    "example/src/index.ts",
+    "example/src/script.json",
+    "example/src/script.ts",
+    "example/tsconfig.json"
+   ]
+  }
+ ]
+}
