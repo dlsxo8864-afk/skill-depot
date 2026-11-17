@@ -1,8 +1,10 @@
 {
  "site": {
-  "title": "스킬 창고",
-  "version": "1.0",
-  "built_at": "2026-11-17T22:41:19.762841+09:00",
+  "title": "LOADOUT",
+  "tagline": "새 PC에서도, 쓰던 스킬 그대로",
+  "repo_url": "https://github.com/dlsxo8864-afk/skill-depot",
+  "version": "1.1",
+  "built_at": "2026-11-17T23:24:50.701035+09:00",
   "base_url": "https://dlsxo8864-afk.github.io/skill-depot"
  },
  "usage_window": {
