@@ -2,7 +2,7 @@
  "site": {
   "title": "스킬 창고",
   "version": "1.0",
-  "built_at": "2026-11-17T22:36:31.199781+09:00",
+  "built_at": "2026-11-17T22:41:19.762841+09:00",
   "base_url": "https://dlsxo8864-afk.github.io/skill-depot"
  },
  "usage_window": {
@@ -303,7 +303,7 @@
    "source": null,
    "install": [],
    "added": "2026-11-09",
-   "updated": "2026-11-15",
+   "updated": "2026-11-17",
    "usage": {
     "calls": 2,
     "sessions": 2,
@@ -318,7 +318,7 @@
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 5762
+     "bytes": 5988
     },
     {
      "path": "references/defect-checklist.md",
@@ -330,15 +330,15 @@
     },
     {
      "path": "references/prompt-contracts.md",
-     "bytes": 8879
+     "bytes": 9259
     }
    ],
    "file_count": 4,
-   "bytes": 26906,
+   "bytes": 27512,
    "zip": {
     "path": "zips/coupang-shorts-pipeline.zip",
-    "bytes": 14654,
-    "sha256": "5f4c2a1d6a1084dcc306b710a4c511b3187c51098e2b66aa0d7fa3373930c07a"
+    "bytes": 14987,
+    "sha256": "e22d2e3a3658ee98679e50cae0310d862af5ecbd3654a56759435529298ceeaa"
    }
   },
   {

@@ -22,9 +22,10 @@ S1 컷 구성 → H1 훅 → C2 대본(이 화면에서 바로 고침) → V1·V
 
 | 타입 | pov | 사람 |
 |---|---|---|
-| `auto` 1인칭 위주(기본) | 모델이 first_person·over_shoulder·tabletop 가운데 고름 | 손·팔뚝만 |
+| `auto` 자동(기본, 11-17) | 모델이 줄의 대사·상황을 보고 다섯 시점 가운데 고르고 이유(`pov_reason_ko`)를 적음. 1인칭 기본 아님, 5줄 이상이면 시점 3가지 이상·1인칭은 1/3 이하 | 시점에 따름 |
+| `first_person` 1인칭(손) | first_person | 손·팔뚝만 |
 | `product_only` 제품 단독 | tabletop | 없음 |
-| `usage_scene` 사용 장면 | back_view | 뒷모습·옆모습(얼굴 fail) |
+| `usage_scene` 사용 장면 | back_view | 3인칭 — 뒤·옆·턱 아래 손과 상반신(얼굴 fail) |
 | `space` 공간 전경 | room_wide | 없음 |
 
 - 진행 화면은 실행 화면(`#/workflow/run/<id>`) 하나다. 다른 제작 화면(`#/workflow/<pid>/…`)으로 보내는 링크·안내를 넣지 않는다. 새로 시작하는 길도 새 흐름 하나(옛 흐름은 지난 작업 보기만).

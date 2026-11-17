@@ -20,7 +20,7 @@
    "type": "archive",
    "description": "쿠팡 파트너스 탭(쇼츠킷 8296, affiliate maker)의 단계별 프롬프트·스킬을 고치거나 새 쿠팡 쇼츠 실행 결과를 검수할 때, 또는 상품 쇼츠 대본·recreate brief·첫 프레임 이미지·영상 프롬프트 품질을 올릴 때 쓴다(쇼츠킷 프롬프트, 쿠팡 쇼츠, affiliate maker, recreate brief).",
    "url": "https://dlsxo8864-afk.github.io/skill-depot/zips/coupang-shorts-pipeline.zip",
-   "digest": "sha256:5f4c2a1d6a1084dcc306b710a4c511b3187c51098e2b66aa0d7fa3373930c07a"
+   "digest": "sha256:e22d2e3a3658ee98679e50cae0310d862af5ecbd3654a56759435529298ceeaa"
   },
   {
    "name": "naver-clip-voice-script",

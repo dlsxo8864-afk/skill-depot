@@ -1,6 +1,6 @@
 gemini-delegate	skill	mine	zips/gemini-delegate.zip	3bcf965eef7110170ef0b8a0cea6ea9ed28f89331a9f91af1928cb8eae633f14	1361	제미나이 위임	gemini-bridge 프로그램(MCP 서버와 bridge_core.py); Antigravity CLI(agy) 로그인	-
 api-agents	skill	mine	zips/api-agents.zip	04061021678232575ab06d4ad602e609bd26614ac63c28ef6223b0cb98d94a7f	2903	API 병렬 워커	API 병렬 에이전트 프로그램(29번); 콘솔 API 키 — 지금 쓰는 프로모션 크레딧은 2026-11-23 만료	-
-coupang-shorts-pipeline	skill	mine	zips/coupang-shorts-pipeline.zip	5f4c2a1d6a1084dcc306b710a4c511b3187c51098e2b66aa0d7fa3373930c07a	14654	쿠팡 쇼츠 프롬프트 검수	쇼츠킷 프로그램(27번) 소스	-
+coupang-shorts-pipeline	skill	mine	zips/coupang-shorts-pipeline.zip	e22d2e3a3658ee98679e50cae0310d862af5ecbd3654a56759435529298ceeaa	14987	쿠팡 쇼츠 프롬프트 검수	쇼츠킷 프로그램(27번) 소스	-
 naver-clip-voice-script	skill	mine	zips/naver-clip-voice-script.zip	4b667bcbf6a469ffd0c4314229ca09d66d28e45bf4c9b025cb268968c3e1fb6f	12820	식당 홍보 내레이션	-	-
 product-scene-video	skill	mine	zips/product-scene-video.zip	2790816a3c82a4fda56294698fa4e6e410c2405dd4cf4cd5747c078a58e9cab2	2887	상품 장면 영상화	쇼츠킷 프로그램(27번) 소스	-
 seedance-office-story	skill	mine	zips/seedance-office-story.zip	30a6d4e4743cc56488cc77350da7aaaebbd9ba544cab7ed36cd357b003fd4e6a	82088	직장 썰 씨댄스 제작	Seedance 이용(수동 업로드 또는 모델 API)	-
